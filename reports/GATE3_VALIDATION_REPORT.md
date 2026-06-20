@@ -245,7 +245,7 @@ A cluster is a **high-impact proxy positive** if it satisfies ≥ 2 of:
 | rank | cluster_id | assigned_station | violation_count | road_class | lcle_pct | bci | persistence | recurrence | peak_window | roi_score | classification | recommended_action |
 |------|------------|-----------------|----------------|------------|---------|-----|-------------|------------|-------------|-----------|----------------|-------------------|
 | 1 | C_298 | HAL OLD AIRPORT | 1,409 | trunk | 50.94 | 0.6915 | 239.0 | 0.9130 | 08:00-10:00 | 100.00 | STRUCTURAL | Review geography first; if confirmed, apply: Recurring  |
-| 2 | C_0_0 | CITY MARKET | 10,667 | primary | 75.62 | 0.1175 | 742.0 | 1.0000 | 01:00-03:00 | 99.91 | STRUCTURAL | Review geography first; if confirmed, apply: Recurring  |
+| 2 | C_0_0 | CITY MARKET | 10,667 | primary | 75.62 | 0.1175 | 742.0 | 1.0000 | 01:00-03:00 | 99.91 | STRUCTURAL | Recurring patrol + towing support + signage/infra revie |
 | 3 | C_22 | MALLESHWARAM | 9,096 | secondary | 91.13 | 0.1407 | 728.0 | 1.0000 | 10:00-12:00 | 99.82 | STRUCTURAL | Review geography first; if confirmed, apply: Recurring  |
 | 4 | C_149 | MAHADEVAPURA | 1,807 | trunk | 40.32 | 0.8742 | 161.0 | 1.0000 | 10:00-12:00 | 99.72 | STRUCTURAL | Review geography first; if confirmed, apply: Recurring  |
 | 5 | C_199 | MAHADEVAPURA | 1,874 | trunk | 44.31 | 0.5312 | 225.0 | 0.9565 | 01:00-03:00 | 99.63 | STRUCTURAL | Review geography first; if confirmed, apply: Recurring  |

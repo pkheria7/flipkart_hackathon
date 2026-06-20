@@ -332,29 +332,56 @@ def score_lcle() -> dict:
     # M12 Feedback Loop integration
     # ------------------------------------------------------------------
     print("[M2] Loading feedback summary...")
+    _FEEDBACK_COLS = [
+        "feedback_event_count",
+        "enforcement_done_count",
+        "recurred_after_enforcement_count",
+        "last_feedback_date",
+        "last_outcome",
+        "feedback_structural_boost",
+    ]
+    _NUMERIC_FEEDBACK_COLS = [
+        "feedback_event_count",
+        "enforcement_done_count",
+        "recurred_after_enforcement_count",
+        "feedback_structural_boost",
+    ]
+    _TEXT_FEEDBACK_COLS = ["last_feedback_date", "last_outcome"]
+
+    def _fill_feedback_defaults(df):
+        for col in _NUMERIC_FEEDBACK_COLS:
+            if col in df.columns:
+                df[col] = df[col].fillna(0).astype(int)
+        for col in _TEXT_FEEDBACK_COLS:
+            if col in df.columns:
+                df[col] = df[col].fillna("").astype(str)
+        return df
+
     try:
         feedback = get_feedback_summary_for_scoring()
+        # Drop stale feedback columns from df before merging to prevent _x/_y suffix collisions
+        df = df.drop(columns=[c for c in _FEEDBACK_COLS if c in df.columns], errors="ignore")
         if not feedback.empty:
-            df = df.merge(feedback, on="cluster_id", how="left")
-            df["feedback_structural_boost"] = df["feedback_structural_boost"].fillna(0).astype(int)
-            # Carry supporting columns through for transparency
-            for col in [
-                "feedback_event_count",
-                "enforcement_done_count",
-                "recurred_after_enforcement_count",
-                "last_feedback_date",
-                "last_outcome",
-            ]:
-                if col in df.columns:
-                    df[col] = df[col].fillna("" if df[col].dtype == object else 0)
+            keep = ["cluster_id"] + [c for c in _FEEDBACK_COLS if c in feedback.columns]
+            df = df.merge(feedback[keep], on="cluster_id", how="left")
+            df = _fill_feedback_defaults(df)
             boost_count = int(df["feedback_structural_boost"].sum())
             print(f"[M2] Feedback events merged. Clusters with structural boost: {boost_count}")
         else:
-            df["feedback_structural_boost"] = 0
+            for col in _NUMERIC_FEEDBACK_COLS:
+                df[col] = 0
+            for col in _TEXT_FEEDBACK_COLS:
+                df[col] = ""
             print("[M2] No feedback events found; structural boost column set to 0 for all clusters.")
     except Exception as exc:
-        print(f"[M2] Warning: could not load feedback summary ({exc}). Proceeding without feedback.")
-        df["feedback_structural_boost"] = 0
+        import traceback
+        print(f"[M2] Warning: could not load feedback summary ({type(exc).__name__}: {exc}).")
+        print(traceback.format_exc())
+        df = df.drop(columns=[c for c in _FEEDBACK_COLS if c in df.columns], errors="ignore")
+        for col in _NUMERIC_FEEDBACK_COLS:
+            df[col] = 0
+        for col in _TEXT_FEEDBACK_COLS:
+            df[col] = ""
 
     # Sort by lcle_pct descending for convenience
     df = df.sort_values("lcle_pct", ascending=False).reset_index(drop=True)
