@@ -31,10 +31,16 @@ from __future__ import annotations
 
 import json
 import math
+import sys
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(PROJECT_ROOT))
+
+from app.officer.feedback_backend import get_feedback_summary_for_scoring
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -151,6 +157,13 @@ def compute_lcle(row: pd.Series) -> dict:
 
 def add_lcle_columns(df: pd.DataFrame) -> pd.DataFrame:
     """Apply LCLE computation to every row and attach new columns."""
+    # Drop any stale LCLE result columns so re-runs are idempotent
+    stale_cols = [
+        "weighted_avg_vehicle_width", "occupancy_proxy", "raw_block",
+        "lcle_pct", "lcle_confidence", "road_width_source",
+    ]
+    df = df.drop(columns=[c for c in stale_cols if c in df.columns])
+
     results = []
     for _, row in df.iterrows():
         results.append(compute_lcle(row))
@@ -314,6 +327,34 @@ def score_lcle() -> dict:
 
     print("[M2] Computing LCLE...")
     df = add_lcle_columns(df)
+
+    # ------------------------------------------------------------------
+    # M12 Feedback Loop integration
+    # ------------------------------------------------------------------
+    print("[M2] Loading feedback summary...")
+    try:
+        feedback = get_feedback_summary_for_scoring()
+        if not feedback.empty:
+            df = df.merge(feedback, on="cluster_id", how="left")
+            df["feedback_structural_boost"] = df["feedback_structural_boost"].fillna(0).astype(int)
+            # Carry supporting columns through for transparency
+            for col in [
+                "feedback_event_count",
+                "enforcement_done_count",
+                "recurred_after_enforcement_count",
+                "last_feedback_date",
+                "last_outcome",
+            ]:
+                if col in df.columns:
+                    df[col] = df[col].fillna("" if df[col].dtype == object else 0)
+            boost_count = int(df["feedback_structural_boost"].sum())
+            print(f"[M2] Feedback events merged. Clusters with structural boost: {boost_count}")
+        else:
+            df["feedback_structural_boost"] = 0
+            print("[M2] No feedback events found; structural boost column set to 0 for all clusters.")
+    except Exception as exc:
+        print(f"[M2] Warning: could not load feedback summary ({exc}). Proceeding without feedback.")
+        df["feedback_structural_boost"] = 0
 
     # Sort by lcle_pct descending for convenience
     df = df.sort_values("lcle_pct", ascending=False).reset_index(drop=True)

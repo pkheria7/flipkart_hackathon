@@ -159,6 +159,20 @@ def derive_schema_columns(df: pd.DataFrame) -> pd.DataFrame:
     # recommended_action from M4
     df["recommended_action"] = df["recommended_action"].fillna("TOW")
 
+    # ------------------------------------------------------------------
+    # M12 Feedback Loop override
+    # If enforcement was done but the hotspot recurred, push it firmly to
+    # STRUCTURAL and assign the structural action.
+    # ------------------------------------------------------------------
+    df["feedback_structural_boost"] = df["feedback_structural_boost"].fillna(0).astype(int)
+    structural_mask = df["feedback_structural_boost"] == 1
+    if structural_mask.any():
+        df.loc[structural_mask, "classification"] = "STRUCTURAL"
+        df.loc[structural_mask, "recommended_action"] = (
+            "Recurring patrol + towing support + signage/infra review"
+        )
+        print(f"[M1] Feedback override applied to {structural_mask.sum()} cluster(s).")
+
     # assigned_station from M18
     df["assigned_station"] = df["assigned_station"].fillna("UNASSIGNED")
 
@@ -184,6 +198,10 @@ def compute_roi(df: pd.DataFrame) -> pd.DataFrame:
     persistence = df["persistence"].fillna(0).astype(float)
     bci = df["bci"].fillna(0).astype(float).clip(0, 1)
     recurrence = df["recurrence"].fillna(0).astype(float).clip(0, 1)
+
+    # Small feedback-driven recurrence boost for confirmed structural recurrences
+    boost = df["feedback_structural_boost"].fillna(0).astype(float)
+    recurrence = (recurrence * (1.0 + 0.025 * boost)).clip(0, 1)
 
     raw_roi = (lcle * traffic_weight * persistence * bci * recurrence) / OFFICER_HOURS_PER_CLUSTER
 
