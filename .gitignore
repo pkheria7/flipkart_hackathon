@@ -27,3 +27,21 @@ data/processed/clustered_violations.csv
 
 # OSM / geospatial caches
 cache/
+
+# Raw data — never commit
+data/raw/
+
+# Secrets / environment
+.env
+.env.*
+*.secret
+
+# Test/type caches
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
