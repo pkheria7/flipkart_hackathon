@@ -24,3 +24,6 @@ venv
 # (use parquet locally or regenerate via pipeline/run_phase1.py)
 data/processed/cleaned_violations.csv
 data/processed/clustered_violations.csv
+
+# OSM / geospatial caches
+cache/
