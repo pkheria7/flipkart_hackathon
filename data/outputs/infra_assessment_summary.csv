@@ -1,0 +1,4 @@
+cluster_id,infra_assessment_count,infra_independent_officer_count,infra_max_severity,infra_avg_severity,infra_dominant_cause,infra_suggested_fix,infra_escalation_ready,infra_structural_boost
+C_27_0,3,3,4,3.6666666666666665,missing_signage,install_no_parking_sign,1,1
+C_22,2,2,3,3.0,footpath_encroachment,create_loading_zone,0,0
+C_0_1,1,1,2,2.0,narrow_road,joint_bbmp_btp_inspection,0,0
