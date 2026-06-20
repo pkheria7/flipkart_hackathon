@@ -62,17 +62,32 @@
 - Note: action_taken_timestamp/closed_datetime are mostly NULL in this anonymized dataset; do not rely on them for classification.
 
 ## Clustering (P2)
-- Total clustered rows: 260,462
-- Noise rows: 37,815
-- Number of real clusters: 1,019
+- Total clustered rows: 259,138
+- Noise rows: 39,139
+- Number of real clusters: 1,084
 
 ## Cluster quality distribution
-- medium: 757
-- good: 247
-- needs_review: 15
-- Clusters flagged for manual review: 543
+- medium: 792
+- good: 258
+- needs_review: 34
+- Clusters flagged for manual review: 588
+
+## Oversized Cluster Split Summary
+
+Oversized clusters were re-clustered with tighter DBSCAN parameters to produce block/intersection-level subclusters.
+
+| old_cluster_id | old_count | old_h3_cells | subclusters | largest_subcluster | new_noise | eps | min_samples |
+|----------------|-----------|--------------|-------------|--------------------|-----------|-----|-------------|
+| C_0 | 51,168 | 24 | 56 | 23,553 | 1,049 | 10.0m | 10 |
+| C_27 | 18,528 | 9 | 11 | 17,825 | 275 | 10.0m | 10 |
+
+- Total violations re-clustered: 69,696
+- Total subclusters created: 67
+- Total new noise rows from splits: 1,324
+- Final subclustering parameters: eps=10.0m, min_samples=10, metric=haversine.
 
 ## Notes
-- DBSCAN parameters: eps=20.0m, min_samples=15, metric=haversine.
+- Global DBSCAN parameters: eps=20.0m, min_samples=15, metric=haversine.
+- Oversized clusters re-clustered with: eps=10.0m, min_samples=10, metric=haversine.
 - Noise points retain cluster_id='NOISE' so the row-level table is complete.
 - All timestamps are in Asia/Kolkata (IST).

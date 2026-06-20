@@ -57,6 +57,12 @@ EPS_METERS = 20.0
 MIN_SAMPLES = 15
 TOP_N_MAP_CLUSTERS = 50
 
+# Oversized-cluster post-processing
+OVERSIZED_VIOLATION_THRESHOLD = 10_000
+OVERSIZED_H3_THRESHOLD = 8
+SUBCLUSTER_EPS_METERS = 10.0
+SUBCLUSTER_MIN_SAMPLES = 10
+
 
 # ---------------------------------------------------------------------------
 # H3 helpers
@@ -145,7 +151,9 @@ def compute_cluster_summary(df: pd.DataFrame) -> pd.DataFrame:
         h3_cells_count = g["h3_res9"].nunique()
 
         # Simple quality heuristic
-        if violation_count >= 100 and h3_cells_count <= 10:
+        if violation_count > OVERSIZED_VIOLATION_THRESHOLD:
+            cluster_quality = "needs_review"
+        elif violation_count >= 100 and h3_cells_count <= 10:
             cluster_quality = "good"
         elif violation_count >= MIN_SAMPLES and h3_cells_count <= 20:
             cluster_quality = "medium"
@@ -154,6 +162,7 @@ def compute_cluster_summary(df: pd.DataFrame) -> pd.DataFrame:
 
         needs_manual_review = 1 if (
             violation_count < MIN_SAMPLES * 2
+            or violation_count > OVERSIZED_VIOLATION_THRESHOLD
             or h3_cells_count > 20
             or active_weeks > 20
         ) else 0
@@ -186,6 +195,104 @@ def compute_cluster_summary(df: pd.DataFrame) -> pd.DataFrame:
     summary_df = pd.DataFrame(summaries)
     summary_df = summary_df.sort_values("violation_count", ascending=False).reset_index(drop=True)
     return summary_df
+
+
+# ---------------------------------------------------------------------------
+# Oversized cluster splitting
+# ---------------------------------------------------------------------------
+def split_oversized_clusters(df: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]:
+    """
+    Identify oversized clusters and re-run DBSCAN with tighter parameters inside
+    each one. Replace the parent cluster_id with subcluster IDs (C_0_0, C_0_1, ...).
+
+    Returns the updated DataFrame and a list of split records for reporting.
+    """
+    clustered = df[df["is_clustered"] == 1].copy()
+    if clustered.empty:
+        return df, []
+
+    cluster_stats = clustered.groupby("cluster_id").agg(
+        violation_count=("cluster_id", "size"),
+        h3_cells_count=("h3_res9", "nunique"),
+    )
+
+    oversized_mask = (
+        (cluster_stats["violation_count"] > OVERSIZED_VIOLATION_THRESHOLD)
+        | (cluster_stats["h3_cells_count"] > OVERSIZED_H3_THRESHOLD)
+    )
+    oversized_ids = cluster_stats[oversized_mask].index.tolist()
+
+    if not oversized_ids:
+        return df, []
+
+    print(f"[P2] Found {len(oversized_ids)} oversized cluster(s) to split.")
+
+    split_records: list[dict] = []
+    next_global_label = int(df["dbscan_label"].max()) + 1
+
+    for old_id in oversized_ids:
+        old_count = int(cluster_stats.loc[old_id, "violation_count"])
+        old_h3_count = int(cluster_stats.loc[old_id, "h3_cells_count"])
+        mask = df["cluster_id"] == old_id
+        sub_df = df.loc[mask].copy()
+
+        print(f"[P2] Splitting {old_id}: {len(sub_df):,} violations, {old_h3_count} H3 cells...")
+
+        coords = np.radians(sub_df[["latitude", "longitude"]].values)
+        eps_radians = SUBCLUSTER_EPS_METERS / EARTH_RADIUS_M
+
+        db = DBSCAN(
+            eps=eps_radians,
+            min_samples=SUBCLUSTER_MIN_SAMPLES,
+            metric="haversine",
+            algorithm="ball_tree",
+        )
+        sub_labels = db.fit_predict(coords)
+
+        unique_labels = set(sub_labels)
+        n_subclusters = len(unique_labels) - (1 if -1 in unique_labels else 0)
+        n_noise = int((sub_labels == -1).sum())
+
+        # Build new IDs and labels
+        new_cluster_ids = []
+        new_dbscan_labels = []
+        subcluster_counts = Counter()
+        for label in sub_labels:
+            if label == -1:
+                new_cluster_ids.append("NOISE")
+                new_dbscan_labels.append(-1)
+            else:
+                new_id = f"{old_id}_{label}"
+                new_cluster_ids.append(new_id)
+                new_dbscan_labels.append(next_global_label + label)
+                subcluster_counts[new_id] += 1
+
+        # Ensure next batch of labels does not collide
+        if n_subclusters > 0:
+            next_global_label += n_subclusters
+
+        df.loc[mask, "cluster_id"] = new_cluster_ids
+        df.loc[mask, "dbscan_label"] = new_dbscan_labels
+        df.loc[mask, "is_clustered"] = (sub_labels >= 0).astype(int)
+
+        largest_sub_count = max(subcluster_counts.values()) if subcluster_counts else 0
+        print(
+            f"[P2]   -> {old_id} split into {n_subclusters} subcluster(s), "
+            f"largest={largest_sub_count:,}, noise={n_noise:,}"
+        )
+
+        split_records.append({
+            "old_cluster_id": old_id,
+            "old_violation_count": old_count,
+            "old_h3_cells_count": old_h3_count,
+            "n_subclusters": n_subclusters,
+            "largest_subcluster_count": largest_sub_count,
+            "noise_rows_created": n_noise,
+            "subcluster_eps_m": SUBCLUSTER_EPS_METERS,
+            "subcluster_min_samples": SUBCLUSTER_MIN_SAMPLES,
+        })
+
+    return df, split_records
 
 
 # ---------------------------------------------------------------------------
@@ -232,8 +339,51 @@ def build_sanity_map(cluster_summary: pd.DataFrame, df: pd.DataFrame) -> None:
 # ---------------------------------------------------------------------------
 # Reports
 # ---------------------------------------------------------------------------
+def format_split_summary(split_records: list[dict]) -> list[str]:
+    """Return markdown lines for the oversized cluster split summary section."""
+    if not split_records:
+        return [
+            "## Oversized Cluster Split Summary",
+            "",
+            "No clusters required splitting.",
+            "",
+        ]
+
+    lines = [
+        "## Oversized Cluster Split Summary",
+        "",
+        "Oversized clusters were re-clustered with tighter DBSCAN parameters to produce "
+        "block/intersection-level subclusters.",
+        "",
+        "| old_cluster_id | old_count | old_h3_cells | subclusters | largest_subcluster | new_noise | eps | min_samples |",
+        "|----------------|-----------|--------------|-------------|--------------------|-----------|-----|-------------|",
+    ]
+    for r in split_records:
+        lines.append(
+            f"| {r['old_cluster_id']} | {r['old_violation_count']:,} | "
+            f"{r['old_h3_cells_count']} | {r['n_subclusters']} | "
+            f"{r['largest_subcluster_count']:,} | {r['noise_rows_created']:,} | "
+            f"{r['subcluster_eps_m']}m | {r['subcluster_min_samples']} |"
+        )
+
+    total_old = sum(r["old_violation_count"] for r in split_records)
+    total_subclusters = sum(r["n_subclusters"] for r in split_records)
+    total_noise = sum(r["noise_rows_created"] for r in split_records)
+    lines.extend([
+        "",
+        f"- Total violations re-clustered: {total_old:,}",
+        f"- Total subclusters created: {total_subclusters}",
+        f"- Total new noise rows from splits: {total_noise:,}",
+        f"- Final subclustering parameters: eps={SUBCLUSTER_EPS_METERS}m, "
+        f"min_samples={SUBCLUSTER_MIN_SAMPLES}, metric=haversine.",
+        "",
+    ])
+    return lines
+
+
 def write_data_quality_summary(cleaned_rows: int, clustered_df: pd.DataFrame,
-                               summary_df: pd.DataFrame, p1_summary: dict | None = None) -> None:
+                               summary_df: pd.DataFrame, split_records: list[dict] | None = None,
+                               p1_summary: dict | None = None) -> None:
     noise_rows = int((clustered_df["is_clustered"] == 0).sum())
     cluster_rows = int((clustered_df["is_clustered"] == 1).sum())
     n_clusters = summary_df["cluster_id"].nunique() if not summary_df.empty else 0
@@ -291,8 +441,19 @@ def write_data_quality_summary(cleaned_rows: int, clustered_df: pd.DataFrame,
         lines.append(f"- {q}: {c}")
     lines.append(f"- Clusters flagged for manual review: {review_count}")
     lines.append("")
+
+    # Oversized split summary
+    lines.extend(format_split_summary(split_records or []))
+
     lines.append("## Notes")
-    lines.append(f"- DBSCAN parameters: eps={EPS_METERS}m, min_samples={MIN_SAMPLES}, metric=haversine.")
+    lines.append(
+        f"- Global DBSCAN parameters: eps={EPS_METERS}m, min_samples={MIN_SAMPLES}, metric=haversine."
+    )
+    if split_records:
+        lines.append(
+            f"- Oversized clusters re-clustered with: eps={SUBCLUSTER_EPS_METERS}m, "
+            f"min_samples={SUBCLUSTER_MIN_SAMPLES}, metric=haversine."
+        )
     lines.append("- Noise points retain cluster_id='NOISE' so the row-level table is complete.")
     lines.append("- All timestamps are in Asia/Kolkata (IST).")
 
@@ -302,6 +463,7 @@ def write_data_quality_summary(cleaned_rows: int, clustered_df: pd.DataFrame,
 
 def write_handover_report(raw_rows: int, cleaned_rows: int, dropped_rows: int,
                           clustered_df: pd.DataFrame, summary_df: pd.DataFrame,
+                          split_records: list[dict] | None = None,
                           p1_summary: dict | None = None) -> None:
     noise_rows = int((clustered_df["is_clustered"] == 0).sum())
     cluster_rows = int((clustered_df["is_clustered"] == 1).sum())
@@ -338,6 +500,9 @@ def write_handover_report(raw_rows: int, cleaned_rows: int, dropped_rows: int,
         lines.append(f"- {q}: {c}")
     lines.append("")
 
+    # Oversized split summary
+    lines.extend(format_split_summary(split_records or []))
+
     lines.append("## Top 20 clusters by violation_count")
     lines.append("")
     lines.append("| Rank | cluster_id | centroid_lat | centroid_lng | count | dominant_vehicle | police_station_mode | quality |")
@@ -372,7 +537,12 @@ def write_handover_report(raw_rows: int, cleaned_rows: int, dropped_rows: int,
     lines.append("Join all future outputs on `cluster_id`. Noise rows keep `cluster_id='NOISE'` and should be excluded from cluster-level analysis.")
     lines.append("")
     lines.append("## DBSCAN tuning note")
-    lines.append(f"- Final parameters: eps={EPS_METERS}m, min_samples={MIN_SAMPLES}.")
+    lines.append(f"- Global parameters: eps={EPS_METERS}m, min_samples={MIN_SAMPLES}.")
+    if split_records:
+        lines.append(
+            f"- Oversized clusters re-clustered with: eps={SUBCLUSTER_EPS_METERS}m, "
+            f"min_samples={SUBCLUSTER_MIN_SAMPLES}."
+        )
     lines.append("- Initial plan suggested 150m, but that merged entire neighborhoods into mega-clusters.")
     lines.append("- Tuning rationale: reduce eps until dense commercial areas resolve into block/intersection-level hotspots.")
     lines.append("- If downstream modules see too many tiny clusters or too much noise, tune these values and re-run `pipeline/run_phase1.py`.")
@@ -407,7 +577,16 @@ def cluster_data(raw_rows: int = None, cleaned_rows: int = None, dropped_rows: i
 
     n_clusters = len(set(labels)) - (1 if -1 in labels else 0)
     n_noise = int((labels == -1).sum())
-    print(f"[P2] Clusters found: {n_clusters:,}, Noise points: {n_noise:,}")
+    print(f"[P2] Global DBSCAN clusters found: {n_clusters:,}, Noise points: {n_noise:,}")
+
+    # Oversized cluster post-processing
+    df, split_records = split_oversized_clusters(df)
+    n_noise_after = int((df["is_clustered"] == 0).sum())
+    n_clusters_after = df[df["is_clustered"] == 1]["cluster_id"].nunique()
+    print(
+        f"[P2] After oversized split: clusters={n_clusters_after:,}, "
+        f"noise={n_noise_after:,}"
+    )
 
     # Save row-level clustered data
     df.to_parquet(OUTPUT_CLUSTERED_PARQUET, index=False)
@@ -458,17 +637,19 @@ def cluster_data(raw_rows: int = None, cleaned_rows: int = None, dropped_rows: i
     print(f"[P2] Saved handoff file: {OUTPUT_HANDOFF_PARQUET}")
 
     # Reports and map
-    write_data_quality_summary(len(df), df, summary_df, p1_summary=p1_summary)
-    write_handover_report(raw_rows or 0, cleaned_rows or len(df), dropped_rows, df, summary_df, p1_summary=p1_summary)
+    write_data_quality_summary(len(df), df, summary_df, split_records=split_records, p1_summary=p1_summary)
+    write_handover_report(raw_rows or 0, cleaned_rows or len(df), dropped_rows, df, summary_df,
+                          split_records=split_records, p1_summary=p1_summary)
     build_sanity_map(summary_df, df)
 
     return {
         "clustered_rows": len(df),
-        "noise_rows": n_noise,
-        "n_clusters": n_clusters,
+        "noise_rows": n_noise_after,
+        "n_clusters": n_clusters_after,
         "cluster_summary_path": str(OUTPUT_SUMMARY_PARQUET),
         "cluster_handoff_path": str(OUTPUT_HANDOFF_PARQUET),
         "map_path": str(MAP_HTML),
+        "split_records": split_records,
     }
 
 
