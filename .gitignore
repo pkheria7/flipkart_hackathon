@@ -13,6 +13,14 @@ venv
 # macOS
 .DS_Store
 
-# Raw data files (kept local-only)
-*.csv
+# Root-level raw data files (kept local-only)
+/*.csv
 *.kml
+
+# Track CSVs inside data/ directories
+!data/**/*.csv
+
+# Ignore individual oversized processed CSVs
+# (use parquet locally or regenerate via pipeline/run_phase1.py)
+data/processed/cleaned_violations.csv
+data/processed/clustered_violations.csv

@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e9b6207ab32275c5bbd1a6b4ad9707d9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e9b6207ab32275c5bbd1a6b4ad9707d9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e9b6207ab32275c5bbd1a6b4ad9707d9 = L.map(
+                "map_e9b6207ab32275c5bbd1a6b4ad9707d9",
+                {
+                    center: [12.982863501038409, 77.6120063618875],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9ea8c8eedbbf37786e7615f1122d089d = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9ea8c8eedbbf37786e7615f1122d089d.addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+            var circle_marker_b275d4c94f28d25257091f8c90191ada = L.circleMarker(
+                [12.97306464885692, 77.57720151061181],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_274d4717bf709dd49e4b261b5b19f0d4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0a39dec2e331853d98aaeabcd9d7bb29 = $(`<div id="html_0a39dec2e331853d98aaeabcd9d7bb29" style="width: 100.0%; height: 100.0%;"><b>Cluster C_0</b><br>Count: 51168<br>Dominant vehicle: SCOOTER<br>Police station: UPPARPET<br>Peak hour: 9<br>Quality: needs_review</div>`)[0];
+                popup_274d4717bf709dd49e4b261b5b19f0d4.setContent(html_0a39dec2e331853d98aaeabcd9d7bb29);
+            
+        
+
+        circle_marker_b275d4c94f28d25257091f8c90191ada.bindPopup(popup_274d4717bf709dd49e4b261b5b19f0d4)
+        ;
+
+        
+    
+    
+            circle_marker_b275d4c94f28d25257091f8c90191ada.bindTooltip(
+                `<div>
+                     C_0: 51168 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_002bf65c5cb84d318c726760f96fc061 = L.circleMarker(
+                [12.981553568752181, 77.60909893993863],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_dac6b0e2095173f21d611ba348d2fc18 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6367e7cae2a333c5df8931ed7326b9ba = $(`<div id="html_6367e7cae2a333c5df8931ed7326b9ba" style="width: 100.0%; height: 100.0%;"><b>Cluster C_27</b><br>Count: 18528<br>Dominant vehicle: SCOOTER<br>Police station: SHIVAJINAGAR<br>Peak hour: 10<br>Quality: good</div>`)[0];
+                popup_dac6b0e2095173f21d611ba348d2fc18.setContent(html_6367e7cae2a333c5df8931ed7326b9ba);
+            
+        
+
+        circle_marker_002bf65c5cb84d318c726760f96fc061.bindPopup(popup_dac6b0e2095173f21d611ba348d2fc18)
+        ;
+
+        
+    
+    
+            circle_marker_002bf65c5cb84d318c726760f96fc061.bindTooltip(
+                `<div>
+                     C_27: 18528 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_925a9ddb0b490caf1f7df775ac164f5a = L.circleMarker(
+                [13.010571767568162, 77.55388194226033],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_b4d962c2ca170af64b300c1ab7369e2b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2cea8629da4e96157e935c9c37ceed12 = $(`<div id="html_2cea8629da4e96157e935c9c37ceed12" style="width: 100.0%; height: 100.0%;"><b>Cluster C_22</b><br>Count: 9096<br>Dominant vehicle: CAR<br>Police station: MALLESHWARAM<br>Peak hour: 10<br>Quality: good</div>`)[0];
+                popup_b4d962c2ca170af64b300c1ab7369e2b.setContent(html_2cea8629da4e96157e935c9c37ceed12);
+            
+        
+
+        circle_marker_925a9ddb0b490caf1f7df775ac164f5a.bindPopup(popup_b4d962c2ca170af64b300c1ab7369e2b)
+        ;
+
+        
+    
+    
+            circle_marker_925a9ddb0b490caf1f7df775ac164f5a.bindTooltip(
+                `<div>
+                     C_22: 9096 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1d74f891024617829a0f05160261593b = L.circleMarker(
+                [12.93367012638579, 77.69094295702138],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_495b49fbcc0544b78b1e3fc11851a589 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ba579b3e3113b2432470d6722cc2d17a = $(`<div id="html_ba579b3e3113b2432470d6722cc2d17a" style="width: 100.0%; height: 100.0%;"><b>Cluster C_333</b><br>Count: 7154<br>Dominant vehicle: SCOOTER<br>Police station: HAL OLD AIRPORT<br>Peak hour: 4<br>Quality: good</div>`)[0];
+                popup_495b49fbcc0544b78b1e3fc11851a589.setContent(html_ba579b3e3113b2432470d6722cc2d17a);
+            
+        
+
+        circle_marker_1d74f891024617829a0f05160261593b.bindPopup(popup_495b49fbcc0544b78b1e3fc11851a589)
+        ;
+
+        
+    
+    
+            circle_marker_1d74f891024617829a0f05160261593b.bindTooltip(
+                `<div>
+                     C_333: 7154 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9029d77978f36d47f6a96b42e08bd50b = L.circleMarker(
+                [12.999706963699936, 77.55037343141102],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_17feff8de91deabe258700bf2f449c18 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_37892bcd935a43ee856ca735143e3690 = $(`<div id="html_37892bcd935a43ee856ca735143e3690" style="width: 100.0%; height: 100.0%;"><b>Cluster C_13</b><br>Count: 6487<br>Dominant vehicle: SCOOTER<br>Police station: MALLESHWARAM<br>Peak hour: 7<br>Quality: good</div>`)[0];
+                popup_17feff8de91deabe258700bf2f449c18.setContent(html_37892bcd935a43ee856ca735143e3690);
+            
+        
+
+        circle_marker_9029d77978f36d47f6a96b42e08bd50b.bindPopup(popup_17feff8de91deabe258700bf2f449c18)
+        ;
+
+        
+    
+    
+            circle_marker_9029d77978f36d47f6a96b42e08bd50b.bindTooltip(
+                `<div>
+                     C_13: 6487 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_70a63b8abd185e02c2a256dd7546be63 = L.circleMarker(
+                [13.071058777450718, 77.58793572473624],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_061577dee9d218c3806649607c93cae0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e344736715a9f65b17b89292a1e0469f = $(`<div id="html_e344736715a9f65b17b89292a1e0469f" style="width: 100.0%; height: 100.0%;"><b>Cluster C_20</b><br>Count: 5251<br>Dominant vehicle: SCOOTER<br>Police station: KODIGEHALLI<br>Peak hour: 11<br>Quality: good</div>`)[0];
+                popup_061577dee9d218c3806649607c93cae0.setContent(html_e344736715a9f65b17b89292a1e0469f);
+            
+        
+
+        circle_marker_70a63b8abd185e02c2a256dd7546be63.bindPopup(popup_061577dee9d218c3806649607c93cae0)
+        ;
+
+        
+    
+    
+            circle_marker_70a63b8abd185e02c2a256dd7546be63.bindTooltip(
+                `<div>
+                     C_20: 5251 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1b7c420919c9f15a42257a54c1927a25 = L.circleMarker(
+                [12.983488878473665, 77.60328934115961],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_2be7514f80d8a37fe41c0c126e93e8b1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6406e78f209c5b3d7306a39370dbf92f = $(`<div id="html_6406e78f209c5b3d7306a39370dbf92f" style="width: 100.0%; height: 100.0%;"><b>Cluster C_14</b><br>Count: 4501<br>Dominant vehicle: PASSENGER AUTO<br>Police station: SHIVAJINAGAR<br>Peak hour: 10<br>Quality: good</div>`)[0];
+                popup_2be7514f80d8a37fe41c0c126e93e8b1.setContent(html_6406e78f209c5b3d7306a39370dbf92f);
+            
+        
+
+        circle_marker_1b7c420919c9f15a42257a54c1927a25.bindPopup(popup_2be7514f80d8a37fe41c0c126e93e8b1)
+        ;
+
+        
+    
+    
+            circle_marker_1b7c420919c9f15a42257a54c1927a25.bindTooltip(
+                `<div>
+                     C_14: 4501 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_75ce175cb2592d916f6fd4ea1f74b3ab = L.circleMarker(
+                [12.974362039318262, 77.54563971689441],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_b33736f4927eb8158d99b760cac07852 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ec07c44ed01bb29f7ccb857c34500799 = $(`<div id="html_ec07c44ed01bb29f7ccb857c34500799" style="width: 100.0%; height: 100.0%;"><b>Cluster C_153</b><br>Count: 4474<br>Dominant vehicle: SCOOTER<br>Police station: VIJAYANAGARA<br>Peak hour: 4<br>Quality: good</div>`)[0];
+                popup_b33736f4927eb8158d99b760cac07852.setContent(html_ec07c44ed01bb29f7ccb857c34500799);
+            
+        
+
+        circle_marker_75ce175cb2592d916f6fd4ea1f74b3ab.bindPopup(popup_b33736f4927eb8158d99b760cac07852)
+        ;
+
+        
+    
+    
+            circle_marker_75ce175cb2592d916f6fd4ea1f74b3ab.bindTooltip(
+                `<div>
+                     C_153: 4474 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f38f8cbcd3bed0d913df11bea9923a95 = L.circleMarker(
+                [13.185430604798288, 77.67994768323867],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_120d062cb0e15a5b3473378db537ba0e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4ba97dda8847ff074a2a87eaf67bd84d = $(`<div id="html_4ba97dda8847ff074a2a87eaf67bd84d" style="width: 100.0%; height: 100.0%;"><b>Cluster C_171</b><br>Count: 4437<br>Dominant vehicle: CAR<br>Police station: CHIKKAJALA<br>Peak hour: 5<br>Quality: good</div>`)[0];
+                popup_120d062cb0e15a5b3473378db537ba0e.setContent(html_4ba97dda8847ff074a2a87eaf67bd84d);
+            
+        
+
+        circle_marker_f38f8cbcd3bed0d913df11bea9923a95.bindPopup(popup_120d062cb0e15a5b3473378db537ba0e)
+        ;
+
+        
+    
+    
+            circle_marker_f38f8cbcd3bed0d913df11bea9923a95.bindTooltip(
+                `<div>
+                     C_171: 4437 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7531c221073ff529e67ef73c93e1b123 = L.circleMarker(
+                [13.008460472703977, 77.6954542260556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_959d70585a44acc1ce7bda21db266066 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_76dc9abed11c46801c727187cdd4ffe0 = $(`<div id="html_76dc9abed11c46801c727187cdd4ffe0" style="width: 100.0%; height: 100.0%;"><b>Cluster C_3</b><br>Count: 3926<br>Dominant vehicle: SCOOTER<br>Police station: K.R. PURA<br>Peak hour: 0<br>Quality: good</div>`)[0];
+                popup_959d70585a44acc1ce7bda21db266066.setContent(html_76dc9abed11c46801c727187cdd4ffe0);
+            
+        
+
+        circle_marker_7531c221073ff529e67ef73c93e1b123.bindPopup(popup_959d70585a44acc1ce7bda21db266066)
+        ;
+
+        
+    
+    
+            circle_marker_7531c221073ff529e67ef73c93e1b123.bindTooltip(
+                `<div>
+                     C_3: 3926 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_27164d3e5758e0374a11a48fae4f5237 = L.circleMarker(
+                [13.006735406687646, 77.57056502355101],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_8b4d835c1d1de88d58563557e1bf63e0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_716c9d41463c005217132d22a136b1f0 = $(`<div id="html_716c9d41463c005217132d22a136b1f0" style="width: 100.0%; height: 100.0%;"><b>Cluster C_15</b><br>Count: 3813<br>Dominant vehicle: CAR<br>Police station: MALLESHWARAM<br>Peak hour: 8<br>Quality: good</div>`)[0];
+                popup_8b4d835c1d1de88d58563557e1bf63e0.setContent(html_716c9d41463c005217132d22a136b1f0);
+            
+        
+
+        circle_marker_27164d3e5758e0374a11a48fae4f5237.bindPopup(popup_8b4d835c1d1de88d58563557e1bf63e0)
+        ;
+
+        
+    
+    
+            circle_marker_27164d3e5758e0374a11a48fae4f5237.bindTooltip(
+                `<div>
+                     C_15: 3813 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7c38e0969fe4ea3fd9c22def3c007fc = L.circleMarker(
+                [13.035301123433317, 77.58902437439944],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_43dee2581fbf7806ef62e5e47b5dc7bd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_32b2055edeecd13b4940db7d8b373f12 = $(`<div id="html_32b2055edeecd13b4940db7d8b373f12" style="width: 100.0%; height: 100.0%;"><b>Cluster C_41</b><br>Count: 3198<br>Dominant vehicle: SCOOTER<br>Police station: HEBBALA<br>Peak hour: 4<br>Quality: good</div>`)[0];
+                popup_43dee2581fbf7806ef62e5e47b5dc7bd.setContent(html_32b2055edeecd13b4940db7d8b373f12);
+            
+        
+
+        circle_marker_d7c38e0969fe4ea3fd9c22def3c007fc.bindPopup(popup_43dee2581fbf7806ef62e5e47b5dc7bd)
+        ;
+
+        
+    
+    
+            circle_marker_d7c38e0969fe4ea3fd9c22def3c007fc.bindTooltip(
+                `<div>
+                     C_41: 3198 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_15c9592db11faa95d8609cef2a1a4702 = L.circleMarker(
+                [12.964581681315789, 77.58389828970395],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_c6c7b93c84d26ae5308adb334c0b377b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0827027a1f3e5332fb7d213d65731683 = $(`<div id="html_0827027a1f3e5332fb7d213d65731683" style="width: 100.0%; height: 100.0%;"><b>Cluster C_38</b><br>Count: 3040<br>Dominant vehicle: SCOOTER<br>Police station: HALASURU GATE<br>Peak hour: 10<br>Quality: good</div>`)[0];
+                popup_c6c7b93c84d26ae5308adb334c0b377b.setContent(html_0827027a1f3e5332fb7d213d65731683);
+            
+        
+
+        circle_marker_15c9592db11faa95d8609cef2a1a4702.bindPopup(popup_c6c7b93c84d26ae5308adb334c0b377b)
+        ;
+
+        
+    
+    
+            circle_marker_15c9592db11faa95d8609cef2a1a4702.bindTooltip(
+                `<div>
+                     C_38: 3040 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4458e541c7237eb6a3cafcfd07374395 = L.circleMarker(
+                [12.998021466657063, 77.57135840260051],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_8b6fb45e375bd691feb2bac8cf690e8a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d8370b5e27a461b02b9785c56aacb090 = $(`<div id="html_d8370b5e27a461b02b9785c56aacb090" style="width: 100.0%; height: 100.0%;"><b>Cluster C_39</b><br>Count: 2928<br>Dominant vehicle: CAR<br>Police station: MALLESHWARAM<br>Peak hour: 10<br>Quality: good</div>`)[0];
+                popup_8b6fb45e375bd691feb2bac8cf690e8a.setContent(html_d8370b5e27a461b02b9785c56aacb090);
+            
+        
+
+        circle_marker_4458e541c7237eb6a3cafcfd07374395.bindPopup(popup_8b6fb45e375bd691feb2bac8cf690e8a)
+        ;
+
+        
+    
+    
+            circle_marker_4458e541c7237eb6a3cafcfd07374395.bindTooltip(
+                `<div>
+                     C_39: 2928 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_80b3d2163baae5a62722bf9d7add4375 = L.circleMarker(
+                [12.992656984457891, 77.58887485785311],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_9dee5d2ddc635d1ec9565e0945e5a3e7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_143fb03634a7ff9f0d8db7167f103d97 = $(`<div id="html_143fb03634a7ff9f0d8db7167f103d97" style="width: 100.0%; height: 100.0%;"><b>Cluster C_327</b><br>Count: 2757<br>Dominant vehicle: SCOOTER<br>Police station: HIGH GROUND<br>Peak hour: 3<br>Quality: good</div>`)[0];
+                popup_9dee5d2ddc635d1ec9565e0945e5a3e7.setContent(html_143fb03634a7ff9f0d8db7167f103d97);
+            
+        
+
+        circle_marker_80b3d2163baae5a62722bf9d7add4375.bindPopup(popup_9dee5d2ddc635d1ec9565e0945e5a3e7)
+        ;
+
+        
+    
+    
+            circle_marker_80b3d2163baae5a62722bf9d7add4375.bindTooltip(
+                `<div>
+                     C_327: 2757 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e1ee845e9f5a69cd5387e9204a9ab1b7 = L.circleMarker(
+                [12.965154722523119, 77.53811533358993],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_67e402ce1a14d53884da15a73af3b760 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6d4ad62135043f9488ae87c25a53aa2e = $(`<div id="html_6d4ad62135043f9488ae87c25a53aa2e" style="width: 100.0%; height: 100.0%;"><b>Cluster C_4</b><br>Count: 2677<br>Dominant vehicle: SCOOTER<br>Police station: VIJAYANAGARA<br>Peak hour: 11<br>Quality: good</div>`)[0];
+                popup_67e402ce1a14d53884da15a73af3b760.setContent(html_6d4ad62135043f9488ae87c25a53aa2e);
+            
+        
+
+        circle_marker_e1ee845e9f5a69cd5387e9204a9ab1b7.bindPopup(popup_67e402ce1a14d53884da15a73af3b760)
+        ;
+
+        
+    
+    
+            circle_marker_e1ee845e9f5a69cd5387e9204a9ab1b7.bindTooltip(
+                `<div>
+                     C_4: 2677 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3280bf55f9cc99eba35029dc6e5d9a54 = L.circleMarker(
+                [12.973571379808892, 77.55113007823016],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_e427f9c908c04b4990016cca4e3a890d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_29f87bc5ac2c2875e61b792a171bb3c2 = $(`<div id="html_29f87bc5ac2c2875e61b792a171bb3c2" style="width: 100.0%; height: 100.0%;"><b>Cluster C_54</b><br>Count: 2407<br>Dominant vehicle: SCOOTER<br>Police station: MAGADI ROAD<br>Peak hour: 11<br>Quality: good</div>`)[0];
+                popup_e427f9c908c04b4990016cca4e3a890d.setContent(html_29f87bc5ac2c2875e61b792a171bb3c2);
+            
+        
+
+        circle_marker_3280bf55f9cc99eba35029dc6e5d9a54.bindPopup(popup_e427f9c908c04b4990016cca4e3a890d)
+        ;
+
+        
+    
+    
+            circle_marker_3280bf55f9cc99eba35029dc6e5d9a54.bindTooltip(
+                `<div>
+                     C_54: 2407 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f3647e605e9aa87bb52692ca53f35126 = L.circleMarker(
+                [12.959679943667124, 77.57706802153636],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_556f98bc2c4d48a21037230b363099e3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b575a260f801bb2ecb24b994b19efdbb = $(`<div id="html_b575a260f801bb2ecb24b994b19efdbb" style="width: 100.0%; height: 100.0%;"><b>Cluster C_81</b><br>Count: 2187<br>Dominant vehicle: SCOOTER<br>Police station: CITY MARKET<br>Peak hour: 11<br>Quality: good</div>`)[0];
+                popup_556f98bc2c4d48a21037230b363099e3.setContent(html_b575a260f801bb2ecb24b994b19efdbb);
+            
+        
+
+        circle_marker_f3647e605e9aa87bb52692ca53f35126.bindPopup(popup_556f98bc2c4d48a21037230b363099e3)
+        ;
+
+        
+    
+    
+            circle_marker_f3647e605e9aa87bb52692ca53f35126.bindTooltip(
+                `<div>
+                     C_81: 2187 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_738923cdafd48f74de2e71172305ed1e = L.circleMarker(
+                [12.997506222949298, 77.54862164315576],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_ada67efcd42c43c8479406233d72d00f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0cab553f956461c8f681c606180c2d6f = $(`<div id="html_0cab553f956461c8f681c606180c2d6f" style="width: 100.0%; height: 100.0%;"><b>Cluster C_21</b><br>Count: 2094<br>Dominant vehicle: SCOOTER<br>Police station: VIJAYANAGARA<br>Peak hour: 8<br>Quality: good</div>`)[0];
+                popup_ada67efcd42c43c8479406233d72d00f.setContent(html_0cab553f956461c8f681c606180c2d6f);
+            
+        
+
+        circle_marker_738923cdafd48f74de2e71172305ed1e.bindPopup(popup_ada67efcd42c43c8479406233d72d00f)
+        ;
+
+        
+    
+    
+            circle_marker_738923cdafd48f74de2e71172305ed1e.bindTooltip(
+                `<div>
+                     C_21: 2094 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a040c0c345c88a899723509bc30078d = L.circleMarker(
+                [12.84190787359102, 77.6458057678966],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_0cfac057ef4c331e70a0f01fb3f69419 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_04531f5ac86620b3106c1e98cca10d3d = $(`<div id="html_04531f5ac86620b3106c1e98cca10d3d" style="width: 100.0%; height: 100.0%;"><b>Cluster C_173</b><br>Count: 1959<br>Dominant vehicle: SCOOTER<br>Police station: ELECTRONIC CITY<br>Peak hour: 12<br>Quality: good</div>`)[0];
+                popup_0cfac057ef4c331e70a0f01fb3f69419.setContent(html_04531f5ac86620b3106c1e98cca10d3d);
+            
+        
+
+        circle_marker_1a040c0c345c88a899723509bc30078d.bindPopup(popup_0cfac057ef4c331e70a0f01fb3f69419)
+        ;
+
+        
+    
+    
+            circle_marker_1a040c0c345c88a899723509bc30078d.bindTooltip(
+                `<div>
+                     C_173: 1959 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0bc3a255aeb1c066eb3945a924207433 = L.circleMarker(
+                [12.981296485329187, 77.59855271627787],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_aca3173311fe908f6fd6c792de82477b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9adcbc4446a49cdfb3ebc505d080007e = $(`<div id="html_9adcbc4446a49cdfb3ebc505d080007e" style="width: 100.0%; height: 100.0%;"><b>Cluster C_5</b><br>Count: 1929<br>Dominant vehicle: SCOOTER<br>Police station: SHIVAJINAGAR<br>Peak hour: 4<br>Quality: good</div>`)[0];
+                popup_aca3173311fe908f6fd6c792de82477b.setContent(html_9adcbc4446a49cdfb3ebc505d080007e);
+            
+        
+
+        circle_marker_0bc3a255aeb1c066eb3945a924207433.bindPopup(popup_aca3173311fe908f6fd6c792de82477b)
+        ;
+
+        
+    
+    
+            circle_marker_0bc3a255aeb1c066eb3945a924207433.bindTooltip(
+                `<div>
+                     C_5: 1929 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_25c2df3ce3415a783e6c31a27a6e71db = L.circleMarker(
+                [12.944050367517546, 77.57112433112003],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_709833177699d1be10d2db75396e8327 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a3ccff076e53ecec7a3821e6917a42db = $(`<div id="html_a3ccff076e53ecec7a3821e6917a42db" style="width: 100.0%; height: 100.0%;"><b>Cluster C_12</b><br>Count: 1900<br>Dominant vehicle: SCOOTER<br>Police station: BASAVANAGUDI<br>Peak hour: 10<br>Quality: good</div>`)[0];
+                popup_709833177699d1be10d2db75396e8327.setContent(html_a3ccff076e53ecec7a3821e6917a42db);
+            
+        
+
+        circle_marker_25c2df3ce3415a783e6c31a27a6e71db.bindPopup(popup_709833177699d1be10d2db75396e8327)
+        ;
+
+        
+    
+    
+            circle_marker_25c2df3ce3415a783e6c31a27a6e71db.bindTooltip(
+                `<div>
+                     C_12: 1900 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2bc87c0409be1610237898e9614ecc80 = L.circleMarker(
+                [13.000381902767533, 77.67707014276532],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_cf6c017ea6248cf29f2915dd78248532 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f3659d4729b0cb4992d96465f9dcf6b9 = $(`<div id="html_f3659d4729b0cb4992d96465f9dcf6b9" style="width: 100.0%; height: 100.0%;"><b>Cluster C_199</b><br>Count: 1874<br>Dominant vehicle: PASSENGER AUTO<br>Police station: MAHADEVAPURA<br>Peak hour: 1<br>Quality: good</div>`)[0];
+                popup_cf6c017ea6248cf29f2915dd78248532.setContent(html_f3659d4729b0cb4992d96465f9dcf6b9);
+            
+        
+
+        circle_marker_2bc87c0409be1610237898e9614ecc80.bindPopup(popup_cf6c017ea6248cf29f2915dd78248532)
+        ;
+
+        
+    
+    
+            circle_marker_2bc87c0409be1610237898e9614ecc80.bindTooltip(
+                `<div>
+                     C_199: 1874 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_38777d3334a64d10fbd59e171d566548 = L.circleMarker(
+                [12.996271345660729, 77.66861135342928],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_78112c883e860568e0b259e443ca8a8c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_380e5377c4880ad17152f6ed773d3a9b = $(`<div id="html_380e5377c4880ad17152f6ed773d3a9b" style="width: 100.0%; height: 100.0%;"><b>Cluster C_149</b><br>Count: 1807<br>Dominant vehicle: PASSENGER AUTO<br>Police station: MAHADEVAPURA<br>Peak hour: 10<br>Quality: good</div>`)[0];
+                popup_78112c883e860568e0b259e443ca8a8c.setContent(html_380e5377c4880ad17152f6ed773d3a9b);
+            
+        
+
+        circle_marker_38777d3334a64d10fbd59e171d566548.bindPopup(popup_78112c883e860568e0b259e443ca8a8c)
+        ;
+
+        
+    
+    
+            circle_marker_38777d3334a64d10fbd59e171d566548.bindTooltip(
+                `<div>
+                     C_149: 1807 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f01179e1353513c247a57ffe3f2cc6cc = L.circleMarker(
+                [12.96444694151913, 77.71791015956596],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_92a00ee89fa3c597cc0eed8027751409 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_338c33ef2e0d2f3358814712d5ce3bcd = $(`<div id="html_338c33ef2e0d2f3358814712d5ce3bcd" style="width: 100.0%; height: 100.0%;"><b>Cluster C_731</b><br>Count: 1751<br>Dominant vehicle: MAXI-CAB<br>Police station: HAL OLD AIRPORT<br>Peak hour: 5<br>Quality: good</div>`)[0];
+                popup_92a00ee89fa3c597cc0eed8027751409.setContent(html_338c33ef2e0d2f3358814712d5ce3bcd);
+            
+        
+
+        circle_marker_f01179e1353513c247a57ffe3f2cc6cc.bindPopup(popup_92a00ee89fa3c597cc0eed8027751409)
+        ;
+
+        
+    
+    
+            circle_marker_f01179e1353513c247a57ffe3f2cc6cc.bindTooltip(
+                `<div>
+                     C_731: 1751 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5f948a1966f5c9af16d3e46a2eedf1a9 = L.circleMarker(
+                [12.975720058669054, 77.55985434794881],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_4b7f3633d6f2ce97e571eb31e48fcf68 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0c3f3181f53f897fbd9e9726e7416ac0 = $(`<div id="html_0c3f3181f53f897fbd9e9726e7416ac0" style="width: 100.0%; height: 100.0%;"><b>Cluster C_34</b><br>Count: 1650<br>Dominant vehicle: SCOOTER<br>Police station: MAGADI ROAD<br>Peak hour: 4<br>Quality: good</div>`)[0];
+                popup_4b7f3633d6f2ce97e571eb31e48fcf68.setContent(html_0c3f3181f53f897fbd9e9726e7416ac0);
+            
+        
+
+        circle_marker_5f948a1966f5c9af16d3e46a2eedf1a9.bindPopup(popup_4b7f3633d6f2ce97e571eb31e48fcf68)
+        ;
+
+        
+    
+    
+            circle_marker_5f948a1966f5c9af16d3e46a2eedf1a9.bindTooltip(
+                `<div>
+                     C_34: 1650 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7a208ab999bc36f66afbda84e5b88281 = L.circleMarker(
+                [12.953188297988932, 77.54227954868416],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_85bc1e1c247e36224841c9306380355e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6f6f6f24b31664328de9e686b63833e1 = $(`<div id="html_6f6f6f24b31664328de9e686b63833e1" style="width: 100.0%; height: 100.0%;"><b>Cluster C_18</b><br>Count: 1602<br>Dominant vehicle: SCOOTER<br>Police station: BYATARAYANAPURA<br>Peak hour: 1<br>Quality: good</div>`)[0];
+                popup_85bc1e1c247e36224841c9306380355e.setContent(html_6f6f6f24b31664328de9e686b63833e1);
+            
+        
+
+        circle_marker_7a208ab999bc36f66afbda84e5b88281.bindPopup(popup_85bc1e1c247e36224841c9306380355e)
+        ;
+
+        
+    
+    
+            circle_marker_7a208ab999bc36f66afbda84e5b88281.bindTooltip(
+                `<div>
+                     C_18: 1602 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2780ee1ffc02d2b19c38c64af01425f6 = L.circleMarker(
+                [12.95738945726518, 77.70158666959101],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_135cb801e3bcf023ef00662374e3b5c6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4df8f29d3bf7ea891ce1b10b1d5c23a3 = $(`<div id="html_4df8f29d3bf7ea891ce1b10b1d5c23a3" style="width: 100.0%; height: 100.0%;"><b>Cluster C_7</b><br>Count: 1519<br>Dominant vehicle: SCOOTER<br>Police station: HAL OLD AIRPORT<br>Peak hour: 3<br>Quality: good</div>`)[0];
+                popup_135cb801e3bcf023ef00662374e3b5c6.setContent(html_4df8f29d3bf7ea891ce1b10b1d5c23a3);
+            
+        
+
+        circle_marker_2780ee1ffc02d2b19c38c64af01425f6.bindPopup(popup_135cb801e3bcf023ef00662374e3b5c6)
+        ;
+
+        
+    
+    
+            circle_marker_2780ee1ffc02d2b19c38c64af01425f6.bindTooltip(
+                `<div>
+                     C_7: 1519 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_124f9d4b26d245e1dd546f0b9f47ba85 = L.circleMarker(
+                [12.977113815241038, 77.57076443579726],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_2744558c001a70e08c1019cd38f3e5b8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f41c2385f3663e49a4702bbe73bff173 = $(`<div id="html_f41c2385f3663e49a4702bbe73bff173" style="width: 100.0%; height: 100.0%;"><b>Cluster C_91</b><br>Count: 1494<br>Dominant vehicle: PASSENGER AUTO<br>Police station: CHAMARAJPET<br>Peak hour: 7<br>Quality: good</div>`)[0];
+                popup_2744558c001a70e08c1019cd38f3e5b8.setContent(html_f41c2385f3663e49a4702bbe73bff173);
+            
+        
+
+        circle_marker_124f9d4b26d245e1dd546f0b9f47ba85.bindPopup(popup_2744558c001a70e08c1019cd38f3e5b8)
+        ;
+
+        
+    
+    
+            circle_marker_124f9d4b26d245e1dd546f0b9f47ba85.bindTooltip(
+                `<div>
+                     C_91: 1494 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a550762b180c3714ca2032e30e672dd = L.circleMarker(
+                [12.939723953634788, 77.69555414042463],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_fb66398b937b34a82d8622735dd0e531 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_316f8cc56de252ecdccebfe65ffbf47f = $(`<div id="html_316f8cc56de252ecdccebfe65ffbf47f" style="width: 100.0%; height: 100.0%;"><b>Cluster C_298</b><br>Count: 1409<br>Dominant vehicle: CAR<br>Police station: HAL OLD AIRPORT<br>Peak hour: 8<br>Quality: good</div>`)[0];
+                popup_fb66398b937b34a82d8622735dd0e531.setContent(html_316f8cc56de252ecdccebfe65ffbf47f);
+            
+        
+
+        circle_marker_1a550762b180c3714ca2032e30e672dd.bindPopup(popup_fb66398b937b34a82d8622735dd0e531)
+        ;
+
+        
+    
+    
+            circle_marker_1a550762b180c3714ca2032e30e672dd.bindTooltip(
+                `<div>
+                     C_298: 1409 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d3d3013e039edcb70e272527427e4de6 = L.circleMarker(
+                [13.00568279951441, 77.68577535574424],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_3b6cdbb8b58687f5060c4487eccfda4a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2180839018d835ef1c2cfa4a1dc35d36 = $(`<div id="html_2180839018d835ef1c2cfa4a1dc35d36" style="width: 100.0%; height: 100.0%;"><b>Cluster C_60</b><br>Count: 1276<br>Dominant vehicle: CAR<br>Police station: K.R. PURA<br>Peak hour: 10<br>Quality: good</div>`)[0];
+                popup_3b6cdbb8b58687f5060c4487eccfda4a.setContent(html_2180839018d835ef1c2cfa4a1dc35d36);
+            
+        
+
+        circle_marker_d3d3013e039edcb70e272527427e4de6.bindPopup(popup_3b6cdbb8b58687f5060c4487eccfda4a)
+        ;
+
+        
+    
+    
+            circle_marker_d3d3013e039edcb70e272527427e4de6.bindTooltip(
+                `<div>
+                     C_60: 1276 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b30c95abac23bdb11c8c8fbc0eddea7a = L.circleMarker(
+                [12.995527034089028, 77.69576493723162],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_dafa56b31ac67072a726e0b3172124df = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2f6e48102794010aee52911d0ca7a601 = $(`<div id="html_2f6e48102794010aee52911d0ca7a601" style="width: 100.0%; height: 100.0%;"><b>Cluster C_58</b><br>Count: 1253<br>Dominant vehicle: PASSENGER AUTO<br>Police station: MAHADEVAPURA<br>Peak hour: 11<br>Quality: good</div>`)[0];
+                popup_dafa56b31ac67072a726e0b3172124df.setContent(html_2f6e48102794010aee52911d0ca7a601);
+            
+        
+
+        circle_marker_b30c95abac23bdb11c8c8fbc0eddea7a.bindPopup(popup_dafa56b31ac67072a726e0b3172124df)
+        ;
+
+        
+    
+    
+            circle_marker_b30c95abac23bdb11c8c8fbc0eddea7a.bindTooltip(
+                `<div>
+                     C_58: 1253 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fb5030e4e8d428f8daf5e965f286ab9c = L.circleMarker(
+                [12.993136851061603, 77.55353074673509],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_2c24d1b309733fc2226e08869790db0b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f7235ceb2645ad143774e54808cb2829 = $(`<div id="html_f7235ceb2645ad143774e54808cb2829" style="width: 100.0%; height: 100.0%;"><b>Cluster C_83</b><br>Count: 1240<br>Dominant vehicle: CAR<br>Police station: RAJAJINAGAR<br>Peak hour: 3<br>Quality: good</div>`)[0];
+                popup_2c24d1b309733fc2226e08869790db0b.setContent(html_f7235ceb2645ad143774e54808cb2829);
+            
+        
+
+        circle_marker_fb5030e4e8d428f8daf5e965f286ab9c.bindPopup(popup_2c24d1b309733fc2226e08869790db0b)
+        ;
+
+        
+    
+    
+            circle_marker_fb5030e4e8d428f8daf5e965f286ab9c.bindTooltip(
+                `<div>
+                     C_83: 1240 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cf96bc129b46bfd099e7225241956e68 = L.circleMarker(
+                [12.971740330192915, 77.65810073616404],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_66ea9408029bcb8d58b8536833832188 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_df8e689f347f116d880f79b07e6c0a3b = $(`<div id="html_df8e689f347f116d880f79b07e6c0a3b" style="width: 100.0%; height: 100.0%;"><b>Cluster C_373</b><br>Count: 1214<br>Dominant vehicle: SCOOTER<br>Police station: JEEVANBHEEMANAGAR<br>Peak hour: 7<br>Quality: good</div>`)[0];
+                popup_66ea9408029bcb8d58b8536833832188.setContent(html_df8e689f347f116d880f79b07e6c0a3b);
+            
+        
+
+        circle_marker_cf96bc129b46bfd099e7225241956e68.bindPopup(popup_66ea9408029bcb8d58b8536833832188)
+        ;
+
+        
+    
+    
+            circle_marker_cf96bc129b46bfd099e7225241956e68.bindTooltip(
+                `<div>
+                     C_373: 1214 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bcefa0719363ec1bd4dc22fb47da55be = L.circleMarker(
+                [12.950631467529393, 77.6997890396515],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_484e4013a24ac4216dca978c22ccdd9c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_34dc45daa185e76905ef1202392df10b = $(`<div id="html_34dc45daa185e76905ef1202392df10b" style="width: 100.0%; height: 100.0%;"><b>Cluster C_168</b><br>Count: 1186<br>Dominant vehicle: CAR<br>Police station: HAL OLD AIRPORT<br>Peak hour: 3<br>Quality: good</div>`)[0];
+                popup_484e4013a24ac4216dca978c22ccdd9c.setContent(html_34dc45daa185e76905ef1202392df10b);
+            
+        
+
+        circle_marker_bcefa0719363ec1bd4dc22fb47da55be.bindPopup(popup_484e4013a24ac4216dca978c22ccdd9c)
+        ;
+
+        
+    
+    
+            circle_marker_bcefa0719363ec1bd4dc22fb47da55be.bindTooltip(
+                `<div>
+                     C_168: 1186 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bc509b8497f0985b559bfae59421a294 = L.circleMarker(
+                [12.973432717208077, 77.61522998217735],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_456dd366bc29f71963fe42ac1fc9ac0f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_78fcce5aa8dbf7b63c66a5fa39924a31 = $(`<div id="html_78fcce5aa8dbf7b63c66a5fa39924a31" style="width: 100.0%; height: 100.0%;"><b>Cluster C_229</b><br>Count: 1139<br>Dominant vehicle: PASSENGER AUTO<br>Police station: HALASUR<br>Peak hour: 4<br>Quality: good</div>`)[0];
+                popup_456dd366bc29f71963fe42ac1fc9ac0f.setContent(html_78fcce5aa8dbf7b63c66a5fa39924a31);
+            
+        
+
+        circle_marker_bc509b8497f0985b559bfae59421a294.bindPopup(popup_456dd366bc29f71963fe42ac1fc9ac0f)
+        ;
+
+        
+    
+    
+            circle_marker_bc509b8497f0985b559bfae59421a294.bindTooltip(
+                `<div>
+                     C_229: 1139 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ffc7ca231c31808d5e660806fccb6f45 = L.circleMarker(
+                [12.9273928179223, 77.67982093780776],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_ea822696b0a8d911fef92c0dbc2c8bca = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6c275734625aee15d4b954b6e6e60b81 = $(`<div id="html_6c275734625aee15d4b954b6e6e60b81" style="width: 100.0%; height: 100.0%;"><b>Cluster C_104</b><br>Count: 1090<br>Dominant vehicle: MAXI-CAB<br>Police station: BELLANDUR<br>Peak hour: 2<br>Quality: good</div>`)[0];
+                popup_ea822696b0a8d911fef92c0dbc2c8bca.setContent(html_6c275734625aee15d4b954b6e6e60b81);
+            
+        
+
+        circle_marker_ffc7ca231c31808d5e660806fccb6f45.bindPopup(popup_ea822696b0a8d911fef92c0dbc2c8bca)
+        ;
+
+        
+    
+    
+            circle_marker_ffc7ca231c31808d5e660806fccb6f45.bindTooltip(
+                `<div>
+                     C_104: 1090 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_236b1b6020f52726a13d4e0e93af3796 = L.circleMarker(
+                [12.906503325809119, 77.62997920543555],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_75800b1273641bf37c510c485b011c12 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_37a9b961c498b075d6876e07de8c22eb = $(`<div id="html_37a9b961c498b075d6876e07de8c22eb" style="width: 100.0%; height: 100.0%;"><b>Cluster C_114</b><br>Count: 1086<br>Dominant vehicle: SCOOTER<br>Police station: HSR LAYOUT<br>Peak hour: 13<br>Quality: good</div>`)[0];
+                popup_75800b1273641bf37c510c485b011c12.setContent(html_37a9b961c498b075d6876e07de8c22eb);
+            
+        
+
+        circle_marker_236b1b6020f52726a13d4e0e93af3796.bindPopup(popup_75800b1273641bf37c510c485b011c12)
+        ;
+
+        
+    
+    
+            circle_marker_236b1b6020f52726a13d4e0e93af3796.bindTooltip(
+                `<div>
+                     C_114: 1086 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8126d65de859226d054b14610d992013 = L.circleMarker(
+                [12.935766392610837, 77.61598794935962],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_5ca2b6061e3480efc10db6b783fdc74d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7d477e188a9a5bc7c81e1ac3a51abe20 = $(`<div id="html_7d477e188a9a5bc7c81e1ac3a51abe20" style="width: 100.0%; height: 100.0%;"><b>Cluster C_213</b><br>Count: 1015<br>Dominant vehicle: SCOOTER<br>Police station: ADUGODI<br>Peak hour: 9<br>Quality: good</div>`)[0];
+                popup_5ca2b6061e3480efc10db6b783fdc74d.setContent(html_7d477e188a9a5bc7c81e1ac3a51abe20);
+            
+        
+
+        circle_marker_8126d65de859226d054b14610d992013.bindPopup(popup_5ca2b6061e3480efc10db6b783fdc74d)
+        ;
+
+        
+    
+    
+            circle_marker_8126d65de859226d054b14610d992013.bindTooltip(
+                `<div>
+                     C_213: 1015 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_779fd9ea86106bf771ba0a5154d50862 = L.circleMarker(
+                [13.007794089102148, 77.54852401484868],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_1e7ac57d755db479d386eb2c2a62de5a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2cacaee3be2414ada5f142c1b6ee1d2c = $(`<div id="html_2cacaee3be2414ada5f142c1b6ee1d2c" style="width: 100.0%; height: 100.0%;"><b>Cluster C_36</b><br>Count: 1011<br>Dominant vehicle: SCOOTER<br>Police station: RAJAJINAGAR<br>Peak hour: 10<br>Quality: good</div>`)[0];
+                popup_1e7ac57d755db479d386eb2c2a62de5a.setContent(html_2cacaee3be2414ada5f142c1b6ee1d2c);
+            
+        
+
+        circle_marker_779fd9ea86106bf771ba0a5154d50862.bindPopup(popup_1e7ac57d755db479d386eb2c2a62de5a)
+        ;
+
+        
+    
+    
+            circle_marker_779fd9ea86106bf771ba0a5154d50862.bindTooltip(
+                `<div>
+                     C_36: 1011 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_13e4e66d3849102f2f763b6bd3a72ad6 = L.circleMarker(
+                [12.96083106711602, 77.52825387231269],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_a51c811a5c6ed1d458e0c92ca2adee51 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4f3e58511738babee69091d23c7f3dfe = $(`<div id="html_4f3e58511738babee69091d23c7f3dfe" style="width: 100.0%; height: 100.0%;"><b>Cluster C_605</b><br>Count: 981<br>Dominant vehicle: SCOOTER<br>Police station: BYATARAYANAPURA<br>Peak hour: 12<br>Quality: good</div>`)[0];
+                popup_a51c811a5c6ed1d458e0c92ca2adee51.setContent(html_4f3e58511738babee69091d23c7f3dfe);
+            
+        
+
+        circle_marker_13e4e66d3849102f2f763b6bd3a72ad6.bindPopup(popup_a51c811a5c6ed1d458e0c92ca2adee51)
+        ;
+
+        
+    
+    
+            circle_marker_13e4e66d3849102f2f763b6bd3a72ad6.bindTooltip(
+                `<div>
+                     C_605: 981 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_709e15557d62f5cdd1066c30312b591b = L.circleMarker(
+                [12.930380187217791, 77.68543168893206],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_f4d1d05dac5e576df431cd79376a9767 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0f19dbcc9856a3b70bd8177462bf0612 = $(`<div id="html_0f19dbcc9856a3b70bd8177462bf0612" style="width: 100.0%; height: 100.0%;"><b>Cluster C_126</b><br>Count: 939<br>Dominant vehicle: CAR<br>Police station: HAL OLD AIRPORT<br>Peak hour: 8<br>Quality: good</div>`)[0];
+                popup_f4d1d05dac5e576df431cd79376a9767.setContent(html_0f19dbcc9856a3b70bd8177462bf0612);
+            
+        
+
+        circle_marker_709e15557d62f5cdd1066c30312b591b.bindPopup(popup_f4d1d05dac5e576df431cd79376a9767)
+        ;
+
+        
+    
+    
+            circle_marker_709e15557d62f5cdd1066c30312b591b.bindTooltip(
+                `<div>
+                     C_126: 939 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_064d9399261fd5338ac1ab3c3641ac37 = L.circleMarker(
+                [13.191255339244876, 77.64623646348437],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_d6b102014215ca4f93202a9474228c4e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_05d26ad269074f814224be9a2c94ec96 = $(`<div id="html_05d26ad269074f814224be9a2c94ec96" style="width: 100.0%; height: 100.0%;"><b>Cluster C_17</b><br>Count: 927<br>Dominant vehicle: CAR<br>Police station: CHIKKAJALA<br>Peak hour: 1<br>Quality: good</div>`)[0];
+                popup_d6b102014215ca4f93202a9474228c4e.setContent(html_05d26ad269074f814224be9a2c94ec96);
+            
+        
+
+        circle_marker_064d9399261fd5338ac1ab3c3641ac37.bindPopup(popup_d6b102014215ca4f93202a9474228c4e)
+        ;
+
+        
+    
+    
+            circle_marker_064d9399261fd5338ac1ab3c3641ac37.bindTooltip(
+                `<div>
+                     C_17: 927 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca2c005dd087eedeab4d42b8cf346a92 = L.circleMarker(
+                [13.047498879157429, 77.57595622572062],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_2054a9aa2d598c9b9907d1d10fdbbc9f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f32bb90bf1ac29531679ace28f598c22 = $(`<div id="html_f32bb90bf1ac29531679ace28f598c22" style="width: 100.0%; height: 100.0%;"><b>Cluster C_301</b><br>Count: 902<br>Dominant vehicle: MOTOR CYCLE<br>Police station: KODIGEHALLI<br>Peak hour: 3<br>Quality: good</div>`)[0];
+                popup_2054a9aa2d598c9b9907d1d10fdbbc9f.setContent(html_f32bb90bf1ac29531679ace28f598c22);
+            
+        
+
+        circle_marker_ca2c005dd087eedeab4d42b8cf346a92.bindPopup(popup_2054a9aa2d598c9b9907d1d10fdbbc9f)
+        ;
+
+        
+    
+    
+            circle_marker_ca2c005dd087eedeab4d42b8cf346a92.bindTooltip(
+                `<div>
+                     C_301: 902 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_686f65de79847b1dd089cf2d87bfa150 = L.circleMarker(
+                [12.971358645259594, 77.59751701162527],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_81437c08a4c566575b534d2c425a2295 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dd7549269a453248619f4fda67c48bd2 = $(`<div id="html_dd7549269a453248619f4fda67c48bd2" style="width: 100.0%; height: 100.0%;"><b>Cluster C_138</b><br>Count: 886<br>Dominant vehicle: CAR<br>Police station: CUBBON PARK<br>Peak hour: 11<br>Quality: good</div>`)[0];
+                popup_81437c08a4c566575b534d2c425a2295.setContent(html_dd7549269a453248619f4fda67c48bd2);
+            
+        
+
+        circle_marker_686f65de79847b1dd089cf2d87bfa150.bindPopup(popup_81437c08a4c566575b534d2c425a2295)
+        ;
+
+        
+    
+    
+            circle_marker_686f65de79847b1dd089cf2d87bfa150.bindTooltip(
+                `<div>
+                     C_138: 886 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bef5151dc1280a5733071388d0ab4541 = L.circleMarker(
+                [12.985262774275833, 77.5535623587975],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_3712f01f0209899d0cb517436d0cabff = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8ed8a821cb61ea990e96fafacc6536fd = $(`<div id="html_8ed8a821cb61ea990e96fafacc6536fd" style="width: 100.0%; height: 100.0%;"><b>Cluster C_19</b><br>Count: 874<br>Dominant vehicle: SCOOTER<br>Police station: RAJAJINAGAR<br>Peak hour: 9<br>Quality: good</div>`)[0];
+                popup_3712f01f0209899d0cb517436d0cabff.setContent(html_8ed8a821cb61ea990e96fafacc6536fd);
+            
+        
+
+        circle_marker_bef5151dc1280a5733071388d0ab4541.bindPopup(popup_3712f01f0209899d0cb517436d0cabff)
+        ;
+
+        
+    
+    
+            circle_marker_bef5151dc1280a5733071388d0ab4541.bindTooltip(
+                `<div>
+                     C_19: 874 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9c0177c3fe29c0c4f2fe721bd8751e05 = L.circleMarker(
+                [12.932581437139133, 77.68835965930221],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_d90a020b42b7253a96368ed4c0e8eb08 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8300ba27e4725d4941028f9e98fbb671 = $(`<div id="html_8300ba27e4725d4941028f9e98fbb671" style="width: 100.0%; height: 100.0%;"><b>Cluster C_329</b><br>Count: 864<br>Dominant vehicle: PASSENGER AUTO<br>Police station: HAL OLD AIRPORT<br>Peak hour: 7<br>Quality: good</div>`)[0];
+                popup_d90a020b42b7253a96368ed4c0e8eb08.setContent(html_8300ba27e4725d4941028f9e98fbb671);
+            
+        
+
+        circle_marker_9c0177c3fe29c0c4f2fe721bd8751e05.bindPopup(popup_d90a020b42b7253a96368ed4c0e8eb08)
+        ;
+
+        
+    
+    
+            circle_marker_9c0177c3fe29c0c4f2fe721bd8751e05.bindTooltip(
+                `<div>
+                     C_329: 864 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6cc1cd04ab45925d20dafe70086ebe3a = L.circleMarker(
+                [12.993668677017116, 77.66265448594132],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_b7a5f1e64a2d34eb097e3cd094e3f632 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fef8341e2a376ffa99706c67153b0cdf = $(`<div id="html_fef8341e2a376ffa99706c67153b0cdf" style="width: 100.0%; height: 100.0%;"><b>Cluster C_142</b><br>Count: 818<br>Dominant vehicle: SCOOTER<br>Police station: BANASWADI<br>Peak hour: 14<br>Quality: good</div>`)[0];
+                popup_b7a5f1e64a2d34eb097e3cd094e3f632.setContent(html_fef8341e2a376ffa99706c67153b0cdf);
+            
+        
+
+        circle_marker_6cc1cd04ab45925d20dafe70086ebe3a.bindPopup(popup_b7a5f1e64a2d34eb097e3cd094e3f632)
+        ;
+
+        
+    
+    
+            circle_marker_6cc1cd04ab45925d20dafe70086ebe3a.bindTooltip(
+                `<div>
+                     C_142: 818 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_34111eee44ece087097ccf16e3448a63 = L.circleMarker(
+                [12.928574698648648, 77.58072796670761],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_d216ecd07a1ebac0ffb055a9e43956cd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_89730ddeb06c5b489832dbbf14070bd2 = $(`<div id="html_89730ddeb06c5b489832dbbf14070bd2" style="width: 100.0%; height: 100.0%;"><b>Cluster C_219</b><br>Count: 814<br>Dominant vehicle: SCOOTER<br>Police station: JAYANAGARA<br>Peak hour: 8<br>Quality: good</div>`)[0];
+                popup_d216ecd07a1ebac0ffb055a9e43956cd.setContent(html_89730ddeb06c5b489832dbbf14070bd2);
+            
+        
+
+        circle_marker_34111eee44ece087097ccf16e3448a63.bindPopup(popup_d216ecd07a1ebac0ffb055a9e43956cd)
+        ;
+
+        
+    
+    
+            circle_marker_34111eee44ece087097ccf16e3448a63.bindTooltip(
+                `<div>
+                     C_219: 814 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0c47903ff90c75effad94a6be5e20da6 = L.circleMarker(
+                [12.988088243112133, 77.53758034494687],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_e9b6207ab32275c5bbd1a6b4ad9707d9);
+        
+    
+        var popup_ea2cbba8fc907fcd5cd4afcfdf686938 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f52bf103534549f6f78bf401e508a45c = $(`<div id="html_f52bf103534549f6f78bf401e508a45c" style="width: 100.0%; height: 100.0%;"><b>Cluster C_150</b><br>Count: 792<br>Dominant vehicle: CAR<br>Police station: VIJAYANAGARA<br>Peak hour: 10<br>Quality: good</div>`)[0];
+                popup_ea2cbba8fc907fcd5cd4afcfdf686938.setContent(html_f52bf103534549f6f78bf401e508a45c);
+            
+        
+
+        circle_marker_0c47903ff90c75effad94a6be5e20da6.bindPopup(popup_ea2cbba8fc907fcd5cd4afcfdf686938)
+        ;
+
+        
+    
+    
+            circle_marker_0c47903ff90c75effad94a6be5e20da6.bindTooltip(
+                `<div>
+                     C_150: 792 violations
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
