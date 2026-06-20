@@ -1,0 +1,6 @@
+cluster_id,feedback_event_count,enforcement_done_count,recurred_after_enforcement_count,last_feedback_date,last_outcome,feedback_structural_boost
+C_0_0,1,1,1,2026-06-21,recurred,1
+C_104,1,0,0,2026-06-21,unknown,0
+C_18,1,1,0,2026-06-21,improved,0
+C_22,1,1,0,2026-06-21,no_change,0
+C_298,1,1,0,2026-06-21,improved,0
