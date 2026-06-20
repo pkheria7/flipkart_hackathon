@@ -1,0 +1,15 @@
+pandas
+numpy
+h3
+scikit-learn
+osmnx
+geopandas
+shapely
+networkx
+ortools
+folium
+plotly
+reportlab
+pyarrow
+scipy
+matplotlib
