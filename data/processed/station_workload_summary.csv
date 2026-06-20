@@ -1,0 +1,55 @@
+assigned_station,station_total_clusters,station_total_violations,station_needs_review_clusters,station_good_clusters,station_medium_clusters,station_top_hotspot_count,station_avg_cluster_size,station_max_cluster_size,station_priority_band,station_rank_by_violations,top_cluster_id,top_cluster_violations,top_cluster_peak_window,workload_notes
+ADUGODI,23,2384,13,2,21,4,103.7,1015,LOW,28,C_213,1015,09:00-11:00,13 clusters need manual review; one cluster dominates station (≥40% of violations)
+ASHOK NAGAR,24,2968,10,7,17,4,123.7,654,MEDIUM,25,C_403,654,04:00-06:00,10 clusters need manual review
+BANASHANKARI,8,1019,4,3,5,3,127.4,396,LOW,39,C_32,396,03:00-05:00,4 clusters need manual review
+BANASWADI,16,1530,8,3,13,3,95.6,818,LOW,34,C_142,818,14:00-16:00,8 clusters need manual review; one cluster dominates station (≥40% of violations)
+BASAVANAGUDI,16,3150,11,6,10,3,196.9,1900,MEDIUM,21,C_12,1900,10:00-12:00,11 clusters need manual review; one cluster dominates station (≥40% of violations)
+BELLANDUR,33,3892,16,7,26,6,117.9,1090,MEDIUM,17,C_104,1090,02:00-04:00,16 clusters need manual review
+BYATARAYANAPURA,16,3703,8,7,9,3,231.4,1602,MEDIUM,19,C_18,1602,01:00-03:00,8 clusters need manual review; one cluster dominates station (≥40% of violations)
+CHAMARAJPET,11,2881,10,2,7,3,261.9,1494,MEDIUM,26,C_91,1494,07:00-09:00,10 clusters need manual review; one cluster dominates station (≥40% of violations)
+CHIKKABANAVARA,9,312,6,0,9,3,34.7,82,LOW,50,C_165,82,11:00-13:00,6 clusters need manual review
+CHIKKAJALA,17,6107,9,3,14,3,359.2,4437,HIGH,10,C_171,4437,05:00-07:00,9 clusters need manual review; one cluster dominates station (≥40% of violations)
+CITY MARKET,36,15655,21,7,25,7,434.9,10667,CRITICAL,5,C_0_0,10667,01:00-03:00,21 clusters need manual review; one cluster dominates station (≥40% of violations)
+CUBBON PARK,19,1977,7,4,15,3,104.1,886,LOW,31,C_138,886,11:00-13:00,7 clusters need manual review; one cluster dominates station (≥40% of violations)
+DEVANAHALLI AIRPORT,1,16,1,0,1,1,16.0,16,LOW,54,C_622,16,05:00-07:00,1 clusters need manual review; one cluster dominates station (≥40% of violations)
+ELECTRONIC CITY,22,3309,11,6,15,4,150.4,1959,MEDIUM,20,C_173,1959,12:00-14:00,11 clusters need manual review; one cluster dominates station (≥40% of violations)
+HAL OLD AIRPORT,51,19446,22,17,32,10,381.3,7154,CRITICAL,4,C_333,7154,04:00-06:00,22 clusters need manual review
+HALASUR,28,3011,19,5,23,5,107.5,1139,MEDIUM,24,C_229,1139,04:00-06:00,19 clusters need manual review
+HALASURU GATE,31,4524,18,4,23,6,145.9,3040,HIGH,14,C_38,3040,10:00-12:00,18 clusters need manual review; one cluster dominates station (≥40% of violations)
+HEBBALA,10,3705,4,3,7,3,370.5,3198,MEDIUM,18,C_41,3198,04:00-06:00,4 clusters need manual review; one cluster dominates station (≥40% of violations)
+HENNURU,12,392,6,0,12,3,32.7,59,LOW,49,C_838,59,11:00-13:00,6 clusters need manual review
+HIGH GROUND,19,4200,13,6,11,3,221.1,2757,MEDIUM,16,C_327,2757,03:00-05:00,13 clusters need manual review; one cluster dominates station (≥40% of violations)
+HSR LAYOUT,34,4491,19,6,26,6,132.1,1086,MEDIUM,15,C_114,1086,13:00-15:00,19 clusters need manual review
+HULIMAVU,21,1677,10,5,15,4,79.9,337,LOW,33,C_184,337,02:00-04:00,10 clusters need manual review
+J.P. NAGAR,18,795,9,1,17,3,44.2,146,LOW,41,C_734,146,09:00-11:00,9 clusters need manual review
+JALAHALLI,10,715,4,3,6,3,71.5,233,LOW,43,C_88,233,03:00-05:00,4 clusters need manual review
+JAYANAGARA,34,3074,15,6,28,6,90.4,814,MEDIUM,23,C_219,814,08:00-10:00,15 clusters need manual review
+JEEVANBHEEMANAGAR,35,5678,16,11,24,7,162.2,1214,HIGH,13,C_373,1214,07:00-09:00,16 clusters need manual review
+JNANABHARATHI,4,600,2,1,3,3,150.0,443,LOW,45,C_67,443,12:00-14:00,2 clusters need manual review; one cluster dominates station (≥40% of violations)
+K.G. HALLI,9,458,6,1,8,3,50.9,266,LOW,46,C_383,266,04:00-06:00,6 clusters need manual review; one cluster dominates station (≥40% of violations)
+K.R. PURA,14,5830,11,4,10,3,416.4,3926,HIGH,12,C_3,3926,00:00-02:00,11 clusters need manual review; one cluster dominates station (≥40% of violations)
+K.S. LAYOUT,11,430,3,0,11,3,39.1,94,LOW,47,C_504,94,12:00-14:00,3 clusters need manual review
+KAMAKSHIPALYA,13,747,6,2,10,3,57.5,200,LOW,42,C_285,200,10:00-12:00,6 clusters need manual review
+KENGERI,5,187,2,0,5,3,37.4,59,LOW,52,C_542,59,07:00-09:00,2 clusters need manual review
+KODIGEHALLI,33,8738,15,10,21,6,264.8,5251,HIGH,7,C_20,5251,11:00-13:00,15 clusters need manual review; one cluster dominates station (≥40% of violations)
+MADIWALA,8,796,3,2,6,3,99.5,273,LOW,40,C_603,273,01:00-03:00,3 clusters need manual review
+MAGADI ROAD,40,7483,22,10,30,8,187.1,2407,HIGH,8,C_54,2407,11:00-13:00,22 clusters need manual review
+MAHADEVAPURA,20,6005,12,5,14,4,300.2,1874,HIGH,11,C_199,1874,01:00-03:00,12 clusters need manual review
+MALLESHWARAM,28,24086,21,9,19,5,860.2,9096,CRITICAL,3,C_22,9096,10:00-12:00,21 clusters need manual review
+MICO LAYOUT,24,2243,11,5,19,4,93.5,419,LOW,30,C_349,419,11:00-13:00,11 clusters need manual review
+NO POLICE STATION,3,67,2,0,3,3,22.3,32,LOW,53,C_476,32,11:00-13:00,2 clusters need manual review; one cluster dominates station (≥40% of violations)
+PEENYA,8,669,5,3,5,3,83.6,240,LOW,44,C_62,240,11:00-13:00,5 clusters need manual review
+PULIKESHINAGAR(F.TOWN),29,3110,13,8,21,5,107.2,714,MEDIUM,22,C_251,714,12:00-14:00,13 clusters need manual review
+R.T. NAGAR,17,1166,9,3,14,3,68.6,312,LOW,37,C_247,312,10:00-12:00,9 clusters need manual review
+RAJAJINAGAR,46,6236,30,12,32,9,135.6,1240,HIGH,9,C_83,1240,03:00-05:00,30 clusters need manual review
+SADASHIVANAGAR,9,1101,4,2,7,3,122.3,674,LOW,38,C_189,674,11:00-13:00,4 clusters need manual review; one cluster dominates station (≥40% of violations)
+SHESHADRIPURAM,20,2523,7,8,12,4,126.2,512,MEDIUM,27,C_1,512,09:00-11:00,7 clusters need manual review
+SHIVAJINAGAR,35,27458,21,9,24,7,784.5,17825,CRITICAL,2,C_27_0,17825,10:00-12:00,21 clusters need manual review; one cluster dominates station (≥40% of violations)
+THALAGATTAPURA,5,271,3,1,4,3,54.2,161,LOW,51,C_174,161,11:00-13:00,3 clusters need manual review; one cluster dominates station (≥40% of violations)
+UPPARPET,33,36360,22,5,21,6,1101.8,23553,CRITICAL,1,C_0_1,23553,09:00-11:00,22 clusters need manual review; one cluster dominates station (≥40% of violations)
+V.V.PURAM (C.PET),11,394,7,1,10,3,35.8,110,LOW,48,C_627,110,03:00-05:00,7 clusters need manual review
+VIJAYANAGARA,33,14536,21,16,17,6,440.5,4474,CRITICAL,6,C_153,4474,04:00-06:00,21 clusters need manual review
+WHITEFIELD,19,1388,9,3,16,3,73.1,375,LOW,36,C_335,375,08:00-10:00,9 clusters need manual review
+WILSON GARDEN,23,2349,16,5,18,4,102.1,386,LOW,29,C_319,386,03:00-05:00,16 clusters need manual review
+YELAHANKA,13,1499,5,4,9,3,115.3,665,LOW,35,C_261,665,02:00-04:00,5 clusters need manual review; one cluster dominates station (≥40% of violations)
+YESHWANTHPURA,17,1797,10,5,12,3,105.7,509,LOW,32,C_183,509,09:00-11:00,10 clusters need manual review

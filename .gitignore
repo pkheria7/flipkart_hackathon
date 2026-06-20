@@ -24,3 +24,21 @@ venv
 # (use parquet locally or regenerate via pipeline/run_phase1.py)
 data/processed/cleaned_violations.csv
 data/processed/clustered_violations.csv
+
+# Raw data — never commit
+data/raw/
+
+# Secrets / environment
+.env
+.env.*
+*.secret
+
+# Test/type caches
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
