@@ -30,6 +30,10 @@ def _format_officer_email(officer_id: str, name: str, station: str, assignments:
         lines.append(f"{i}. {a['time_window']} — {a['cluster_id']}")
         lines.append(f"   Action: {a['action']}")
         lines.append(f"   Reason: {a['reason']}")
+        if a.get("explanation_en"):
+            lines.append(f"   Why: {a['explanation_en']}")
+        if a.get("explanation_kn"):
+            lines.append(f"   ಏಕೆ (Kannada): {a['explanation_kn']}")
         lines.append(f"   Location: {a['centroid_lat']:.6f}, {a['centroid_lng']:.6f}")
         lines.append("")
     lines.append("Please report the outcome after each patrol.")

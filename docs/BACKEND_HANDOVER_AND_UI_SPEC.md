@@ -162,6 +162,21 @@ export HEAD_OFFICER_EMAIL="head.officer@btp.gov.in"
 
 Default mode is `dry_run=True`, which writes `.eml` files instead of sending real emails.
 
+### LLM explanations and Kannada translation
+
+Set:
+
+```bash
+export GROQ_API_KEY="gsk_..."
+```
+
+If set, the agent uses Groq LLaMA to:
+- Generate plain-English explanations of why each hotspot is prioritized
+- Translate those explanations into Kannada (ಕನ್ನಡ)
+
+If `GROQ_API_KEY` is not set, the system falls back to template-based explanations and marks Kannada as unavailable.
+LLM outputs are cached in `data/outputs/llm_cache.json` to avoid repeated API calls.
+
 ---
 
 ## 8. Demo mode

@@ -6,12 +6,12 @@
 
 | Metric | Week 1 | Week 2 | Change |
 |--------|--------|--------|--------|
-| Total violations | 257,752 | 223,371 | -34,381 (-13.3%) |
+| Total violations | 257,752 | 224,092 | -33,660 (-13.1%) |
 | STRUCTURAL clusters | 243 | 309 | +66 |
 | RESPONSIVE clusters | 631 | 583 | -48 |
-| Avg ROI of hotspots | 50.05 | 50.05 | -0.00 |
+| Avg ROI of hotspots | 50.05 | 50.05 | +0.00 |
 | Counterfactual violations (no intervention) | — | 270,639 | — |
-| Prevented violations (simulated) | — | 47,268 | — |
+| Prevented violations (simulated) | — | 46,547 | — |
 
 ## Interpretation
 

@@ -16,6 +16,9 @@ import numpy as np
 import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+from agents.llm_explainer import explain_hotspot
+from agents.kannada_translator import translate_to_kannada
 SCORED_PATH = PROJECT_ROOT / "data" / "outputs" / "scored_hotspots.parquet"
 OFFICERS_PATH = PROJECT_ROOT / "data" / "processed" / "synthetic_officers.csv"
 TRUCKS_PATH = PROJECT_ROOT / "data" / "processed" / "synthetic_tow_trucks.csv"
@@ -39,7 +42,7 @@ def load_rosters() -> tuple[pd.DataFrame, pd.DataFrame]:
     return officers, trucks
 
 
-def generate_master_plan(date_str: str | None = None, top_n: int = 5) -> dict:
+def generate_master_plan(date_str: str | None = None, top_n: int = 5, use_llm: bool = True, llm_top_n: int = 3) -> dict:
     """Generate the daily master plan."""
     if date_str is None:
         date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -65,6 +68,29 @@ def generate_master_plan(date_str: str | None = None, top_n: int = 5) -> dict:
 
         assignments = []
         for i, (_, row) in enumerate(top.iterrows()):
+            # Generate LLM explanations for top-N per station only
+            explanation_en = ""
+            explanation_kn = ""
+            if use_llm and i < llm_top_n:
+                cluster_data = {
+                    "cluster_id": row["cluster_id"],
+                    "road_class": row["road_class"],
+                    "road_width_m": float(row["road_width_m"]),
+                    "violation_count": int(row["violation_count"]),
+                    "lcle_pct": float(row["lcle_pct"]),
+                    "bci": float(row["bci"]),
+                    "persistence": float(row["persistence"]),
+                    "recurrence": float(row["recurrence"]),
+                    "roi_score": float(row["roi_score"]),
+                    "classification": row["classification"],
+                    "peak_window": row["peak_window"],
+                }
+                try:
+                    explanation_en = explain_hotspot(cluster_data)
+                    explanation_kn = translate_to_kannada(explanation_en)
+                except Exception as exc:
+                    explanation_en = f"(LLM error: {exc})"
+                    explanation_kn = ""
             officer = station_officers.iloc[i % len(station_officers)] if len(station_officers) else None
             truck = station_trucks.iloc[i % len(station_trucks)] if len(station_trucks) and row["classification"] == "STRUCTURAL" else None
 
@@ -89,6 +115,8 @@ def generate_master_plan(date_str: str | None = None, top_n: int = 5) -> dict:
                     f"ROI={row['roi_score']:.1f}, LCLE={row['lcle_pct']:.1f}%, "
                     f"BCI={row['bci']:.3f}, class={row['classification']}"
                 ),
+                "explanation_en": explanation_en,
+                "explanation_kn": explanation_kn,
             }
             assignments.append(assignment)
             all_assignments.append(assignment)
@@ -140,6 +168,16 @@ def _write_markdown(plan: dict) -> None:
                 f"| {a['time_window']} | {a['cluster_id']} | {a['officer_name']} ({a['officer_id']}) | {tow} | {a['action']} | {a['reason']} |"
             )
         lines.append("")
+
+        # Add LLM explanations for top assignments
+        explained = [a for a in station_plan["assignments"] if a.get("explanation_en")]
+        if explained:
+            lines.append("### Plain-language explanations")
+            for a in explained:
+                lines.append(f"- **{a['cluster_id']} (English):** {a['explanation_en']}")
+                if a.get("explanation_kn"):
+                    lines.append(f"- **{a['cluster_id']} (ಕನ್ನಡ):** {a['explanation_kn']}")
+            lines.append("")
 
     PLAN_MD.parent.mkdir(parents=True, exist_ok=True)
     PLAN_MD.write_text("\n".join(lines), encoding="utf-8")

@@ -75,6 +75,8 @@
   - Location (lat/lng or landmark)
   - Action
   - Reason
+  - **Plain-English explanation** (from LLM)
+  - **Kannada explanation** (from LLM)
   - Tow truck support (if any)
 - Button: **Mark as Done** → opens feedback form
 

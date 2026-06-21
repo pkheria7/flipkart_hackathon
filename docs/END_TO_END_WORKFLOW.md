@@ -88,6 +88,12 @@ Each row is one of 1,084 hotspots with columns like `roi_score`, `classification
 
 After the pipeline finishes, `generate_master_plan()` reads `scored_hotspots.parquet` plus the officer and tow-truck rosters, then builds a command-level daily plan.
 
+For the top assignments per station, it also calls:
+- `agents/llm_explainer.py` → plain-English explanation of why the hotspot matters
+- `agents/kannada_translator.py` → Kannada (ಕನ್ನಡ) translation of that explanation
+
+Both use Groq LLaMA if `GROQ_API_KEY` is set; otherwise they fall back to template text.
+
 For each police station:
 - Pick the top-N hotspots by `roi_score`
 - Assign a specific officer from that station

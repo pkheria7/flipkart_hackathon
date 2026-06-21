@@ -19,6 +19,8 @@ from agents.dispatcher import dispatch_head_officer, dispatch_approved_plan
 from agents.mailer import EML_DIR
 from agents.feedback_ingestor import ingest_officer_feedback, clear_synthetic_feedback
 from agents.state_manager import load_state
+from agents.llm_explainer import explain_hotspot
+from agents.kannada_translator import translate_to_kannada
 
 from demo.synth_officers import generate_officers
 from demo.synth_tow_trucks import generate_tow_trucks
@@ -117,6 +119,33 @@ def test_agent_state_updated():
     assert "total_runs" in state
 
 
+def test_llm_explainer_fallback():
+    sample = {
+        "cluster_id": "C_TEST",
+        "road_class": "trunk",
+        "road_width_m": 10.0,
+        "violation_count": 500,
+        "lcle_pct": 45.0,
+        "bci": 0.5,
+        "persistence": 3.0,
+        "recurrence": 0.8,
+        "roi_score": 75.0,
+        "classification": "STRUCTURAL",
+        "peak_window": "17:00-19:00",
+    }
+    explanation = explain_hotspot(sample)
+    assert isinstance(explanation, str)
+    assert len(explanation) > 0
+    assert "C_TEST" in explanation or "structural" in explanation.lower()
+
+
+def test_kannada_translator_fallback():
+    text = "This hotspot has high violations during evening peak."
+    translation = translate_to_kannada(text)
+    assert isinstance(translation, str)
+    assert len(translation) > 0
+
+
 if __name__ == "__main__":
     test_roster_generation()
     print("PASS: test_roster_generation")
@@ -138,5 +167,11 @@ if __name__ == "__main__":
 
     test_agent_state_updated()
     print("PASS: test_agent_state_updated")
+
+    test_llm_explainer_fallback()
+    print("PASS: test_llm_explainer_fallback")
+
+    test_kannada_translator_fallback()
+    print("PASS: test_kannada_translator_fallback")
 
     print("\nAll agent tests passed.")

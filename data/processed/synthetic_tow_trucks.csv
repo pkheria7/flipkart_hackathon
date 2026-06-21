@@ -1,109 +1,109 @@
 truck_id,assigned_station,driver_name,email,phone,capacity
-TOW_ADUGODI_01,ADUGODI,Kiran,tow_adugodi_01@btp-demo.example,+91-77073142457,2
-TOW_ADUGODI_02,ADUGODI,Manjunath,tow_adugodi_02@btp-demo.example,+91-77413965193,4
-TOW_ASHOK_NAGAR_01,ASHOK NAGAR,Kiran,tow_ashok_nagar_01@btp-demo.example,+91-77426957817,2
-TOW_ASHOK_NAGAR_02,ASHOK NAGAR,Manjunath,tow_ashok_nagar_02@btp-demo.example,+91-77530670728,4
-TOW_BANASHANKARI_01,BANASHANKARI,Kiran,tow_banashankari_01@btp-demo.example,+91-77312433741,2
-TOW_BANASHANKARI_02,BANASHANKARI,Manjunath,tow_banashankari_02@btp-demo.example,+91-77681569182,4
-TOW_BANASWADI_01,BANASWADI,Kiran,tow_banaswadi_01@btp-demo.example,+91-77465500841,2
-TOW_BANASWADI_02,BANASWADI,Manjunath,tow_banaswadi_02@btp-demo.example,+91-77398062104,4
-TOW_BASAVANAGUDI_01,BASAVANAGUDI,Kiran,tow_basavanagudi_01@btp-demo.example,+91-77152993339,2
-TOW_BASAVANAGUDI_02,BASAVANAGUDI,Manjunath,tow_basavanagudi_02@btp-demo.example,+91-77411798789,4
-TOW_BELLANDUR_01,BELLANDUR,Kiran,tow_bellandur_01@btp-demo.example,+91-77927022011,2
-TOW_BELLANDUR_02,BELLANDUR,Manjunath,tow_bellandur_02@btp-demo.example,+91-77765655408,4
-TOW_BYATARAYANAPURA_01,BYATARAYANAPURA,Kiran,tow_byatarayanapura_01@btp-demo.example,+91-77597678868,2
-TOW_BYATARAYANAPURA_02,BYATARAYANAPURA,Manjunath,tow_byatarayanapura_02@btp-demo.example,+91-77374335305,4
-TOW_CHAMARAJPET_01,CHAMARAJPET,Kiran,tow_chamarajpet_01@btp-demo.example,+91-77987252410,2
-TOW_CHAMARAJPET_02,CHAMARAJPET,Manjunath,tow_chamarajpet_02@btp-demo.example,+91-77457096571,4
-TOW_CHIKKABANAVARA_01,CHIKKABANAVARA,Kiran,tow_chikkabanavara_01@btp-demo.example,+91-77690657021,2
-TOW_CHIKKABANAVARA_02,CHIKKABANAVARA,Manjunath,tow_chikkabanavara_02@btp-demo.example,+91-77621256266,4
-TOW_CHIKKAJALA_01,CHIKKAJALA,Kiran,tow_chikkajala_01@btp-demo.example,+91-77440346522,2
-TOW_CHIKKAJALA_02,CHIKKAJALA,Manjunath,tow_chikkajala_02@btp-demo.example,+91-77751164648,4
-TOW_CITY_MARKET_01,CITY MARKET,Kiran,tow_city_market_01@btp-demo.example,+91-77587622309,2
-TOW_CITY_MARKET_02,CITY MARKET,Manjunath,tow_city_market_02@btp-demo.example,+91-77227208250,4
-TOW_CUBBON_PARK_01,CUBBON PARK,Kiran,tow_cubbon_park_01@btp-demo.example,+91-77295581266,2
-TOW_CUBBON_PARK_02,CUBBON PARK,Manjunath,tow_cubbon_park_02@btp-demo.example,+91-77704628517,4
-TOW_DEVANAHALLI_AIRPORT_01,DEVANAHALLI AIRPORT,Kiran,tow_devanahalli_airport_01@btp-demo.example,+91-77780649444,2
-TOW_DEVANAHALLI_AIRPORT_02,DEVANAHALLI AIRPORT,Manjunath,tow_devanahalli_airport_02@btp-demo.example,+91-77143316125,4
-TOW_ELECTRONIC_CITY_01,ELECTRONIC CITY,Kiran,tow_electronic_city_01@btp-demo.example,+91-77285275846,2
-TOW_ELECTRONIC_CITY_02,ELECTRONIC CITY,Manjunath,tow_electronic_city_02@btp-demo.example,+91-77790388061,4
-TOW_HAL_OLD_AIRPORT_01,HAL OLD AIRPORT,Kiran,tow_hal_old_airport_01@btp-demo.example,+91-77205197364,2
-TOW_HAL_OLD_AIRPORT_02,HAL OLD AIRPORT,Manjunath,tow_hal_old_airport_02@btp-demo.example,+91-77482635086,4
-TOW_HALASUR_01,HALASUR,Kiran,tow_halasur_01@btp-demo.example,+91-77520654272,2
-TOW_HALASUR_02,HALASUR,Manjunath,tow_halasur_02@btp-demo.example,+91-77559768658,4
-TOW_HALASURU_GATE_01,HALASURU GATE,Kiran,tow_halasuru_gate_01@btp-demo.example,+91-77845872440,2
-TOW_HALASURU_GATE_02,HALASURU GATE,Manjunath,tow_halasuru_gate_02@btp-demo.example,+91-77303216520,4
-TOW_HEBBALA_01,HEBBALA,Kiran,tow_hebbala_01@btp-demo.example,+91-77241471108,2
-TOW_HEBBALA_02,HEBBALA,Manjunath,tow_hebbala_02@btp-demo.example,+91-77935419796,4
-TOW_HENNURU_01,HENNURU,Kiran,tow_hennuru_01@btp-demo.example,+91-77760068911,2
-TOW_HENNURU_02,HENNURU,Manjunath,tow_hennuru_02@btp-demo.example,+91-77145124287,4
-TOW_HIGH_GROUND_01,HIGH GROUND,Kiran,tow_high_ground_01@btp-demo.example,+91-77719107397,2
-TOW_HIGH_GROUND_02,HIGH GROUND,Manjunath,tow_high_ground_02@btp-demo.example,+91-77531948869,4
-TOW_HSR_LAYOUT_01,HSR LAYOUT,Kiran,tow_hsr_layout_01@btp-demo.example,+91-77560119811,2
-TOW_HSR_LAYOUT_02,HSR LAYOUT,Manjunath,tow_hsr_layout_02@btp-demo.example,+91-77650052177,4
-TOW_HULIMAVU_01,HULIMAVU,Kiran,tow_hulimavu_01@btp-demo.example,+91-77717096819,2
-TOW_HULIMAVU_02,HULIMAVU,Manjunath,tow_hulimavu_02@btp-demo.example,+91-77336045080,4
-TOW_J.P._NAGAR_01,J.P. NAGAR,Kiran,tow_j.p._nagar_01@btp-demo.example,+91-77465700862,2
-TOW_J.P._NAGAR_02,J.P. NAGAR,Manjunath,tow_j.p._nagar_02@btp-demo.example,+91-77065523466,4
-TOW_JALAHALLI_01,JALAHALLI,Kiran,tow_jalahalli_01@btp-demo.example,+91-77925141329,2
-TOW_JALAHALLI_02,JALAHALLI,Manjunath,tow_jalahalli_02@btp-demo.example,+91-77209234026,4
-TOW_JAYANAGARA_01,JAYANAGARA,Kiran,tow_jayanagara_01@btp-demo.example,+91-77967524318,2
-TOW_JAYANAGARA_02,JAYANAGARA,Manjunath,tow_jayanagara_02@btp-demo.example,+91-77224437575,4
-TOW_JEEVANBHEEMANAGAR_01,JEEVANBHEEMANAGAR,Kiran,tow_jeevanbheemanagar_01@btp-demo.example,+91-77919343256,2
-TOW_JEEVANBHEEMANAGAR_02,JEEVANBHEEMANAGAR,Manjunath,tow_jeevanbheemanagar_02@btp-demo.example,+91-77747629836,4
-TOW_JNANABHARATHI_01,JNANABHARATHI,Kiran,tow_jnanabharathi_01@btp-demo.example,+91-77780969627,2
-TOW_JNANABHARATHI_02,JNANABHARATHI,Manjunath,tow_jnanabharathi_02@btp-demo.example,+91-77549482775,4
-TOW_K.G._HALLI_01,K.G. HALLI,Kiran,tow_k.g._halli_01@btp-demo.example,+91-77100879813,2
-TOW_K.G._HALLI_02,K.G. HALLI,Manjunath,tow_k.g._halli_02@btp-demo.example,+91-77946053214,4
-TOW_K.R._PURA_01,K.R. PURA,Kiran,tow_k.r._pura_01@btp-demo.example,+91-77224971939,2
-TOW_K.R._PURA_02,K.R. PURA,Manjunath,tow_k.r._pura_02@btp-demo.example,+91-77433324543,4
-TOW_K.S._LAYOUT_01,K.S. LAYOUT,Kiran,tow_k.s._layout_01@btp-demo.example,+91-77184019898,2
-TOW_K.S._LAYOUT_02,K.S. LAYOUT,Manjunath,tow_k.s._layout_02@btp-demo.example,+91-77685544668,4
-TOW_KAMAKSHIPALYA_01,KAMAKSHIPALYA,Kiran,tow_kamakshipalya_01@btp-demo.example,+91-77023601888,2
-TOW_KAMAKSHIPALYA_02,KAMAKSHIPALYA,Manjunath,tow_kamakshipalya_02@btp-demo.example,+91-77995221290,4
-TOW_KENGERI_01,KENGERI,Kiran,tow_kengeri_01@btp-demo.example,+91-77409953054,2
-TOW_KENGERI_02,KENGERI,Manjunath,tow_kengeri_02@btp-demo.example,+91-77563412636,4
-TOW_KODIGEHALLI_01,KODIGEHALLI,Kiran,tow_kodigehalli_01@btp-demo.example,+91-77401382806,2
-TOW_KODIGEHALLI_02,KODIGEHALLI,Manjunath,tow_kodigehalli_02@btp-demo.example,+91-77571321167,4
-TOW_MADIWALA_01,MADIWALA,Kiran,tow_madiwala_01@btp-demo.example,+91-77873601276,2
-TOW_MADIWALA_02,MADIWALA,Manjunath,tow_madiwala_02@btp-demo.example,+91-77679436193,4
-TOW_MAGADI_ROAD_01,MAGADI ROAD,Kiran,tow_magadi_road_01@btp-demo.example,+91-77851586202,2
-TOW_MAGADI_ROAD_02,MAGADI ROAD,Manjunath,tow_magadi_road_02@btp-demo.example,+91-77773667430,4
-TOW_MAHADEVAPURA_01,MAHADEVAPURA,Kiran,tow_mahadevapura_01@btp-demo.example,+91-77480660609,2
-TOW_MAHADEVAPURA_02,MAHADEVAPURA,Manjunath,tow_mahadevapura_02@btp-demo.example,+91-77891407636,4
-TOW_MALLESHWARAM_01,MALLESHWARAM,Kiran,tow_malleshwaram_01@btp-demo.example,+91-77317154723,2
-TOW_MALLESHWARAM_02,MALLESHWARAM,Manjunath,tow_malleshwaram_02@btp-demo.example,+91-77484157943,4
-TOW_MICO_LAYOUT_01,MICO LAYOUT,Kiran,tow_mico_layout_01@btp-demo.example,+91-77508123200,2
-TOW_MICO_LAYOUT_02,MICO LAYOUT,Manjunath,tow_mico_layout_02@btp-demo.example,+91-77385853673,4
-TOW_NO_POLICE_STATION_01,NO POLICE STATION,Kiran,tow_no_police_station_01@btp-demo.example,+91-77639945057,2
-TOW_NO_POLICE_STATION_02,NO POLICE STATION,Manjunath,tow_no_police_station_02@btp-demo.example,+91-77826873099,4
-TOW_PEENYA_01,PEENYA,Kiran,tow_peenya_01@btp-demo.example,+91-77552957528,2
-TOW_PEENYA_02,PEENYA,Manjunath,tow_peenya_02@btp-demo.example,+91-77720196966,4
-TOW_PULIKESHINAGAR(F.TOWN)_01,PULIKESHINAGAR(F.TOWN),Kiran,tow_pulikeshinagar(f.town)_01@btp-demo.example,+91-77810747535,2
-TOW_PULIKESHINAGAR(F.TOWN)_02,PULIKESHINAGAR(F.TOWN),Manjunath,tow_pulikeshinagar(f.town)_02@btp-demo.example,+91-77132148337,4
-TOW_R.T._NAGAR_01,R.T. NAGAR,Kiran,tow_r.t._nagar_01@btp-demo.example,+91-77805601544,2
-TOW_R.T._NAGAR_02,R.T. NAGAR,Manjunath,tow_r.t._nagar_02@btp-demo.example,+91-77363531250,4
-TOW_RAJAJINAGAR_01,RAJAJINAGAR,Kiran,tow_rajajinagar_01@btp-demo.example,+91-77976648148,2
-TOW_RAJAJINAGAR_02,RAJAJINAGAR,Manjunath,tow_rajajinagar_02@btp-demo.example,+91-77784364466,4
-TOW_SADASHIVANAGAR_01,SADASHIVANAGAR,Kiran,tow_sadashivanagar_01@btp-demo.example,+91-77849597970,2
-TOW_SADASHIVANAGAR_02,SADASHIVANAGAR,Manjunath,tow_sadashivanagar_02@btp-demo.example,+91-77905112032,4
-TOW_SHESHADRIPURAM_01,SHESHADRIPURAM,Kiran,tow_sheshadripuram_01@btp-demo.example,+91-77122031472,2
-TOW_SHESHADRIPURAM_02,SHESHADRIPURAM,Manjunath,tow_sheshadripuram_02@btp-demo.example,+91-77456733096,4
-TOW_SHIVAJINAGAR_01,SHIVAJINAGAR,Kiran,tow_shivajinagar_01@btp-demo.example,+91-77646478012,2
-TOW_SHIVAJINAGAR_02,SHIVAJINAGAR,Manjunath,tow_shivajinagar_02@btp-demo.example,+91-77135426462,4
-TOW_THALAGATTAPURA_01,THALAGATTAPURA,Kiran,tow_thalagattapura_01@btp-demo.example,+91-77375058387,2
-TOW_THALAGATTAPURA_02,THALAGATTAPURA,Manjunath,tow_thalagattapura_02@btp-demo.example,+91-77246025709,4
-TOW_UPPARPET_01,UPPARPET,Kiran,tow_upparpet_01@btp-demo.example,+91-77615051086,2
-TOW_UPPARPET_02,UPPARPET,Manjunath,tow_upparpet_02@btp-demo.example,+91-77401921439,4
-TOW_V.V.PURAM_(C.PET)_01,V.V.PURAM (C.PET),Kiran,tow_v.v.puram_(c.pet)_01@btp-demo.example,+91-77287107220,2
-TOW_V.V.PURAM_(C.PET)_02,V.V.PURAM (C.PET),Manjunath,tow_v.v.puram_(c.pet)_02@btp-demo.example,+91-77790814365,4
-TOW_VIJAYANAGARA_01,VIJAYANAGARA,Kiran,tow_vijayanagara_01@btp-demo.example,+91-77022651099,2
-TOW_VIJAYANAGARA_02,VIJAYANAGARA,Manjunath,tow_vijayanagara_02@btp-demo.example,+91-77774369509,4
-TOW_WHITEFIELD_01,WHITEFIELD,Kiran,tow_whitefield_01@btp-demo.example,+91-77468565932,2
-TOW_WHITEFIELD_02,WHITEFIELD,Manjunath,tow_whitefield_02@btp-demo.example,+91-77467824064,4
-TOW_WILSON_GARDEN_01,WILSON GARDEN,Kiran,tow_wilson_garden_01@btp-demo.example,+91-77831874982,2
-TOW_WILSON_GARDEN_02,WILSON GARDEN,Manjunath,tow_wilson_garden_02@btp-demo.example,+91-77704423813,4
-TOW_YELAHANKA_01,YELAHANKA,Kiran,tow_yelahanka_01@btp-demo.example,+91-77469510437,2
-TOW_YELAHANKA_02,YELAHANKA,Manjunath,tow_yelahanka_02@btp-demo.example,+91-77480018914,4
-TOW_YESHWANTHPURA_01,YESHWANTHPURA,Kiran,tow_yeshwanthpura_01@btp-demo.example,+91-77779846857,2
-TOW_YESHWANTHPURA_02,YESHWANTHPURA,Manjunath,tow_yeshwanthpura_02@btp-demo.example,+91-77162297022,4
+TOW_ADUGODI_01,ADUGODI,Kiran,tow_adugodi_01@btp-demo.example,+91-77867114530,2
+TOW_ADUGODI_02,ADUGODI,Manjunath,tow_adugodi_02@btp-demo.example,+91-77072920053,4
+TOW_ASHOK_NAGAR_01,ASHOK NAGAR,Kiran,tow_ashok_nagar_01@btp-demo.example,+91-77536114759,2
+TOW_ASHOK_NAGAR_02,ASHOK NAGAR,Manjunath,tow_ashok_nagar_02@btp-demo.example,+91-77341774710,4
+TOW_BANASHANKARI_01,BANASHANKARI,Kiran,tow_banashankari_01@btp-demo.example,+91-77077466068,2
+TOW_BANASHANKARI_02,BANASHANKARI,Manjunath,tow_banashankari_02@btp-demo.example,+91-77592164385,4
+TOW_BANASWADI_01,BANASWADI,Kiran,tow_banaswadi_01@btp-demo.example,+91-77679012506,2
+TOW_BANASWADI_02,BANASWADI,Manjunath,tow_banaswadi_02@btp-demo.example,+91-77733037517,4
+TOW_BASAVANAGUDI_01,BASAVANAGUDI,Kiran,tow_basavanagudi_01@btp-demo.example,+91-77279146363,2
+TOW_BASAVANAGUDI_02,BASAVANAGUDI,Manjunath,tow_basavanagudi_02@btp-demo.example,+91-77436388111,4
+TOW_BELLANDUR_01,BELLANDUR,Kiran,tow_bellandur_01@btp-demo.example,+91-77481714558,2
+TOW_BELLANDUR_02,BELLANDUR,Manjunath,tow_bellandur_02@btp-demo.example,+91-77592364773,4
+TOW_BYATARAYANAPURA_01,BYATARAYANAPURA,Kiran,tow_byatarayanapura_01@btp-demo.example,+91-77276967373,2
+TOW_BYATARAYANAPURA_02,BYATARAYANAPURA,Manjunath,tow_byatarayanapura_02@btp-demo.example,+91-77619515017,4
+TOW_CHAMARAJPET_01,CHAMARAJPET,Kiran,tow_chamarajpet_01@btp-demo.example,+91-77302958947,2
+TOW_CHAMARAJPET_02,CHAMARAJPET,Manjunath,tow_chamarajpet_02@btp-demo.example,+91-77522263129,4
+TOW_CHIKKABANAVARA_01,CHIKKABANAVARA,Kiran,tow_chikkabanavara_01@btp-demo.example,+91-77634688894,2
+TOW_CHIKKABANAVARA_02,CHIKKABANAVARA,Manjunath,tow_chikkabanavara_02@btp-demo.example,+91-77656918536,4
+TOW_CHIKKAJALA_01,CHIKKAJALA,Kiran,tow_chikkajala_01@btp-demo.example,+91-77512358366,2
+TOW_CHIKKAJALA_02,CHIKKAJALA,Manjunath,tow_chikkajala_02@btp-demo.example,+91-77651034832,4
+TOW_CITY_MARKET_01,CITY MARKET,Kiran,tow_city_market_01@btp-demo.example,+91-77997932976,2
+TOW_CITY_MARKET_02,CITY MARKET,Manjunath,tow_city_market_02@btp-demo.example,+91-77018969260,4
+TOW_CUBBON_PARK_01,CUBBON PARK,Kiran,tow_cubbon_park_01@btp-demo.example,+91-77227306302,2
+TOW_CUBBON_PARK_02,CUBBON PARK,Manjunath,tow_cubbon_park_02@btp-demo.example,+91-77992431199,4
+TOW_DEVANAHALLI_AIRPORT_01,DEVANAHALLI AIRPORT,Kiran,tow_devanahalli_airport_01@btp-demo.example,+91-77802000149,2
+TOW_DEVANAHALLI_AIRPORT_02,DEVANAHALLI AIRPORT,Manjunath,tow_devanahalli_airport_02@btp-demo.example,+91-77467286238,4
+TOW_ELECTRONIC_CITY_01,ELECTRONIC CITY,Kiran,tow_electronic_city_01@btp-demo.example,+91-77537818457,2
+TOW_ELECTRONIC_CITY_02,ELECTRONIC CITY,Manjunath,tow_electronic_city_02@btp-demo.example,+91-77420651922,4
+TOW_HAL_OLD_AIRPORT_01,HAL OLD AIRPORT,Kiran,tow_hal_old_airport_01@btp-demo.example,+91-77578674199,2
+TOW_HAL_OLD_AIRPORT_02,HAL OLD AIRPORT,Manjunath,tow_hal_old_airport_02@btp-demo.example,+91-77705753259,4
+TOW_HALASUR_01,HALASUR,Kiran,tow_halasur_01@btp-demo.example,+91-77430199358,2
+TOW_HALASUR_02,HALASUR,Manjunath,tow_halasur_02@btp-demo.example,+91-77715488306,4
+TOW_HALASURU_GATE_01,HALASURU GATE,Kiran,tow_halasuru_gate_01@btp-demo.example,+91-77975572987,2
+TOW_HALASURU_GATE_02,HALASURU GATE,Manjunath,tow_halasuru_gate_02@btp-demo.example,+91-77853220897,4
+TOW_HEBBALA_01,HEBBALA,Kiran,tow_hebbala_01@btp-demo.example,+91-77520842053,2
+TOW_HEBBALA_02,HEBBALA,Manjunath,tow_hebbala_02@btp-demo.example,+91-77836040895,4
+TOW_HENNURU_01,HENNURU,Kiran,tow_hennuru_01@btp-demo.example,+91-77309303202,2
+TOW_HENNURU_02,HENNURU,Manjunath,tow_hennuru_02@btp-demo.example,+91-77317732179,4
+TOW_HIGH_GROUND_01,HIGH GROUND,Kiran,tow_high_ground_01@btp-demo.example,+91-77446198991,2
+TOW_HIGH_GROUND_02,HIGH GROUND,Manjunath,tow_high_ground_02@btp-demo.example,+91-77358380154,4
+TOW_HSR_LAYOUT_01,HSR LAYOUT,Kiran,tow_hsr_layout_01@btp-demo.example,+91-77155784704,2
+TOW_HSR_LAYOUT_02,HSR LAYOUT,Manjunath,tow_hsr_layout_02@btp-demo.example,+91-77768209525,4
+TOW_HULIMAVU_01,HULIMAVU,Kiran,tow_hulimavu_01@btp-demo.example,+91-77157926239,2
+TOW_HULIMAVU_02,HULIMAVU,Manjunath,tow_hulimavu_02@btp-demo.example,+91-77710460808,4
+TOW_J.P._NAGAR_01,J.P. NAGAR,Kiran,tow_j.p._nagar_01@btp-demo.example,+91-77734827728,2
+TOW_J.P._NAGAR_02,J.P. NAGAR,Manjunath,tow_j.p._nagar_02@btp-demo.example,+91-77625170179,4
+TOW_JALAHALLI_01,JALAHALLI,Kiran,tow_jalahalli_01@btp-demo.example,+91-77736650831,2
+TOW_JALAHALLI_02,JALAHALLI,Manjunath,tow_jalahalli_02@btp-demo.example,+91-77706438141,4
+TOW_JAYANAGARA_01,JAYANAGARA,Kiran,tow_jayanagara_01@btp-demo.example,+91-77181194884,2
+TOW_JAYANAGARA_02,JAYANAGARA,Manjunath,tow_jayanagara_02@btp-demo.example,+91-77277593296,4
+TOW_JEEVANBHEEMANAGAR_01,JEEVANBHEEMANAGAR,Kiran,tow_jeevanbheemanagar_01@btp-demo.example,+91-77671891145,2
+TOW_JEEVANBHEEMANAGAR_02,JEEVANBHEEMANAGAR,Manjunath,tow_jeevanbheemanagar_02@btp-demo.example,+91-77664164863,4
+TOW_JNANABHARATHI_01,JNANABHARATHI,Kiran,tow_jnanabharathi_01@btp-demo.example,+91-77435526915,2
+TOW_JNANABHARATHI_02,JNANABHARATHI,Manjunath,tow_jnanabharathi_02@btp-demo.example,+91-77887307790,4
+TOW_K.G._HALLI_01,K.G. HALLI,Kiran,tow_k.g._halli_01@btp-demo.example,+91-77791071111,2
+TOW_K.G._HALLI_02,K.G. HALLI,Manjunath,tow_k.g._halli_02@btp-demo.example,+91-77034529339,4
+TOW_K.R._PURA_01,K.R. PURA,Kiran,tow_k.r._pura_01@btp-demo.example,+91-77133066887,2
+TOW_K.R._PURA_02,K.R. PURA,Manjunath,tow_k.r._pura_02@btp-demo.example,+91-77923875860,4
+TOW_K.S._LAYOUT_01,K.S. LAYOUT,Kiran,tow_k.s._layout_01@btp-demo.example,+91-77835118641,2
+TOW_K.S._LAYOUT_02,K.S. LAYOUT,Manjunath,tow_k.s._layout_02@btp-demo.example,+91-77498688230,4
+TOW_KAMAKSHIPALYA_01,KAMAKSHIPALYA,Kiran,tow_kamakshipalya_01@btp-demo.example,+91-77590031650,2
+TOW_KAMAKSHIPALYA_02,KAMAKSHIPALYA,Manjunath,tow_kamakshipalya_02@btp-demo.example,+91-77108710884,4
+TOW_KENGERI_01,KENGERI,Kiran,tow_kengeri_01@btp-demo.example,+91-77197625899,2
+TOW_KENGERI_02,KENGERI,Manjunath,tow_kengeri_02@btp-demo.example,+91-77614922323,4
+TOW_KODIGEHALLI_01,KODIGEHALLI,Kiran,tow_kodigehalli_01@btp-demo.example,+91-77213573278,2
+TOW_KODIGEHALLI_02,KODIGEHALLI,Manjunath,tow_kodigehalli_02@btp-demo.example,+91-77774426753,4
+TOW_MADIWALA_01,MADIWALA,Kiran,tow_madiwala_01@btp-demo.example,+91-77917241742,2
+TOW_MADIWALA_02,MADIWALA,Manjunath,tow_madiwala_02@btp-demo.example,+91-77952963999,4
+TOW_MAGADI_ROAD_01,MAGADI ROAD,Kiran,tow_magadi_road_01@btp-demo.example,+91-77582998620,2
+TOW_MAGADI_ROAD_02,MAGADI ROAD,Manjunath,tow_magadi_road_02@btp-demo.example,+91-77621766487,4
+TOW_MAHADEVAPURA_01,MAHADEVAPURA,Kiran,tow_mahadevapura_01@btp-demo.example,+91-77630101529,2
+TOW_MAHADEVAPURA_02,MAHADEVAPURA,Manjunath,tow_mahadevapura_02@btp-demo.example,+91-77552903847,4
+TOW_MALLESHWARAM_01,MALLESHWARAM,Kiran,tow_malleshwaram_01@btp-demo.example,+91-77448779064,2
+TOW_MALLESHWARAM_02,MALLESHWARAM,Manjunath,tow_malleshwaram_02@btp-demo.example,+91-77062624957,4
+TOW_MICO_LAYOUT_01,MICO LAYOUT,Kiran,tow_mico_layout_01@btp-demo.example,+91-77685361535,2
+TOW_MICO_LAYOUT_02,MICO LAYOUT,Manjunath,tow_mico_layout_02@btp-demo.example,+91-77694911239,4
+TOW_NO_POLICE_STATION_01,NO POLICE STATION,Kiran,tow_no_police_station_01@btp-demo.example,+91-77748575877,2
+TOW_NO_POLICE_STATION_02,NO POLICE STATION,Manjunath,tow_no_police_station_02@btp-demo.example,+91-77736629035,4
+TOW_PEENYA_01,PEENYA,Kiran,tow_peenya_01@btp-demo.example,+91-77200955291,2
+TOW_PEENYA_02,PEENYA,Manjunath,tow_peenya_02@btp-demo.example,+91-77717619856,4
+TOW_PULIKESHINAGAR(F.TOWN)_01,PULIKESHINAGAR(F.TOWN),Kiran,tow_pulikeshinagar(f.town)_01@btp-demo.example,+91-77096118408,2
+TOW_PULIKESHINAGAR(F.TOWN)_02,PULIKESHINAGAR(F.TOWN),Manjunath,tow_pulikeshinagar(f.town)_02@btp-demo.example,+91-77303159559,4
+TOW_R.T._NAGAR_01,R.T. NAGAR,Kiran,tow_r.t._nagar_01@btp-demo.example,+91-77165185882,2
+TOW_R.T._NAGAR_02,R.T. NAGAR,Manjunath,tow_r.t._nagar_02@btp-demo.example,+91-77642999335,4
+TOW_RAJAJINAGAR_01,RAJAJINAGAR,Kiran,tow_rajajinagar_01@btp-demo.example,+91-77294615862,2
+TOW_RAJAJINAGAR_02,RAJAJINAGAR,Manjunath,tow_rajajinagar_02@btp-demo.example,+91-77082055980,4
+TOW_SADASHIVANAGAR_01,SADASHIVANAGAR,Kiran,tow_sadashivanagar_01@btp-demo.example,+91-77639080773,2
+TOW_SADASHIVANAGAR_02,SADASHIVANAGAR,Manjunath,tow_sadashivanagar_02@btp-demo.example,+91-77059546648,4
+TOW_SHESHADRIPURAM_01,SHESHADRIPURAM,Kiran,tow_sheshadripuram_01@btp-demo.example,+91-77306215955,2
+TOW_SHESHADRIPURAM_02,SHESHADRIPURAM,Manjunath,tow_sheshadripuram_02@btp-demo.example,+91-77678606992,4
+TOW_SHIVAJINAGAR_01,SHIVAJINAGAR,Kiran,tow_shivajinagar_01@btp-demo.example,+91-77145445100,2
+TOW_SHIVAJINAGAR_02,SHIVAJINAGAR,Manjunath,tow_shivajinagar_02@btp-demo.example,+91-77636374979,4
+TOW_THALAGATTAPURA_01,THALAGATTAPURA,Kiran,tow_thalagattapura_01@btp-demo.example,+91-77458997279,2
+TOW_THALAGATTAPURA_02,THALAGATTAPURA,Manjunath,tow_thalagattapura_02@btp-demo.example,+91-77084567819,4
+TOW_UPPARPET_01,UPPARPET,Kiran,tow_upparpet_01@btp-demo.example,+91-77431614224,2
+TOW_UPPARPET_02,UPPARPET,Manjunath,tow_upparpet_02@btp-demo.example,+91-77159313689,4
+TOW_V.V.PURAM_(C.PET)_01,V.V.PURAM (C.PET),Kiran,tow_v.v.puram_(c.pet)_01@btp-demo.example,+91-77631374638,2
+TOW_V.V.PURAM_(C.PET)_02,V.V.PURAM (C.PET),Manjunath,tow_v.v.puram_(c.pet)_02@btp-demo.example,+91-77590794312,4
+TOW_VIJAYANAGARA_01,VIJAYANAGARA,Kiran,tow_vijayanagara_01@btp-demo.example,+91-77742529285,2
+TOW_VIJAYANAGARA_02,VIJAYANAGARA,Manjunath,tow_vijayanagara_02@btp-demo.example,+91-77791055504,4
+TOW_WHITEFIELD_01,WHITEFIELD,Kiran,tow_whitefield_01@btp-demo.example,+91-77044813875,2
+TOW_WHITEFIELD_02,WHITEFIELD,Manjunath,tow_whitefield_02@btp-demo.example,+91-77454682003,4
+TOW_WILSON_GARDEN_01,WILSON GARDEN,Kiran,tow_wilson_garden_01@btp-demo.example,+91-77923640100,2
+TOW_WILSON_GARDEN_02,WILSON GARDEN,Manjunath,tow_wilson_garden_02@btp-demo.example,+91-77879753843,4
+TOW_YELAHANKA_01,YELAHANKA,Kiran,tow_yelahanka_01@btp-demo.example,+91-77267671995,2
+TOW_YELAHANKA_02,YELAHANKA,Manjunath,tow_yelahanka_02@btp-demo.example,+91-77239945633,4
+TOW_YESHWANTHPURA_01,YESHWANTHPURA,Kiran,tow_yeshwanthpura_01@btp-demo.example,+91-77495115750,2
+TOW_YESHWANTHPURA_02,YESHWANTHPURA,Manjunath,tow_yeshwanthpura_02@btp-demo.example,+91-77043265788,4

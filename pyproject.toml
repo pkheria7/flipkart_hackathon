@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "apscheduler>=3.10.0",
+    "groq>=1.0.0",
     "folium>=0.20.0",
     "geopandas>=0.14.0",
     "h3>=4.5.0",

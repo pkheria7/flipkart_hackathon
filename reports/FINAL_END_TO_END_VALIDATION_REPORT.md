@@ -42,7 +42,7 @@ This report validates consistency across the entire pipeline: P1 → P2 → P3 �
 | 15 | violation_count_consistent_summary_to_scored | PASS | counts match |
 | 16 | feedback_boosted_clusters_are_structural | PASS | boosted=['C_0_0'], structural=True |
 | 17 | feedback_summary_matches_enriched_boost | PASS | enriched_boost=['C_0_0'], feedback_boost=['C_0_0'] |
-| 18 | classification_values_valid | PASS | classes={'SEASONAL', 'RESPONSIVE', 'STRUCTURAL'} |
+| 18 | classification_values_valid | PASS | classes={'SEASONAL', 'STRUCTURAL', 'RESPONSIVE'} |
 | 19 | structural_clusters_have_structural_action | PASS | unique structural actions: ['Recurring patrol + towing support + signage/infra review', 'Review geography first; if confirmed, apply: Recurring patrol + towing support + signage/infra review'] |
 | 20 | roi_has_spread | PASS | std=28.8808 |
 | 21 | lcle_has_spread | PASS | std=20.4943 |
