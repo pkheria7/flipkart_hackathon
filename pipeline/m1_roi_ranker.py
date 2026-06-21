@@ -108,6 +108,13 @@ def load_and_merge(enriched_path: Path, prakhar_path: Path) -> pd.DataFrame:
 
     # Keep only Prakhar columns we actually need to avoid accidental overlap.
     # active_weeks is dropped here because it already exists in enriched_clusters.
+    # Feedback columns are also dropped because enriched_clusters is the source
+    # of truth for feedback-derived signals.
+    feedback_cols = [
+        "feedback_event_count", "enforcement_done_count",
+        "recurred_after_enforcement_count", "last_feedback_date",
+        "last_outcome", "feedback_structural_boost",
+    ]
     needed_prakhar_cols = [
         "cluster_id",
         "peak_hour_count",
@@ -120,6 +127,7 @@ def load_and_merge(enriched_path: Path, prakhar_path: Path) -> pd.DataFrame:
     missing = [c for c in needed_prakhar_cols if c not in prakhar.columns]
     if missing:
         raise ValueError(f"Missing expected Prakhar columns: {missing}")
+    prakhar = prakhar[[c for c in prakhar.columns if c not in feedback_cols]].copy()
     prakhar = prakhar[available].copy()
 
     merged = enriched.merge(prakhar, on="cluster_id", how="left")

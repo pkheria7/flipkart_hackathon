@@ -1,0 +1,271 @@
+officer_id,name,assigned_station,email,phone,shift,rank
+OFF_ADUGODI_01,Ramesh Kumar,ADUGODI,off_adugodi_01@btp-demo.example,+91-98351066899,day,ASI
+OFF_ADUGODI_02,Suresh Singh,ADUGODI,off_adugodi_02@btp-demo.example,+91-98801069560,day,ASI
+OFF_ADUGODI_03,Mahesh Reddy,ADUGODI,off_adugodi_03@btp-demo.example,+91-98325844045,day,ASI
+OFF_ADUGODI_04,Ganesh Naidu,ADUGODI,off_adugodi_04@btp-demo.example,+91-98698724687,night,HC
+OFF_ADUGODI_05,Venkatesh Rao,ADUGODI,off_adugodi_05@btp-demo.example,+91-98847371976,night,HC
+OFF_ASHOK_NAGAR_01,Ramesh Kumar,ASHOK NAGAR,off_ashok_nagar_01@btp-demo.example,+91-98192838085,day,ASI
+OFF_ASHOK_NAGAR_02,Suresh Singh,ASHOK NAGAR,off_ashok_nagar_02@btp-demo.example,+91-98196899559,day,ASI
+OFF_ASHOK_NAGAR_03,Mahesh Reddy,ASHOK NAGAR,off_ashok_nagar_03@btp-demo.example,+91-98976468226,day,ASI
+OFF_ASHOK_NAGAR_04,Ganesh Naidu,ASHOK NAGAR,off_ashok_nagar_04@btp-demo.example,+91-98592557635,night,HC
+OFF_ASHOK_NAGAR_05,Venkatesh Rao,ASHOK NAGAR,off_ashok_nagar_05@btp-demo.example,+91-98412849950,night,HC
+OFF_BANASHANKARI_01,Ramesh Kumar,BANASHANKARI,off_banashankari_01@btp-demo.example,+91-98474027354,day,ASI
+OFF_BANASHANKARI_02,Suresh Singh,BANASHANKARI,off_banashankari_02@btp-demo.example,+91-98943890273,day,ASI
+OFF_BANASHANKARI_03,Mahesh Reddy,BANASHANKARI,off_banashankari_03@btp-demo.example,+91-98599596619,day,ASI
+OFF_BANASHANKARI_04,Ganesh Naidu,BANASHANKARI,off_banashankari_04@btp-demo.example,+91-98740609824,night,HC
+OFF_BANASHANKARI_05,Venkatesh Rao,BANASHANKARI,off_banashankari_05@btp-demo.example,+91-98498299384,night,HC
+OFF_BANASWADI_01,Ramesh Kumar,BANASWADI,off_banaswadi_01@btp-demo.example,+91-98412285331,day,ASI
+OFF_BANASWADI_02,Suresh Singh,BANASWADI,off_banaswadi_02@btp-demo.example,+91-98029733130,day,ASI
+OFF_BANASWADI_03,Mahesh Reddy,BANASWADI,off_banaswadi_03@btp-demo.example,+91-98857845350,day,ASI
+OFF_BANASWADI_04,Ganesh Naidu,BANASWADI,off_banaswadi_04@btp-demo.example,+91-98641335248,night,HC
+OFF_BANASWADI_05,Venkatesh Rao,BANASWADI,off_banaswadi_05@btp-demo.example,+91-98447463683,night,HC
+OFF_BASAVANAGUDI_01,Ramesh Kumar,BASAVANAGUDI,off_basavanagudi_01@btp-demo.example,+91-98794987829,day,ASI
+OFF_BASAVANAGUDI_02,Suresh Singh,BASAVANAGUDI,off_basavanagudi_02@btp-demo.example,+91-98308491384,day,ASI
+OFF_BASAVANAGUDI_03,Mahesh Reddy,BASAVANAGUDI,off_basavanagudi_03@btp-demo.example,+91-98731848998,day,ASI
+OFF_BASAVANAGUDI_04,Ganesh Naidu,BASAVANAGUDI,off_basavanagudi_04@btp-demo.example,+91-98558709591,night,HC
+OFF_BASAVANAGUDI_05,Venkatesh Rao,BASAVANAGUDI,off_basavanagudi_05@btp-demo.example,+91-98866645833,night,HC
+OFF_BELLANDUR_01,Ramesh Kumar,BELLANDUR,off_bellandur_01@btp-demo.example,+91-98365254523,day,ASI
+OFF_BELLANDUR_02,Suresh Singh,BELLANDUR,off_bellandur_02@btp-demo.example,+91-98388338735,day,ASI
+OFF_BELLANDUR_03,Mahesh Reddy,BELLANDUR,off_bellandur_03@btp-demo.example,+91-98049623696,day,ASI
+OFF_BELLANDUR_04,Ganesh Naidu,BELLANDUR,off_bellandur_04@btp-demo.example,+91-98282719696,night,HC
+OFF_BELLANDUR_05,Venkatesh Rao,BELLANDUR,off_bellandur_05@btp-demo.example,+91-98740179493,night,HC
+OFF_BYATARAYANAPURA_01,Ramesh Kumar,BYATARAYANAPURA,off_byatarayanapura_01@btp-demo.example,+91-98954955674,day,ASI
+OFF_BYATARAYANAPURA_02,Suresh Singh,BYATARAYANAPURA,off_byatarayanapura_02@btp-demo.example,+91-98577249420,day,ASI
+OFF_BYATARAYANAPURA_03,Mahesh Reddy,BYATARAYANAPURA,off_byatarayanapura_03@btp-demo.example,+91-98128728723,day,ASI
+OFF_BYATARAYANAPURA_04,Ganesh Naidu,BYATARAYANAPURA,off_byatarayanapura_04@btp-demo.example,+91-98563922796,night,HC
+OFF_BYATARAYANAPURA_05,Venkatesh Rao,BYATARAYANAPURA,off_byatarayanapura_05@btp-demo.example,+91-98893328349,night,HC
+OFF_CHAMARAJPET_01,Ramesh Kumar,CHAMARAJPET,off_chamarajpet_01@btp-demo.example,+91-98181023237,day,ASI
+OFF_CHAMARAJPET_02,Suresh Singh,CHAMARAJPET,off_chamarajpet_02@btp-demo.example,+91-98590593625,day,ASI
+OFF_CHAMARAJPET_03,Mahesh Reddy,CHAMARAJPET,off_chamarajpet_03@btp-demo.example,+91-98907361686,day,ASI
+OFF_CHAMARAJPET_04,Ganesh Naidu,CHAMARAJPET,off_chamarajpet_04@btp-demo.example,+91-98687806461,night,HC
+OFF_CHAMARAJPET_05,Venkatesh Rao,CHAMARAJPET,off_chamarajpet_05@btp-demo.example,+91-98542783174,night,HC
+OFF_CHIKKABANAVARA_01,Ramesh Kumar,CHIKKABANAVARA,off_chikkabanavara_01@btp-demo.example,+91-98610817329,day,ASI
+OFF_CHIKKABANAVARA_02,Suresh Singh,CHIKKABANAVARA,off_chikkabanavara_02@btp-demo.example,+91-98289703591,day,ASI
+OFF_CHIKKABANAVARA_03,Mahesh Reddy,CHIKKABANAVARA,off_chikkabanavara_03@btp-demo.example,+91-98626644348,day,ASI
+OFF_CHIKKABANAVARA_04,Ganesh Naidu,CHIKKABANAVARA,off_chikkabanavara_04@btp-demo.example,+91-98084942848,night,HC
+OFF_CHIKKABANAVARA_05,Venkatesh Rao,CHIKKABANAVARA,off_chikkabanavara_05@btp-demo.example,+91-98028452678,night,HC
+OFF_CHIKKAJALA_01,Ramesh Kumar,CHIKKAJALA,off_chikkajala_01@btp-demo.example,+91-98325082579,day,ASI
+OFF_CHIKKAJALA_02,Suresh Singh,CHIKKAJALA,off_chikkajala_02@btp-demo.example,+91-98378562369,day,ASI
+OFF_CHIKKAJALA_03,Mahesh Reddy,CHIKKAJALA,off_chikkajala_03@btp-demo.example,+91-98362055886,day,ASI
+OFF_CHIKKAJALA_04,Ganesh Naidu,CHIKKAJALA,off_chikkajala_04@btp-demo.example,+91-98973336679,night,HC
+OFF_CHIKKAJALA_05,Venkatesh Rao,CHIKKAJALA,off_chikkajala_05@btp-demo.example,+91-98264893073,night,HC
+OFF_CITY_MARKET_01,Ramesh Kumar,CITY MARKET,off_city_market_01@btp-demo.example,+91-98900721483,day,ASI
+OFF_CITY_MARKET_02,Suresh Singh,CITY MARKET,off_city_market_02@btp-demo.example,+91-98047311556,day,ASI
+OFF_CITY_MARKET_03,Mahesh Reddy,CITY MARKET,off_city_market_03@btp-demo.example,+91-98532527815,day,ASI
+OFF_CITY_MARKET_04,Ganesh Naidu,CITY MARKET,off_city_market_04@btp-demo.example,+91-98386038372,night,HC
+OFF_CITY_MARKET_05,Venkatesh Rao,CITY MARKET,off_city_market_05@btp-demo.example,+91-98123992995,night,HC
+OFF_CUBBON_PARK_01,Ramesh Kumar,CUBBON PARK,off_cubbon_park_01@btp-demo.example,+91-98250627565,day,ASI
+OFF_CUBBON_PARK_02,Suresh Singh,CUBBON PARK,off_cubbon_park_02@btp-demo.example,+91-98630408453,day,ASI
+OFF_CUBBON_PARK_03,Mahesh Reddy,CUBBON PARK,off_cubbon_park_03@btp-demo.example,+91-98004041875,day,ASI
+OFF_CUBBON_PARK_04,Ganesh Naidu,CUBBON PARK,off_cubbon_park_04@btp-demo.example,+91-98040695491,night,HC
+OFF_CUBBON_PARK_05,Venkatesh Rao,CUBBON PARK,off_cubbon_park_05@btp-demo.example,+91-98649484404,night,HC
+OFF_DEVANAHALLI_AIRPORT_01,Ramesh Kumar,DEVANAHALLI AIRPORT,off_devanahalli_airport_01@btp-demo.example,+91-98990299526,day,ASI
+OFF_DEVANAHALLI_AIRPORT_02,Suresh Singh,DEVANAHALLI AIRPORT,off_devanahalli_airport_02@btp-demo.example,+91-98467079347,day,ASI
+OFF_DEVANAHALLI_AIRPORT_03,Mahesh Reddy,DEVANAHALLI AIRPORT,off_devanahalli_airport_03@btp-demo.example,+91-98644375269,day,ASI
+OFF_DEVANAHALLI_AIRPORT_04,Ganesh Naidu,DEVANAHALLI AIRPORT,off_devanahalli_airport_04@btp-demo.example,+91-98944745841,night,HC
+OFF_DEVANAHALLI_AIRPORT_05,Venkatesh Rao,DEVANAHALLI AIRPORT,off_devanahalli_airport_05@btp-demo.example,+91-98950609543,night,HC
+OFF_ELECTRONIC_CITY_01,Ramesh Kumar,ELECTRONIC CITY,off_electronic_city_01@btp-demo.example,+91-98249928102,day,ASI
+OFF_ELECTRONIC_CITY_02,Suresh Singh,ELECTRONIC CITY,off_electronic_city_02@btp-demo.example,+91-98528002647,day,ASI
+OFF_ELECTRONIC_CITY_03,Mahesh Reddy,ELECTRONIC CITY,off_electronic_city_03@btp-demo.example,+91-98505819854,day,ASI
+OFF_ELECTRONIC_CITY_04,Ganesh Naidu,ELECTRONIC CITY,off_electronic_city_04@btp-demo.example,+91-98243835370,night,HC
+OFF_ELECTRONIC_CITY_05,Venkatesh Rao,ELECTRONIC CITY,off_electronic_city_05@btp-demo.example,+91-98705079030,night,HC
+OFF_HAL_OLD_AIRPORT_01,Ramesh Kumar,HAL OLD AIRPORT,off_hal_old_airport_01@btp-demo.example,+91-98826936731,day,ASI
+OFF_HAL_OLD_AIRPORT_02,Suresh Singh,HAL OLD AIRPORT,off_hal_old_airport_02@btp-demo.example,+91-98557121356,day,ASI
+OFF_HAL_OLD_AIRPORT_03,Mahesh Reddy,HAL OLD AIRPORT,off_hal_old_airport_03@btp-demo.example,+91-98716554682,day,ASI
+OFF_HAL_OLD_AIRPORT_04,Ganesh Naidu,HAL OLD AIRPORT,off_hal_old_airport_04@btp-demo.example,+91-98862498283,night,HC
+OFF_HAL_OLD_AIRPORT_05,Venkatesh Rao,HAL OLD AIRPORT,off_hal_old_airport_05@btp-demo.example,+91-98138203527,night,HC
+OFF_HALASUR_01,Ramesh Kumar,HALASUR,off_halasur_01@btp-demo.example,+91-98977810584,day,ASI
+OFF_HALASUR_02,Suresh Singh,HALASUR,off_halasur_02@btp-demo.example,+91-98931853023,day,ASI
+OFF_HALASUR_03,Mahesh Reddy,HALASUR,off_halasur_03@btp-demo.example,+91-98607104405,day,ASI
+OFF_HALASUR_04,Ganesh Naidu,HALASUR,off_halasur_04@btp-demo.example,+91-98165865399,night,HC
+OFF_HALASUR_05,Venkatesh Rao,HALASUR,off_halasur_05@btp-demo.example,+91-98266152860,night,HC
+OFF_HALASURU_GATE_01,Ramesh Kumar,HALASURU GATE,off_halasuru_gate_01@btp-demo.example,+91-98377712153,day,ASI
+OFF_HALASURU_GATE_02,Suresh Singh,HALASURU GATE,off_halasuru_gate_02@btp-demo.example,+91-98982855561,day,ASI
+OFF_HALASURU_GATE_03,Mahesh Reddy,HALASURU GATE,off_halasuru_gate_03@btp-demo.example,+91-98185278071,day,ASI
+OFF_HALASURU_GATE_04,Ganesh Naidu,HALASURU GATE,off_halasuru_gate_04@btp-demo.example,+91-98030362695,night,HC
+OFF_HALASURU_GATE_05,Venkatesh Rao,HALASURU GATE,off_halasuru_gate_05@btp-demo.example,+91-98398350758,night,HC
+OFF_HEBBALA_01,Ramesh Kumar,HEBBALA,off_hebbala_01@btp-demo.example,+91-98944271572,day,ASI
+OFF_HEBBALA_02,Suresh Singh,HEBBALA,off_hebbala_02@btp-demo.example,+91-98073307579,day,ASI
+OFF_HEBBALA_03,Mahesh Reddy,HEBBALA,off_hebbala_03@btp-demo.example,+91-98586770064,day,ASI
+OFF_HEBBALA_04,Ganesh Naidu,HEBBALA,off_hebbala_04@btp-demo.example,+91-98812542216,night,HC
+OFF_HEBBALA_05,Venkatesh Rao,HEBBALA,off_hebbala_05@btp-demo.example,+91-98400793985,night,HC
+OFF_HENNURU_01,Ramesh Kumar,HENNURU,off_hennuru_01@btp-demo.example,+91-98586885245,day,ASI
+OFF_HENNURU_02,Suresh Singh,HENNURU,off_hennuru_02@btp-demo.example,+91-98283769368,day,ASI
+OFF_HENNURU_03,Mahesh Reddy,HENNURU,off_hennuru_03@btp-demo.example,+91-98808056502,day,ASI
+OFF_HENNURU_04,Ganesh Naidu,HENNURU,off_hennuru_04@btp-demo.example,+91-98751613342,night,HC
+OFF_HENNURU_05,Venkatesh Rao,HENNURU,off_hennuru_05@btp-demo.example,+91-98853472805,night,HC
+OFF_HIGH_GROUND_01,Ramesh Kumar,HIGH GROUND,off_high_ground_01@btp-demo.example,+91-98298924085,day,ASI
+OFF_HIGH_GROUND_02,Suresh Singh,HIGH GROUND,off_high_ground_02@btp-demo.example,+91-98676411058,day,ASI
+OFF_HIGH_GROUND_03,Mahesh Reddy,HIGH GROUND,off_high_ground_03@btp-demo.example,+91-98329700484,day,ASI
+OFF_HIGH_GROUND_04,Ganesh Naidu,HIGH GROUND,off_high_ground_04@btp-demo.example,+91-98935122675,night,HC
+OFF_HIGH_GROUND_05,Venkatesh Rao,HIGH GROUND,off_high_ground_05@btp-demo.example,+91-98426498529,night,HC
+OFF_HSR_LAYOUT_01,Ramesh Kumar,HSR LAYOUT,off_hsr_layout_01@btp-demo.example,+91-98538702526,day,ASI
+OFF_HSR_LAYOUT_02,Suresh Singh,HSR LAYOUT,off_hsr_layout_02@btp-demo.example,+91-98431321422,day,ASI
+OFF_HSR_LAYOUT_03,Mahesh Reddy,HSR LAYOUT,off_hsr_layout_03@btp-demo.example,+91-98458615006,day,ASI
+OFF_HSR_LAYOUT_04,Ganesh Naidu,HSR LAYOUT,off_hsr_layout_04@btp-demo.example,+91-98469350568,night,HC
+OFF_HSR_LAYOUT_05,Venkatesh Rao,HSR LAYOUT,off_hsr_layout_05@btp-demo.example,+91-98385874004,night,HC
+OFF_HULIMAVU_01,Ramesh Kumar,HULIMAVU,off_hulimavu_01@btp-demo.example,+91-98822892245,day,ASI
+OFF_HULIMAVU_02,Suresh Singh,HULIMAVU,off_hulimavu_02@btp-demo.example,+91-98939392185,day,ASI
+OFF_HULIMAVU_03,Mahesh Reddy,HULIMAVU,off_hulimavu_03@btp-demo.example,+91-98906753467,day,ASI
+OFF_HULIMAVU_04,Ganesh Naidu,HULIMAVU,off_hulimavu_04@btp-demo.example,+91-98838599294,night,HC
+OFF_HULIMAVU_05,Venkatesh Rao,HULIMAVU,off_hulimavu_05@btp-demo.example,+91-98369585015,night,HC
+OFF_J.P._NAGAR_01,Ramesh Kumar,J.P. NAGAR,off_j.p._nagar_01@btp-demo.example,+91-98882823863,day,ASI
+OFF_J.P._NAGAR_02,Suresh Singh,J.P. NAGAR,off_j.p._nagar_02@btp-demo.example,+91-98253308706,day,ASI
+OFF_J.P._NAGAR_03,Mahesh Reddy,J.P. NAGAR,off_j.p._nagar_03@btp-demo.example,+91-98938520551,day,ASI
+OFF_J.P._NAGAR_04,Ganesh Naidu,J.P. NAGAR,off_j.p._nagar_04@btp-demo.example,+91-98544777323,night,HC
+OFF_J.P._NAGAR_05,Venkatesh Rao,J.P. NAGAR,off_j.p._nagar_05@btp-demo.example,+91-98832887367,night,HC
+OFF_JALAHALLI_01,Ramesh Kumar,JALAHALLI,off_jalahalli_01@btp-demo.example,+91-98775040048,day,ASI
+OFF_JALAHALLI_02,Suresh Singh,JALAHALLI,off_jalahalli_02@btp-demo.example,+91-98110354382,day,ASI
+OFF_JALAHALLI_03,Mahesh Reddy,JALAHALLI,off_jalahalli_03@btp-demo.example,+91-98197527823,day,ASI
+OFF_JALAHALLI_04,Ganesh Naidu,JALAHALLI,off_jalahalli_04@btp-demo.example,+91-98237445612,night,HC
+OFF_JALAHALLI_05,Venkatesh Rao,JALAHALLI,off_jalahalli_05@btp-demo.example,+91-98578691029,night,HC
+OFF_JAYANAGARA_01,Ramesh Kumar,JAYANAGARA,off_jayanagara_01@btp-demo.example,+91-98077254139,day,ASI
+OFF_JAYANAGARA_02,Suresh Singh,JAYANAGARA,off_jayanagara_02@btp-demo.example,+91-98986991018,day,ASI
+OFF_JAYANAGARA_03,Mahesh Reddy,JAYANAGARA,off_jayanagara_03@btp-demo.example,+91-98777851133,day,ASI
+OFF_JAYANAGARA_04,Ganesh Naidu,JAYANAGARA,off_jayanagara_04@btp-demo.example,+91-98830123560,night,HC
+OFF_JAYANAGARA_05,Venkatesh Rao,JAYANAGARA,off_jayanagara_05@btp-demo.example,+91-98680269701,night,HC
+OFF_JEEVANBHEEMANAGAR_01,Ramesh Kumar,JEEVANBHEEMANAGAR,off_jeevanbheemanagar_01@btp-demo.example,+91-98980330826,day,ASI
+OFF_JEEVANBHEEMANAGAR_02,Suresh Singh,JEEVANBHEEMANAGAR,off_jeevanbheemanagar_02@btp-demo.example,+91-98008034321,day,ASI
+OFF_JEEVANBHEEMANAGAR_03,Mahesh Reddy,JEEVANBHEEMANAGAR,off_jeevanbheemanagar_03@btp-demo.example,+91-98152358090,day,ASI
+OFF_JEEVANBHEEMANAGAR_04,Ganesh Naidu,JEEVANBHEEMANAGAR,off_jeevanbheemanagar_04@btp-demo.example,+91-98079929030,night,HC
+OFF_JEEVANBHEEMANAGAR_05,Venkatesh Rao,JEEVANBHEEMANAGAR,off_jeevanbheemanagar_05@btp-demo.example,+91-98559582090,night,HC
+OFF_JNANABHARATHI_01,Ramesh Kumar,JNANABHARATHI,off_jnanabharathi_01@btp-demo.example,+91-98531248326,day,ASI
+OFF_JNANABHARATHI_02,Suresh Singh,JNANABHARATHI,off_jnanabharathi_02@btp-demo.example,+91-98558098667,day,ASI
+OFF_JNANABHARATHI_03,Mahesh Reddy,JNANABHARATHI,off_jnanabharathi_03@btp-demo.example,+91-98261468910,day,ASI
+OFF_JNANABHARATHI_04,Ganesh Naidu,JNANABHARATHI,off_jnanabharathi_04@btp-demo.example,+91-98535801144,night,HC
+OFF_JNANABHARATHI_05,Venkatesh Rao,JNANABHARATHI,off_jnanabharathi_05@btp-demo.example,+91-98902050334,night,HC
+OFF_K.G._HALLI_01,Ramesh Kumar,K.G. HALLI,off_k.g._halli_01@btp-demo.example,+91-98389205923,day,ASI
+OFF_K.G._HALLI_02,Suresh Singh,K.G. HALLI,off_k.g._halli_02@btp-demo.example,+91-98159357532,day,ASI
+OFF_K.G._HALLI_03,Mahesh Reddy,K.G. HALLI,off_k.g._halli_03@btp-demo.example,+91-98001673060,day,ASI
+OFF_K.G._HALLI_04,Ganesh Naidu,K.G. HALLI,off_k.g._halli_04@btp-demo.example,+91-98864525718,night,HC
+OFF_K.G._HALLI_05,Venkatesh Rao,K.G. HALLI,off_k.g._halli_05@btp-demo.example,+91-98395159865,night,HC
+OFF_K.R._PURA_01,Ramesh Kumar,K.R. PURA,off_k.r._pura_01@btp-demo.example,+91-98494216001,day,ASI
+OFF_K.R._PURA_02,Suresh Singh,K.R. PURA,off_k.r._pura_02@btp-demo.example,+91-98598473329,day,ASI
+OFF_K.R._PURA_03,Mahesh Reddy,K.R. PURA,off_k.r._pura_03@btp-demo.example,+91-98328770404,day,ASI
+OFF_K.R._PURA_04,Ganesh Naidu,K.R. PURA,off_k.r._pura_04@btp-demo.example,+91-98528941269,night,HC
+OFF_K.R._PURA_05,Venkatesh Rao,K.R. PURA,off_k.r._pura_05@btp-demo.example,+91-98667200929,night,HC
+OFF_K.S._LAYOUT_01,Ramesh Kumar,K.S. LAYOUT,off_k.s._layout_01@btp-demo.example,+91-98356578711,day,ASI
+OFF_K.S._LAYOUT_02,Suresh Singh,K.S. LAYOUT,off_k.s._layout_02@btp-demo.example,+91-98801200976,day,ASI
+OFF_K.S._LAYOUT_03,Mahesh Reddy,K.S. LAYOUT,off_k.s._layout_03@btp-demo.example,+91-98290624682,day,ASI
+OFF_K.S._LAYOUT_04,Ganesh Naidu,K.S. LAYOUT,off_k.s._layout_04@btp-demo.example,+91-98733815988,night,HC
+OFF_K.S._LAYOUT_05,Venkatesh Rao,K.S. LAYOUT,off_k.s._layout_05@btp-demo.example,+91-98073761252,night,HC
+OFF_KAMAKSHIPALYA_01,Ramesh Kumar,KAMAKSHIPALYA,off_kamakshipalya_01@btp-demo.example,+91-98477506890,day,ASI
+OFF_KAMAKSHIPALYA_02,Suresh Singh,KAMAKSHIPALYA,off_kamakshipalya_02@btp-demo.example,+91-98003847092,day,ASI
+OFF_KAMAKSHIPALYA_03,Mahesh Reddy,KAMAKSHIPALYA,off_kamakshipalya_03@btp-demo.example,+91-98764606576,day,ASI
+OFF_KAMAKSHIPALYA_04,Ganesh Naidu,KAMAKSHIPALYA,off_kamakshipalya_04@btp-demo.example,+91-98854637781,night,HC
+OFF_KAMAKSHIPALYA_05,Venkatesh Rao,KAMAKSHIPALYA,off_kamakshipalya_05@btp-demo.example,+91-98018118464,night,HC
+OFF_KENGERI_01,Ramesh Kumar,KENGERI,off_kengeri_01@btp-demo.example,+91-98531940502,day,ASI
+OFF_KENGERI_02,Suresh Singh,KENGERI,off_kengeri_02@btp-demo.example,+91-98584473576,day,ASI
+OFF_KENGERI_03,Mahesh Reddy,KENGERI,off_kengeri_03@btp-demo.example,+91-98042169261,day,ASI
+OFF_KENGERI_04,Ganesh Naidu,KENGERI,off_kengeri_04@btp-demo.example,+91-98022381723,night,HC
+OFF_KENGERI_05,Venkatesh Rao,KENGERI,off_kengeri_05@btp-demo.example,+91-98410684521,night,HC
+OFF_KODIGEHALLI_01,Ramesh Kumar,KODIGEHALLI,off_kodigehalli_01@btp-demo.example,+91-98667791252,day,ASI
+OFF_KODIGEHALLI_02,Suresh Singh,KODIGEHALLI,off_kodigehalli_02@btp-demo.example,+91-98605263538,day,ASI
+OFF_KODIGEHALLI_03,Mahesh Reddy,KODIGEHALLI,off_kodigehalli_03@btp-demo.example,+91-98256543484,day,ASI
+OFF_KODIGEHALLI_04,Ganesh Naidu,KODIGEHALLI,off_kodigehalli_04@btp-demo.example,+91-98971561958,night,HC
+OFF_KODIGEHALLI_05,Venkatesh Rao,KODIGEHALLI,off_kodigehalli_05@btp-demo.example,+91-98476656154,night,HC
+OFF_MADIWALA_01,Ramesh Kumar,MADIWALA,off_madiwala_01@btp-demo.example,+91-98798953117,day,ASI
+OFF_MADIWALA_02,Suresh Singh,MADIWALA,off_madiwala_02@btp-demo.example,+91-98005405061,day,ASI
+OFF_MADIWALA_03,Mahesh Reddy,MADIWALA,off_madiwala_03@btp-demo.example,+91-98252517994,day,ASI
+OFF_MADIWALA_04,Ganesh Naidu,MADIWALA,off_madiwala_04@btp-demo.example,+91-98857636878,night,HC
+OFF_MADIWALA_05,Venkatesh Rao,MADIWALA,off_madiwala_05@btp-demo.example,+91-98438848820,night,HC
+OFF_MAGADI_ROAD_01,Ramesh Kumar,MAGADI ROAD,off_magadi_road_01@btp-demo.example,+91-98866564477,day,ASI
+OFF_MAGADI_ROAD_02,Suresh Singh,MAGADI ROAD,off_magadi_road_02@btp-demo.example,+91-98754992522,day,ASI
+OFF_MAGADI_ROAD_03,Mahesh Reddy,MAGADI ROAD,off_magadi_road_03@btp-demo.example,+91-98191474976,day,ASI
+OFF_MAGADI_ROAD_04,Ganesh Naidu,MAGADI ROAD,off_magadi_road_04@btp-demo.example,+91-98503891230,night,HC
+OFF_MAGADI_ROAD_05,Venkatesh Rao,MAGADI ROAD,off_magadi_road_05@btp-demo.example,+91-98815555682,night,HC
+OFF_MAHADEVAPURA_01,Ramesh Kumar,MAHADEVAPURA,off_mahadevapura_01@btp-demo.example,+91-98991521351,day,ASI
+OFF_MAHADEVAPURA_02,Suresh Singh,MAHADEVAPURA,off_mahadevapura_02@btp-demo.example,+91-98238628831,day,ASI
+OFF_MAHADEVAPURA_03,Mahesh Reddy,MAHADEVAPURA,off_mahadevapura_03@btp-demo.example,+91-98914877878,day,ASI
+OFF_MAHADEVAPURA_04,Ganesh Naidu,MAHADEVAPURA,off_mahadevapura_04@btp-demo.example,+91-98278785423,night,HC
+OFF_MAHADEVAPURA_05,Venkatesh Rao,MAHADEVAPURA,off_mahadevapura_05@btp-demo.example,+91-98843793846,night,HC
+OFF_MALLESHWARAM_01,Ramesh Kumar,MALLESHWARAM,off_malleshwaram_01@btp-demo.example,+91-98428110832,day,ASI
+OFF_MALLESHWARAM_02,Suresh Singh,MALLESHWARAM,off_malleshwaram_02@btp-demo.example,+91-98803050231,day,ASI
+OFF_MALLESHWARAM_03,Mahesh Reddy,MALLESHWARAM,off_malleshwaram_03@btp-demo.example,+91-98641665574,day,ASI
+OFF_MALLESHWARAM_04,Ganesh Naidu,MALLESHWARAM,off_malleshwaram_04@btp-demo.example,+91-98013308466,night,HC
+OFF_MALLESHWARAM_05,Venkatesh Rao,MALLESHWARAM,off_malleshwaram_05@btp-demo.example,+91-98109792963,night,HC
+OFF_MICO_LAYOUT_01,Ramesh Kumar,MICO LAYOUT,off_mico_layout_01@btp-demo.example,+91-98587900533,day,ASI
+OFF_MICO_LAYOUT_02,Suresh Singh,MICO LAYOUT,off_mico_layout_02@btp-demo.example,+91-98124621209,day,ASI
+OFF_MICO_LAYOUT_03,Mahesh Reddy,MICO LAYOUT,off_mico_layout_03@btp-demo.example,+91-98225826934,day,ASI
+OFF_MICO_LAYOUT_04,Ganesh Naidu,MICO LAYOUT,off_mico_layout_04@btp-demo.example,+91-98988173598,night,HC
+OFF_MICO_LAYOUT_05,Venkatesh Rao,MICO LAYOUT,off_mico_layout_05@btp-demo.example,+91-98018293828,night,HC
+OFF_NO_POLICE_STATION_01,Ramesh Kumar,NO POLICE STATION,off_no_police_station_01@btp-demo.example,+91-98191173460,day,ASI
+OFF_NO_POLICE_STATION_02,Suresh Singh,NO POLICE STATION,off_no_police_station_02@btp-demo.example,+91-98543248854,day,ASI
+OFF_NO_POLICE_STATION_03,Mahesh Reddy,NO POLICE STATION,off_no_police_station_03@btp-demo.example,+91-98327191790,day,ASI
+OFF_NO_POLICE_STATION_04,Ganesh Naidu,NO POLICE STATION,off_no_police_station_04@btp-demo.example,+91-98060848344,night,HC
+OFF_NO_POLICE_STATION_05,Venkatesh Rao,NO POLICE STATION,off_no_police_station_05@btp-demo.example,+91-98460507949,night,HC
+OFF_PEENYA_01,Ramesh Kumar,PEENYA,off_peenya_01@btp-demo.example,+91-98014227161,day,ASI
+OFF_PEENYA_02,Suresh Singh,PEENYA,off_peenya_02@btp-demo.example,+91-98564182521,day,ASI
+OFF_PEENYA_03,Mahesh Reddy,PEENYA,off_peenya_03@btp-demo.example,+91-98687669776,day,ASI
+OFF_PEENYA_04,Ganesh Naidu,PEENYA,off_peenya_04@btp-demo.example,+91-98775670705,night,HC
+OFF_PEENYA_05,Venkatesh Rao,PEENYA,off_peenya_05@btp-demo.example,+91-98467253820,night,HC
+OFF_PULIKESHINAGAR(F.TOWN)_01,Ramesh Kumar,PULIKESHINAGAR(F.TOWN),off_pulikeshinagar(f.town)_01@btp-demo.example,+91-98629069922,day,ASI
+OFF_PULIKESHINAGAR(F.TOWN)_02,Suresh Singh,PULIKESHINAGAR(F.TOWN),off_pulikeshinagar(f.town)_02@btp-demo.example,+91-98967438158,day,ASI
+OFF_PULIKESHINAGAR(F.TOWN)_03,Mahesh Reddy,PULIKESHINAGAR(F.TOWN),off_pulikeshinagar(f.town)_03@btp-demo.example,+91-98875137774,day,ASI
+OFF_PULIKESHINAGAR(F.TOWN)_04,Ganesh Naidu,PULIKESHINAGAR(F.TOWN),off_pulikeshinagar(f.town)_04@btp-demo.example,+91-98186737002,night,HC
+OFF_PULIKESHINAGAR(F.TOWN)_05,Venkatesh Rao,PULIKESHINAGAR(F.TOWN),off_pulikeshinagar(f.town)_05@btp-demo.example,+91-98175932683,night,HC
+OFF_R.T._NAGAR_01,Ramesh Kumar,R.T. NAGAR,off_r.t._nagar_01@btp-demo.example,+91-98041459133,day,ASI
+OFF_R.T._NAGAR_02,Suresh Singh,R.T. NAGAR,off_r.t._nagar_02@btp-demo.example,+91-98305853507,day,ASI
+OFF_R.T._NAGAR_03,Mahesh Reddy,R.T. NAGAR,off_r.t._nagar_03@btp-demo.example,+91-98512744404,day,ASI
+OFF_R.T._NAGAR_04,Ganesh Naidu,R.T. NAGAR,off_r.t._nagar_04@btp-demo.example,+91-98096890714,night,HC
+OFF_R.T._NAGAR_05,Venkatesh Rao,R.T. NAGAR,off_r.t._nagar_05@btp-demo.example,+91-98672944596,night,HC
+OFF_RAJAJINAGAR_01,Ramesh Kumar,RAJAJINAGAR,off_rajajinagar_01@btp-demo.example,+91-98804297075,day,ASI
+OFF_RAJAJINAGAR_02,Suresh Singh,RAJAJINAGAR,off_rajajinagar_02@btp-demo.example,+91-98906461901,day,ASI
+OFF_RAJAJINAGAR_03,Mahesh Reddy,RAJAJINAGAR,off_rajajinagar_03@btp-demo.example,+91-98226268812,day,ASI
+OFF_RAJAJINAGAR_04,Ganesh Naidu,RAJAJINAGAR,off_rajajinagar_04@btp-demo.example,+91-98184743231,night,HC
+OFF_RAJAJINAGAR_05,Venkatesh Rao,RAJAJINAGAR,off_rajajinagar_05@btp-demo.example,+91-98298569885,night,HC
+OFF_SADASHIVANAGAR_01,Ramesh Kumar,SADASHIVANAGAR,off_sadashivanagar_01@btp-demo.example,+91-98232766489,day,ASI
+OFF_SADASHIVANAGAR_02,Suresh Singh,SADASHIVANAGAR,off_sadashivanagar_02@btp-demo.example,+91-98481654030,day,ASI
+OFF_SADASHIVANAGAR_03,Mahesh Reddy,SADASHIVANAGAR,off_sadashivanagar_03@btp-demo.example,+91-98869819482,day,ASI
+OFF_SADASHIVANAGAR_04,Ganesh Naidu,SADASHIVANAGAR,off_sadashivanagar_04@btp-demo.example,+91-98292323577,night,HC
+OFF_SADASHIVANAGAR_05,Venkatesh Rao,SADASHIVANAGAR,off_sadashivanagar_05@btp-demo.example,+91-98084001380,night,HC
+OFF_SHESHADRIPURAM_01,Ramesh Kumar,SHESHADRIPURAM,off_sheshadripuram_01@btp-demo.example,+91-98709338774,day,ASI
+OFF_SHESHADRIPURAM_02,Suresh Singh,SHESHADRIPURAM,off_sheshadripuram_02@btp-demo.example,+91-98543531254,day,ASI
+OFF_SHESHADRIPURAM_03,Mahesh Reddy,SHESHADRIPURAM,off_sheshadripuram_03@btp-demo.example,+91-98662947063,day,ASI
+OFF_SHESHADRIPURAM_04,Ganesh Naidu,SHESHADRIPURAM,off_sheshadripuram_04@btp-demo.example,+91-98895794683,night,HC
+OFF_SHESHADRIPURAM_05,Venkatesh Rao,SHESHADRIPURAM,off_sheshadripuram_05@btp-demo.example,+91-98009050062,night,HC
+OFF_SHIVAJINAGAR_01,Ramesh Kumar,SHIVAJINAGAR,off_shivajinagar_01@btp-demo.example,+91-98438417626,day,ASI
+OFF_SHIVAJINAGAR_02,Suresh Singh,SHIVAJINAGAR,off_shivajinagar_02@btp-demo.example,+91-98450454075,day,ASI
+OFF_SHIVAJINAGAR_03,Mahesh Reddy,SHIVAJINAGAR,off_shivajinagar_03@btp-demo.example,+91-98181666173,day,ASI
+OFF_SHIVAJINAGAR_04,Ganesh Naidu,SHIVAJINAGAR,off_shivajinagar_04@btp-demo.example,+91-98900287485,night,HC
+OFF_SHIVAJINAGAR_05,Venkatesh Rao,SHIVAJINAGAR,off_shivajinagar_05@btp-demo.example,+91-98660680259,night,HC
+OFF_THALAGATTAPURA_01,Ramesh Kumar,THALAGATTAPURA,off_thalagattapura_01@btp-demo.example,+91-98328408565,day,ASI
+OFF_THALAGATTAPURA_02,Suresh Singh,THALAGATTAPURA,off_thalagattapura_02@btp-demo.example,+91-98021827324,day,ASI
+OFF_THALAGATTAPURA_03,Mahesh Reddy,THALAGATTAPURA,off_thalagattapura_03@btp-demo.example,+91-98779490644,day,ASI
+OFF_THALAGATTAPURA_04,Ganesh Naidu,THALAGATTAPURA,off_thalagattapura_04@btp-demo.example,+91-98442797839,night,HC
+OFF_THALAGATTAPURA_05,Venkatesh Rao,THALAGATTAPURA,off_thalagattapura_05@btp-demo.example,+91-98837916758,night,HC
+OFF_UPPARPET_01,Ramesh Kumar,UPPARPET,off_upparpet_01@btp-demo.example,+91-98868647199,day,ASI
+OFF_UPPARPET_02,Suresh Singh,UPPARPET,off_upparpet_02@btp-demo.example,+91-98489162198,day,ASI
+OFF_UPPARPET_03,Mahesh Reddy,UPPARPET,off_upparpet_03@btp-demo.example,+91-98464313986,day,ASI
+OFF_UPPARPET_04,Ganesh Naidu,UPPARPET,off_upparpet_04@btp-demo.example,+91-98099001071,night,HC
+OFF_UPPARPET_05,Venkatesh Rao,UPPARPET,off_upparpet_05@btp-demo.example,+91-98524162672,night,HC
+OFF_V.V.PURAM_(C.PET)_01,Ramesh Kumar,V.V.PURAM (C.PET),off_v.v.puram_(c.pet)_01@btp-demo.example,+91-98536716669,day,ASI
+OFF_V.V.PURAM_(C.PET)_02,Suresh Singh,V.V.PURAM (C.PET),off_v.v.puram_(c.pet)_02@btp-demo.example,+91-98155921758,day,ASI
+OFF_V.V.PURAM_(C.PET)_03,Mahesh Reddy,V.V.PURAM (C.PET),off_v.v.puram_(c.pet)_03@btp-demo.example,+91-98302237265,day,ASI
+OFF_V.V.PURAM_(C.PET)_04,Ganesh Naidu,V.V.PURAM (C.PET),off_v.v.puram_(c.pet)_04@btp-demo.example,+91-98492745735,night,HC
+OFF_V.V.PURAM_(C.PET)_05,Venkatesh Rao,V.V.PURAM (C.PET),off_v.v.puram_(c.pet)_05@btp-demo.example,+91-98664224055,night,HC
+OFF_VIJAYANAGARA_01,Ramesh Kumar,VIJAYANAGARA,off_vijayanagara_01@btp-demo.example,+91-98961003701,day,ASI
+OFF_VIJAYANAGARA_02,Suresh Singh,VIJAYANAGARA,off_vijayanagara_02@btp-demo.example,+91-98120886979,day,ASI
+OFF_VIJAYANAGARA_03,Mahesh Reddy,VIJAYANAGARA,off_vijayanagara_03@btp-demo.example,+91-98211404050,day,ASI
+OFF_VIJAYANAGARA_04,Ganesh Naidu,VIJAYANAGARA,off_vijayanagara_04@btp-demo.example,+91-98329365538,night,HC
+OFF_VIJAYANAGARA_05,Venkatesh Rao,VIJAYANAGARA,off_vijayanagara_05@btp-demo.example,+91-98692243969,night,HC
+OFF_WHITEFIELD_01,Ramesh Kumar,WHITEFIELD,off_whitefield_01@btp-demo.example,+91-98909788432,day,ASI
+OFF_WHITEFIELD_02,Suresh Singh,WHITEFIELD,off_whitefield_02@btp-demo.example,+91-98872877879,day,ASI
+OFF_WHITEFIELD_03,Mahesh Reddy,WHITEFIELD,off_whitefield_03@btp-demo.example,+91-98157560117,day,ASI
+OFF_WHITEFIELD_04,Ganesh Naidu,WHITEFIELD,off_whitefield_04@btp-demo.example,+91-98071552562,night,HC
+OFF_WHITEFIELD_05,Venkatesh Rao,WHITEFIELD,off_whitefield_05@btp-demo.example,+91-98850830505,night,HC
+OFF_WILSON_GARDEN_01,Ramesh Kumar,WILSON GARDEN,off_wilson_garden_01@btp-demo.example,+91-98441077224,day,ASI
+OFF_WILSON_GARDEN_02,Suresh Singh,WILSON GARDEN,off_wilson_garden_02@btp-demo.example,+91-98711557195,day,ASI
+OFF_WILSON_GARDEN_03,Mahesh Reddy,WILSON GARDEN,off_wilson_garden_03@btp-demo.example,+91-98894229994,day,ASI
+OFF_WILSON_GARDEN_04,Ganesh Naidu,WILSON GARDEN,off_wilson_garden_04@btp-demo.example,+91-98959812735,night,HC
+OFF_WILSON_GARDEN_05,Venkatesh Rao,WILSON GARDEN,off_wilson_garden_05@btp-demo.example,+91-98818404187,night,HC
+OFF_YELAHANKA_01,Ramesh Kumar,YELAHANKA,off_yelahanka_01@btp-demo.example,+91-98374154699,day,ASI
+OFF_YELAHANKA_02,Suresh Singh,YELAHANKA,off_yelahanka_02@btp-demo.example,+91-98500386341,day,ASI
+OFF_YELAHANKA_03,Mahesh Reddy,YELAHANKA,off_yelahanka_03@btp-demo.example,+91-98372381156,day,ASI
+OFF_YELAHANKA_04,Ganesh Naidu,YELAHANKA,off_yelahanka_04@btp-demo.example,+91-98320152489,night,HC
+OFF_YELAHANKA_05,Venkatesh Rao,YELAHANKA,off_yelahanka_05@btp-demo.example,+91-98636010663,night,HC
+OFF_YESHWANTHPURA_01,Ramesh Kumar,YESHWANTHPURA,off_yeshwanthpura_01@btp-demo.example,+91-98654858336,day,ASI
+OFF_YESHWANTHPURA_02,Suresh Singh,YESHWANTHPURA,off_yeshwanthpura_02@btp-demo.example,+91-98083641863,day,ASI
+OFF_YESHWANTHPURA_03,Mahesh Reddy,YESHWANTHPURA,off_yeshwanthpura_03@btp-demo.example,+91-98421955188,day,ASI
+OFF_YESHWANTHPURA_04,Ganesh Naidu,YESHWANTHPURA,off_yeshwanthpura_04@btp-demo.example,+91-98964082677,night,HC
+OFF_YESHWANTHPURA_05,Venkatesh Rao,YESHWANTHPURA,off_yeshwanthpura_05@btp-demo.example,+91-98544428629,night,HC

@@ -45,3 +45,15 @@ data/raw/
 
 # Logs
 *.log
+
+# Agent runtime artifacts (regenerable)
+data/outputs/eml/
+data/outputs/run_snapshots/
+data/outputs/agent_state.json
+data/outputs/pending_master_plan.json
+data/outputs/approved_master_plan.json
+data/outputs/daily_master_plan.json
+
+# SQLite WAL files
+data/outputs/*.sqlite-shm
+data/outputs/*.sqlite-wal
