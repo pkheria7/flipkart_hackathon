@@ -1,0 +1,38 @@
+{
+  "plan_id": "PLAN_20260621_APPROVED",
+  "date": "2026-06-21",
+  "generated_at": "2026-06-21T04:00:00+05:30",
+  "status": "approved",
+  "station_summaries": [
+    { "station": "ADUGODI", "assignment_count": 8, "avg_roi_score": 71.8, "structural_count": 3, "responsive_count": 5 },
+    { "station": "JAYANAGARA", "assignment_count": 5, "avg_roi_score": 74.2, "structural_count": 2, "responsive_count": 3 }
+  ],
+  "assignments": [
+    {
+      "cluster_id": "C_446",
+      "assigned_station": "ADUGODI",
+      "time_window": "02:00-04:00",
+      "officer_id": "OFF_ADUGODI_01",
+      "officer_name": "Ramesh Kumar",
+      "tow_truck_id": "TOW_ADUGODI_01",
+      "action": "Recurring patrol + towing support + signage/infra review",
+      "reason": "ROI=92.5, LCLE=55.7%, BCI=0.023, class=STRUCTURAL",
+      "roi_score": 92.53,
+      "lcle_pct": 55.74,
+      "bci": 0.0235
+    },
+    {
+      "cluster_id": "C_512",
+      "assigned_station": "JAYANAGARA",
+      "time_window": "14:00-16:00",
+      "officer_id": "OFF_JAYANAGARA_01",
+      "officer_name": "Anil Desai",
+      "tow_truck_id": "TOW_JAYANAGARA_01",
+      "action": "Infra escalation review + recurring patrol",
+      "reason": "ROI=88.2, LCLE=42.1%, BCI=0.078, class=STRUCTURAL",
+      "roi_score": 88.2,
+      "lcle_pct": 42.1,
+      "bci": 0.078
+    }
+  ]
+}

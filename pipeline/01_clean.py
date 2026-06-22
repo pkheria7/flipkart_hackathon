@@ -186,9 +186,17 @@ def clean_data() -> tuple[pd.DataFrame, dict]:
     dropped_bbox = before_bbox - len(df)
     print(f"[P1] Dropped {dropped_bbox:,} rows outside Bengaluru bbox")
 
-    # Timestamp parsing
-    df["created_datetime"] = pd.to_datetime(df["created_datetime"], errors="coerce", utc=True)
-    df["created_datetime_ist"] = df["created_datetime"].dt.tz_convert("Asia/Kolkata")
+    # ── Timestamp parsing ─────────────────────────────────────────────────────
+    # Source CSV: created_datetime carries an explicit +00 (UTC) offset, e.g.
+    #   '2023-11-20 00:28:46+00'
+    # utc=True handles both offset-aware strings (passes through UTC) and any
+    # naive strings (treated as UTC).  The single tz_convert call is the only
+    # UTC→IST conversion in this pipeline — do not re-convert downstream.
+    df["created_datetime_raw"] = df["created_datetime"].astype(str)  # preserve raw
+    df["created_datetime_utc"] = pd.to_datetime(
+        df["created_datetime"], errors="coerce", utc=True
+    )
+    df["created_datetime_ist"] = df["created_datetime_utc"].dt.tz_convert("Asia/Kolkata")
 
     df["action_taken_timestamp"] = pd.to_datetime(df["action_taken_timestamp"], errors="coerce", utc=True)
     df["closed_datetime"] = pd.to_datetime(df["closed_datetime"], errors="coerce", utc=True)
@@ -201,16 +209,23 @@ def clean_data() -> tuple[pd.DataFrame, dict]:
     dropped_time = before_time - len(df)
     print(f"[P1] Dropped {dropped_time:,} rows with unparseable created_datetime")
 
-    # Temporal features
-    df["date_ist"] = df["created_datetime_ist"].dt.date
-    df["hour"] = df["created_datetime_ist"].dt.hour
-    df["day_of_week"] = df["created_datetime_ist"].dt.dayofweek  # Monday=0
-    df["day_name"] = df["created_datetime_ist"].dt.day_name()
+    # ── IST-derived temporal features ─────────────────────────────────────────
+    # All operational fields (peak windows, recurrence, weekly patterns) use IST.
+    # hour_ist / weekday_ist are explicit; hour / day_of_week are kept as
+    # backward-compatible aliases so M3/M4 (which reference those names) continue
+    # to work without modification.
+    df["date_ist"]    = df["created_datetime_ist"].dt.date
+    df["hour_ist"]    = df["created_datetime_ist"].dt.hour.astype("int32")
+    df["weekday_ist"] = df["created_datetime_ist"].dt.weekday.astype("int32")  # Mon=0
+    df["day_name"]    = df["created_datetime_ist"].dt.day_name()
     df["week_number"] = df["created_datetime_ist"].dt.isocalendar().week.astype(int)
-    df["month"] = df["created_datetime_ist"].dt.month
-    df["is_weekend"] = df["day_of_week"].isin([5, 6]).astype(int)
-    df["is_peak_hour"] = df["hour"].isin(PEAK_HOURS).astype(int)
-    df["time_period"] = df["hour"].apply(classify_time_period)
+    df["month"]       = df["created_datetime_ist"].dt.month
+    # Backward-compatible aliases — downstream modules use these names
+    df["hour"]        = df["hour_ist"]
+    df["day_of_week"] = df["weekday_ist"]
+    df["is_weekend"]  = df["weekday_ist"].isin([5, 6]).astype(int)
+    df["is_peak_hour"]= df["hour_ist"].isin(PEAK_HOURS).astype(int)
+    df["time_period"] = df["hour_ist"].apply(classify_time_period)
 
     # Vehicle type resolution
     df["updated_vehicle_type"] = clean_text_series(df.get("updated_vehicle_type", pd.Series(np.nan, index=df.index)))
@@ -252,9 +267,12 @@ def clean_data() -> tuple[pd.DataFrame, dict]:
         "offence_code",
         "offence_code_list",
         "offence_code_clean",
-        "created_datetime",
+        "created_datetime_raw",
+        "created_datetime_utc",
         "created_datetime_ist",
         "date_ist",
+        "hour_ist",
+        "weekday_ist",
         "hour",
         "day_of_week",
         "day_name",

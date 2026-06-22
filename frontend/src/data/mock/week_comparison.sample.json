@@ -1,0 +1,14 @@
+{
+  "disclaimer": "Synthetic closed-loop demo data. Week 2 incorporates officer feedback structural boosts from Week 1 patrol outcomes. Not representative of live BTP enforcement data.",
+  "week_1_label": "Week 1 — Baseline Scoring",
+  "week_2_label": "Week 2 — Feedback-Adjusted",
+  "metrics": [
+    { "label": "Avg ROI Score", "week_1": 68.4, "week_2": 74.2, "unit": "score" },
+    { "label": "Structural Hotspots", "week_1": 312, "week_2": 298, "unit": "count" },
+    { "label": "LCLE Signal Rate", "week_1": 22.1, "week_2": 28.6, "unit": "%" },
+    { "label": "Patrol Coverage", "week_1": 78.5, "week_2": 86.3, "unit": "%" },
+    { "label": "Recurrence Rate", "week_1": 0.58, "week_2": 0.42, "unit": "ratio" }
+  ],
+  "structural_shift_pct": -4.5,
+  "feedback_loop_active": true
+}

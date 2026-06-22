@@ -4,8 +4,8 @@ This report validates consistency across the entire pipeline: P1 → P2 → P3 �
 
 ## Summary
 
-- Overall verdict: **PASS**
-- Checks passed: 24 / 24
+- Overall verdict: **FAIL**
+- Checks passed: 23 / 24
 
 ## Pipeline stats
 
@@ -34,15 +34,15 @@ This report validates consistency across the entire pipeline: P1 → P2 → P3 �
 | 7 | scored_covers_all_summary_clusters | PASS | overlap=1084, summary=1084, scored=1084 |
 | 8 | scored_has_no_noise | PASS | clean |
 | 9 | scored_schema_columns | PASS | missing=[], extra=[] |
-| 10 | scored_schema_dtypes | PASS | all dtypes match |
+| 10 | scored_schema_dtypes | PASS | all dtype categories match |
 | 11 | roi_score_range_0_100 | PASS | min=0.3690, max=100.0000 |
 | 12 | lcle_range_0_100 | PASS | min=6.7928, max=100.0000 |
 | 13 | bci_range_0_1 | PASS | min=0.0000, max=1.0000 |
 | 14 | no_null_required_fields | PASS | no nulls |
 | 15 | violation_count_consistent_summary_to_scored | PASS | counts match |
 | 16 | feedback_boosted_clusters_are_structural | PASS | boosted=['C_0_0'], structural=True |
-| 17 | feedback_summary_matches_enriched_boost | PASS | enriched_boost=['C_0_0'], feedback_boost=['C_0_0'] |
-| 18 | classification_values_valid | PASS | classes={'SEASONAL', 'STRUCTURAL', 'RESPONSIVE'} |
+| 17 | feedback_summary_matches_enriched_boost | FAIL | enriched_boost=['C_0_0'], feedback_boost=['C_0_0', 'C_229', 'C_298'] |
+| 18 | classification_values_valid | PASS | classes={'SEASONAL', 'RESPONSIVE', 'STRUCTURAL'} |
 | 19 | structural_clusters_have_structural_action | PASS | unique structural actions: ['Recurring patrol + towing support + signage/infra review', 'Review geography first; if confirmed, apply: Recurring patrol + towing support + signage/infra review'] |
 | 20 | roi_has_spread | PASS | std=28.8808 |
 | 21 | lcle_has_spread | PASS | std=20.4943 |
@@ -52,4 +52,4 @@ This report validates consistency across the entire pipeline: P1 → P2 → P3 �
 
 ## Conclusion
 
-All end-to-end checks passed. The pipeline outputs are internally consistent and ready for demo/deployment.
+Some checks failed. Review the FAIL rows above before demo/deployment.

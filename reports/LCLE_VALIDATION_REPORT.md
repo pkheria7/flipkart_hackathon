@@ -55,26 +55,26 @@ lcle_pct             = min(100, (raw_block / max(road_width_m, 1)) × obstructio
 
 | rank | cluster_id | violation_count | road_class | road_width_m | source | avg_width | occupancy | raw_block | junction_rate | lcle_pct | confidence |
 |------|------------|-----------------|------------|--------------|--------|-----------|-----------|-----------|---------------|----------|------------|
-| 1 | C_0_1 | 23,553 | tertiary | 6.0 | osm_width | 1.30 | 5.06 | 6.56 | 0.00 | 100.00 | LOW |
-| 2 | C_990 | 49 | residential | 3.5 | irc_default | 1.68 | 3.24 | 5.45 | 0.00 | 100.00 | MEDIUM |
-| 3 | C_358 | 77 | residential | 3.5 | irc_default | 1.82 | 2.08 | 3.79 | 0.00 | 100.00 | MEDIUM |
-| 4 | C_808 | 237 | residential | 3.5 | irc_default | 1.86 | 2.51 | 4.66 | 0.00 | 100.00 | MEDIUM |
-| 5 | C_1004 | 19 | residential | 3.5 | irc_default | 2.05 | 1.99 | 4.08 | 0.00 | 100.00 | MEDIUM |
-| 6 | C_0_2 | 8,323 | residential | 3.5 | irc_default | 1.13 | 4.03 | 4.54 | 0.00 | 100.00 | MEDIUM |
-| 7 | C_282 | 20 | residential | 3.5 | irc_default | 1.78 | 3.04 | 5.40 | 0.00 | 100.00 | MEDIUM |
-| 8 | C_383 | 266 | residential | 3.5 | irc_default | 2.02 | 2.42 | 4.89 | 0.00 | 100.00 | MEDIUM |
+| 1 | C_0_53 | 11 | residential | 3.5 | irc_default | 1.55 | 2.48 | 3.84 | 0.00 | 100.00 | LOW |
+| 2 | C_731 | 1,751 | residential | 3.5 | irc_default | 1.53 | 3.26 | 4.98 | 0.00 | 100.00 | MEDIUM |
+| 3 | C_81 | 2,187 | tertiary | 4.0 | irc_default | 1.48 | 2.84 | 4.20 | 0.00 | 100.00 | MEDIUM |
+| 4 | C_908 | 15 | tertiary | 4.0 | irc_default | 1.86 | 2.77 | 5.16 | 0.00 | 100.00 | MEDIUM |
+| 5 | C_972 | 15 | secondary | 5.5 | irc_default | 2.07 | 2.77 | 5.73 | 0.00 | 100.00 | MEDIUM |
+| 6 | C_1017 | 16 | residential | 3.5 | irc_default | 1.54 | 2.83 | 4.37 | 0.00 | 100.00 | MEDIUM |
+| 7 | C_798 | 16 | residential | 3.5 | irc_default | 1.82 | 2.20 | 4.00 | 0.00 | 100.00 | MEDIUM |
+| 8 | C_1000 | 16 | residential | 3.5 | irc_default | 1.44 | 2.83 | 4.07 | 0.00 | 100.00 | MEDIUM |
 | 9 | C_806 | 20 | residential | 3.5 | irc_default | 1.75 | 2.04 | 3.55 | 0.00 | 100.00 | MEDIUM |
-| 10 | C_14 | 4,501 | tertiary | 4.0 | irc_default | 1.44 | 3.46 | 4.97 | 0.00 | 100.00 | MEDIUM |
-| 11 | C_1018 | 17 | residential | 3.5 | irc_default | 1.32 | 2.89 | 3.83 | 0.00 | 100.00 | MEDIUM |
-| 12 | C_171 | 4,437 | residential | 3.5 | irc_default | 1.90 | 3.46 | 6.56 | 0.02 | 100.00 | MEDIUM |
-| 13 | C_3 | 3,926 | residential | 3.5 | irc_default | 1.36 | 3.30 | 4.50 | 0.00 | 100.00 | MEDIUM |
-| 14 | C_15 | 3,813 | residential | 3.5 | irc_default | 1.40 | 3.33 | 4.66 | 0.00 | 100.00 | MEDIUM |
-| 15 | C_1017 | 16 | residential | 3.5 | irc_default | 1.54 | 2.83 | 4.37 | 0.00 | 100.00 | MEDIUM |
-| 16 | C_798 | 16 | residential | 3.5 | irc_default | 1.82 | 2.20 | 4.00 | 0.00 | 100.00 | MEDIUM |
-| 17 | C_1000 | 16 | residential | 3.5 | irc_default | 1.44 | 2.83 | 4.07 | 0.00 | 100.00 | MEDIUM |
-| 18 | C_117 | 458 | residential | 3.5 | irc_default | 1.84 | 2.03 | 3.74 | 0.00 | 100.00 | MEDIUM |
-| 19 | C_83 | 1,240 | tertiary | 4.0 | irc_default | 1.76 | 2.58 | 4.54 | 0.00 | 100.00 | MEDIUM |
-| 20 | C_731 | 1,751 | residential | 3.5 | irc_default | 1.53 | 3.26 | 4.98 | 0.00 | 100.00 | MEDIUM |
+| 10 | C_1004 | 19 | residential | 3.5 | irc_default | 2.05 | 1.99 | 4.08 | 0.00 | 100.00 | MEDIUM |
+| 11 | C_282 | 20 | residential | 3.5 | irc_default | 1.78 | 3.04 | 5.40 | 0.00 | 100.00 | MEDIUM |
+| 12 | C_1018 | 17 | residential | 3.5 | irc_default | 1.32 | 2.89 | 3.83 | 0.00 | 100.00 | MEDIUM |
+| 13 | C_83 | 1,240 | tertiary | 4.0 | irc_default | 1.76 | 2.58 | 4.54 | 0.00 | 100.00 | MEDIUM |
+| 14 | C_696 | 28 | trunk_link | 3.5 | irc_default | 2.13 | 1.73 | 3.70 | 0.00 | 100.00 | MEDIUM |
+| 15 | C_17 | 927 | residential | 3.5 | irc_default | 1.79 | 2.37 | 4.24 | 0.01 | 100.00 | MEDIUM |
+| 16 | C_126 | 939 | trunk_link | 3.0 | osm_width | 1.65 | 2.49 | 4.11 | 0.12 | 100.00 | HIGH |
+| 17 | C_14 | 4,501 | tertiary | 4.0 | irc_default | 1.44 | 3.46 | 4.97 | 0.00 | 100.00 | MEDIUM |
+| 18 | C_0_2 | 8,323 | residential | 3.5 | irc_default | 1.13 | 4.03 | 4.54 | 0.00 | 100.00 | MEDIUM |
+| 19 | C_3 | 3,926 | residential | 3.5 | irc_default | 1.36 | 3.30 | 4.50 | 0.00 | 100.00 | MEDIUM |
+| 20 | C_171 | 4,437 | residential | 3.5 | irc_default | 1.90 | 3.46 | 6.56 | 0.02 | 100.00 | MEDIUM |
 
 ## Top 20 clusters by violation_count (for divergence check)
 

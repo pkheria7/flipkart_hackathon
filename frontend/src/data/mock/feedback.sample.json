@@ -1,0 +1,45 @@
+{
+  "officer_feedback": [
+    {
+      "cluster_id": "C_446",
+      "officer_id": "OFF_ADUGODI_01",
+      "action": "towed",
+      "outcome": "resolved",
+      "reason_code": "ignored_sign",
+      "assigned_station": "ADUGODI",
+      "timestamp": "2026-06-20T03:45:00+05:30",
+      "source": "mobile_app"
+    },
+    {
+      "cluster_id": "C_318",
+      "officer_id": "OFF_HSR_01",
+      "action": "warned",
+      "outcome": "recurred",
+      "reason_code": "no_parking_space",
+      "reason_text": "Insufficient legal parking bays; violations returned within 48 hours",
+      "assigned_station": "HSR_LAYOUT",
+      "timestamp": "2026-06-19T09:15:00+05:30",
+      "source": "mobile_app"
+    },
+    {
+      "cluster_id": "C_751",
+      "officer_id": "OFF_ADUGODI_03",
+      "action": "could_not_enforce",
+      "outcome": "no_violation",
+      "reason_code": "loading",
+      "reason_text": "Active commercial loading zone during patrol window",
+      "assigned_station": "ADUGODI",
+      "timestamp": "2026-06-20T12:30:00+05:30",
+      "source": "mobile_app"
+    }
+  ],
+  "citizen_feedback": [
+    {
+      "cluster_id": "C_512",
+      "reason_code": "no_parking_space",
+      "reason_text": "No designated parking on commercial stretch",
+      "timestamp": "2026-06-18T16:20:00+05:30",
+      "source": "citizen_portal"
+    }
+  ]
+}

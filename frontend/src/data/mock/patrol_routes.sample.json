@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-06-21T02:39:02+05:30",
+  "routes": [
+    {
+      "route_id": "ROUTE_ADUGODI_001",
+      "assigned_station": "ADUGODI",
+      "routing_mode": "OSM_GRAPH",
+      "total_distance_km": 9.48,
+      "estimated_duration_min": 92.81,
+      "officer_hours": 1.55,
+      "stops": [
+        {
+          "order": 1,
+          "cluster_id": "C_446",
+          "centroid_lat": 12.932364,
+          "centroid_lng": 77.63175,
+          "location_name": "Adugodi Main Road",
+          "roi_score": 92.53,
+          "peak_window": "02:00-04:00",
+          "recommended_action": "Recurring patrol + towing support"
+        },
+        {
+          "order": 2,
+          "cluster_id": "C_290",
+          "centroid_lat": 12.937134,
+          "centroid_lng": 77.627115,
+          "location_name": "Koramangala Ring Road Junction",
+          "roi_score": 68.08,
+          "peak_window": "14:00-16:00",
+          "recommended_action": "Review geography + recurring patrol"
+        },
+        {
+          "order": 3,
+          "cluster_id": "C_751",
+          "centroid_lat": 12.935647,
+          "centroid_lng": 77.611595,
+          "location_name": "Lakkasandra Cross",
+          "roi_score": 79.06,
+          "peak_window": "11:00-13:00",
+          "recommended_action": "Targeted short-term patrol"
+        }
+      ]
+    },
+    {
+      "route_id": "ROUTE_INDIRANAGAR_001",
+      "assigned_station": "INDIRANAGAR",
+      "routing_mode": "OSM_GRAPH",
+      "total_distance_km": 7.2,
+      "estimated_duration_min": 78.5,
+      "officer_hours": 1.31,
+      "stops": [
+        {
+          "order": 1,
+          "cluster_id": "C_102",
+          "centroid_lat": 12.9784,
+          "centroid_lng": 77.6408,
+          "location_name": "100 Feet Road",
+          "roi_score": 85.4,
+          "peak_window": "17:00-19:00",
+          "recommended_action": "Peak-window patrol with tow standby"
+        },
+        {
+          "order": 2,
+          "cluster_id": "C_203",
+          "centroid_lat": 12.9352,
+          "centroid_lng": 77.6245,
+          "location_name": "Koramangala 5th Block",
+          "roi_score": 54.2,
+          "peak_window": "20:00-22:00",
+          "recommended_action": "Evening patrol sweep"
+        }
+      ]
+    }
+  ]
+}

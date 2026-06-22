@@ -1,0 +1,38 @@
+{
+  "plan_id": "PLAN_20260622_PENDING",
+  "date": "2026-06-22",
+  "generated_at": "2026-06-22T04:00:00+05:30",
+  "status": "pending",
+  "station_summaries": [
+    { "station": "ADUGODI", "assignment_count": 7, "avg_roi_score": 70.1, "structural_count": 2, "responsive_count": 5 },
+    { "station": "HSR_LAYOUT", "assignment_count": 4, "avg_roi_score": 72.5, "structural_count": 2, "responsive_count": 2 }
+  ],
+  "assignments": [
+    {
+      "cluster_id": "C_318",
+      "assigned_station": "HSR_LAYOUT",
+      "time_window": "08:00-10:00",
+      "officer_id": "OFF_HSR_01",
+      "officer_name": "Vikram Rao",
+      "tow_truck_id": "TOW_HSR_01",
+      "action": "Morning patrol + signage audit",
+      "reason": "ROI=76.8, LCLE=31.6%, BCI=0.055, class=STRUCTURAL",
+      "roi_score": 76.8,
+      "lcle_pct": 31.6,
+      "bci": 0.055
+    },
+    {
+      "cluster_id": "C_290",
+      "assigned_station": "ADUGODI",
+      "time_window": "14:00-16:00",
+      "officer_id": "OFF_ADUGODI_02",
+      "officer_name": "Suresh Singh",
+      "tow_truck_id": "TOW_ADUGODI_02",
+      "action": "Recurring patrol + towing support",
+      "reason": "ROI=68.1, LCLE=12.4%, BCI=0.024, class=STRUCTURAL",
+      "roi_score": 68.08,
+      "lcle_pct": 12.41,
+      "bci": 0.0242
+    }
+  ]
+}

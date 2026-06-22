@@ -6,21 +6,35 @@ Translates English hotspot explanations into Kannada for local officers and driv
 
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 from pathlib import Path
 
-from groq import Groq
-
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-CACHE_FILE = PROJECT_ROOT / "data" / "outputs" / "llm_cache.json"
+CACHE_FILE   = PROJECT_ROOT / "data" / "outputs" / "llm_cache.json"
 
 DEFAULT_MODEL = "llama-3.3-70b-versatile"
+
+try:
+    from groq import Groq as _Groq
+    _GROQ_AVAILABLE = True
+except ImportError:
+    _Groq = None  # type: ignore[assignment,misc]
+    _GROQ_AVAILABLE = False
+
+
+def _stable_key(text: str) -> str:
+    """Return a stable SHA-256-based cache key — safe across Python sessions."""
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
 def _load_cache() -> dict:
     if CACHE_FILE.exists():
-        return json.loads(CACHE_FILE.read_text(encoding="utf-8"))
+        try:
+            return json.loads(CACHE_FILE.read_text(encoding="utf-8"))
+        except Exception:
+            return {}
     return {}
 
 
@@ -32,18 +46,24 @@ def _save_cache(cache: dict) -> None:
 def translate_to_kannada(text: str, api_key: str | None = None) -> str:
     """
     Translate an English explanation into Kannada.
-    Uses a local cache to avoid repeated API calls.
+
+    Uses a SHA-256-keyed local cache to avoid repeated API calls.
+    Falls back to a labelled placeholder if GROQ_API_KEY is not set or groq is not installed.
     """
     cache = _load_cache()
-    cache_key = f"kannada:{hash(text)}"
+
+    # Stable key (replaces old hash()-based key which was not cross-session-safe)
+    cache_key = f"kannada_v2:{_stable_key(text)}"
     if cache_key in cache:
         return cache[cache_key]
 
     key = api_key or os.getenv("GROQ_API_KEY")
-    if not key:
+    if not key or not _GROQ_AVAILABLE:
+        if not _GROQ_AVAILABLE:
+            return f"[Kannada translation unavailable — install groq: pip install groq] {text}"
         return f"[Kannada translation unavailable — set GROQ_API_KEY] {text}"
 
-    client = Groq(api_key=key)
+    client = _Groq(api_key=key)
     prompt = (
         "Translate the following English text into Kannada (ಕನ್ನಡ). "
         "Keep it simple and natural for a Bangalore traffic police officer or driver to understand. "

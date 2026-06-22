@@ -1,0 +1,318 @@
+@import './theme/theme-variables.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: Inter, 'Segoe UI', system-ui, sans-serif;
+    color: var(--page-fg);
+    background-color: var(--color-bg);
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 999px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .text-on-primary {
+    color: #ffffff;
+  }
+
+  .text-shell {
+    color: var(--shell-fg);
+  }
+
+  .text-shell-muted {
+    color: var(--shell-fg-muted);
+  }
+
+  .border-shell {
+    border-color: var(--glass-border-accent);
+  }
+
+  .bg-shell-nav {
+    background-color: color-mix(in srgb, var(--civic-navy) 85%, transparent);
+  }
+
+  /* ---- App canvas ---- */
+  .command-canvas {
+    background: var(--gradient-app);
+    background-color: var(--color-bg);
+  }
+
+  .command-grid {
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 44px 44px;
+    background-position: center;
+  }
+
+  .bg-app {
+    @apply command-canvas;
+  }
+
+  .aurora-bg {
+    @apply pointer-events-none absolute inset-0 overflow-hidden;
+  }
+  .aurora-bg::before,
+  .aurora-bg::after {
+    content: '';
+    @apply pointer-events-none absolute rounded-full blur-3xl;
+  }
+  .aurora-bg::before {
+    width: 38rem;
+    height: 38rem;
+    top: -10rem;
+    left: -8rem;
+    background: radial-gradient(circle, var(--aurora-orb-1) 0%, transparent 65%);
+    @apply animate-aurora-drift;
+  }
+  .aurora-bg::after {
+    width: 32rem;
+    height: 32rem;
+    bottom: -12rem;
+    right: -6rem;
+    background: radial-gradient(circle, var(--aurora-orb-2) 0%, transparent 68%);
+    @apply animate-aurora-drift;
+    animation-delay: -8s;
+  }
+
+  /* ---- Surfaces ---- */
+  .glass-white {
+    @apply rounded-2xl backdrop-blur-xl;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-white-bg);
+    color: var(--civic-ink);
+    box-shadow: var(--shadow-glass);
+  }
+
+  .light-surface {
+    @apply rounded-2xl backdrop-blur-xl;
+    border: 1px solid var(--glass-border);
+    background: var(--color-surface);
+    color: var(--civic-ink);
+    box-shadow: var(--shadow-glass);
+  }
+
+  .glass-navy,
+  .dark-glass {
+    @apply rounded-2xl backdrop-blur-2xl;
+    border: 1px solid var(--glass-border-accent);
+    background: var(--glass-navy-bg);
+    color: var(--fg-on-panel);
+    box-shadow: var(--shadow-command);
+  }
+
+  .glass-panel {
+    @apply glass-white;
+  }
+
+  .signal-line {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      color-mix(in srgb, var(--color-accent) 50%, transparent) 35%,
+      color-mix(in srgb, var(--status-route) 60%, transparent) 65%,
+      transparent
+    );
+  }
+
+  .hero-video-scrim {
+    @apply pointer-events-none absolute inset-0;
+    background:
+      var(--hero-scrim),
+      radial-gradient(ellipse 60% 50% at 30% 40%, var(--aurora-orb-1), transparent 70%);
+  }
+
+  .focus-ring-command {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-accent)] focus-visible:ring-opacity-50;
+    --tw-ring-offset-color: var(--ring-offset);
+    @apply ring-offset-2;
+  }
+
+  .focus-ring-premium {
+    @apply focus-ring-command;
+  }
+
+  .page-container {
+    @apply mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8;
+  }
+
+  .section-shell {
+    @apply rounded-3xl p-6 sm:p-8;
+    border: 1px solid var(--glass-border);
+    background: color-mix(in srgb, var(--color-surface) 90%, transparent);
+    color: var(--civic-ink);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .command-panel {
+    @apply relative overflow-hidden rounded-3xl p-6 sm:p-8;
+    border: 1px solid var(--glass-border-accent);
+    background: var(--gradient-command);
+    color: var(--fg-on-panel);
+    box-shadow: var(--shadow-command);
+  }
+
+  .aurora-orb {
+    @apply pointer-events-none absolute rounded-full blur-3xl;
+    background: radial-gradient(circle, var(--color-glow) 0%, transparent 70%);
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  /* Theme-aware form fields (selects, inputs) */
+  .field-select,
+  .field-input {
+    border-color: color-mix(in srgb, var(--color-accent) 18%, transparent);
+    background: color-mix(in srgb, var(--civic-navy) 72%, transparent);
+    color: var(--shell-fg);
+    backdrop-filter: blur(12px);
+  }
+
+  .field-select:focus,
+  .field-input:focus {
+    border-color: color-mix(in srgb, var(--color-accent) 45%, transparent);
+    outline: none;
+  }
+
+  [data-theme-mode='light'] .field-select,
+  [data-theme-mode='light'] .field-input {
+    border-color: var(--glass-border);
+    background: var(--color-bg-muted);
+    color: var(--shell-fg);
+  }
+
+  .field-select option {
+    background-color: var(--civic-navy);
+    color: var(--civic-white);
+  }
+
+  [data-theme-mode='light'] .field-select option {
+    background-color: var(--color-surface);
+    color: var(--shell-fg);
+  }
+
+  .filter-bar-shell {
+    border-color: color-mix(in srgb, var(--color-accent) 12%, transparent);
+    background: color-mix(in srgb, var(--civic-navy) 45%, transparent);
+  }
+
+  [data-theme-mode='light'] .filter-bar-shell {
+    border-color: var(--glass-border);
+    background: color-mix(in srgb, var(--color-surface) 92%, transparent);
+  }
+
+  .app-navbar {
+    border-color: color-mix(in srgb, var(--color-accent) 12%, transparent);
+    background: color-mix(in srgb, var(--civic-navy) 90%, transparent);
+    box-shadow: var(--shadow-command);
+  }
+
+  [data-theme-mode='light'] .app-navbar {
+    border-color: var(--glass-border);
+    background: color-mix(in srgb, var(--color-surface) 98%, transparent);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .hero-mesh {
+    background-image:
+      radial-gradient(ellipse 80% 50% at 20% 40%, var(--aurora-orb-1), transparent),
+      radial-gradient(ellipse 60% 40% at 80% 60%, color-mix(in srgb, var(--status-amber) 30%, transparent), transparent);
+  }
+
+  .hero-command-canvas {
+    @apply command-canvas command-grid;
+  }
+}
+
+/* MapLibre GL — themed popup + controls */
+.cmd-popup .maplibregl-popup-content {
+  background: color-mix(in srgb, var(--civic-dusk) 92%, transparent);
+  border: 1px solid var(--glass-border-accent);
+  border-radius: 0.625rem;
+  padding: 0.5rem 0.625rem;
+  box-shadow: var(--shadow-command);
+  backdrop-filter: blur(8px);
+}
+.cmd-popup .maplibregl-popup-tip {
+  border-top-color: var(--glass-border-accent);
+  border-bottom-color: var(--glass-border-accent);
+}
+.cmd-popup-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--fg-on-panel);
+}
+.cmd-popup-id {
+  font-size: 0.5625rem;
+  font-family: ui-monospace, monospace;
+  color: var(--color-accent);
+  opacity: 0.55;
+  margin-top: 0.0625rem;
+}
+.cmd-popup-row {
+  margin-top: 0.125rem;
+  display: flex;
+  gap: 0.625rem;
+  justify-content: space-between;
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.maplibregl-ctrl-group {
+  background: color-mix(in srgb, var(--civic-navy) 80%, transparent) !important;
+  border: 1px solid var(--glass-border-accent) !important;
+  border-radius: 0.5rem !important;
+  overflow: hidden;
+}
+.maplibregl-ctrl-group button {
+  background: transparent !important;
+}
+.maplibregl-ctrl-group button + button {
+  border-top: 1px solid var(--glass-border-accent) !important;
+}
+[data-theme-mode='dark'] .maplibregl-ctrl button .maplibregl-ctrl-icon {
+  filter: invert(1) hue-rotate(180deg) brightness(1.4);
+}

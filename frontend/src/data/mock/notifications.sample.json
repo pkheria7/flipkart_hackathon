@@ -1,0 +1,38 @@
+[
+  {
+    "id": "NOTIF_001",
+    "recipient": "off_adugodi_01@btp-demo.example",
+    "recipient_role": "officer",
+    "subject": "BTP Parking Agent — Patrol Tasks — 2026-06-21",
+    "station": "ADUGODI",
+    "cluster_ids": ["C_446", "C_290", "C_751"],
+    "channel": "email",
+    "status": "queued",
+    "scheduled_at": "2026-06-21T04:30:00+05:30",
+    "body_preview": "Morning patrol assignments for Adugodi station. Priority cluster C_446 (ROI 92.5) requires towing support during 02:00-04:00 window."
+  },
+  {
+    "id": "NOTIF_002",
+    "recipient": "tow_adugodi_01@btp-demo.example",
+    "recipient_role": "tow_driver",
+    "subject": "BTP Parking Agent — Towing Tasks — 2026-06-21",
+    "station": "ADUGODI",
+    "cluster_ids": ["C_446"],
+    "channel": "email",
+    "status": "sent",
+    "scheduled_at": "2026-06-21T04:30:00+05:30",
+    "body_preview": "Tow standby requested at Adugodi Main Road (C_446) during early morning patrol window."
+  },
+  {
+    "id": "NOTIF_003",
+    "recipient": "head.officer@btp-demo.example",
+    "recipient_role": "head_officer",
+    "subject": "Daily Master Plan Ready for Approval — 2026-06-22",
+    "station": "ALL",
+    "cluster_ids": [],
+    "channel": "email",
+    "status": "queued",
+    "scheduled_at": "2026-06-22T04:05:00+05:30",
+    "body_preview": "4 AM generated master plan for 2026-06-22 is pending head officer approval. 11 station assignments across Bengaluru."
+  }
+]

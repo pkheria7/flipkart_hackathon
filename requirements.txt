@@ -1,5 +1,8 @@
 apscheduler>=3.10.0
+fastapi>=0.111.0
 groq>=1.0.0
+python-multipart>=0.0.9
+uvicorn[standard]>=0.29.0
 folium>=0.20.0
 geopandas>=0.14.0
 h3>=4.5.0

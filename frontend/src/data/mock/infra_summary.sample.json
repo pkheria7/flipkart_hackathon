@@ -1,0 +1,44 @@
+{
+  "total_candidates": 12,
+  "escalation_ready_count": 4,
+  "top_causes": [
+    { "cause": "Insufficient signage", "count": 5 },
+    { "cause": "Narrow carriageway", "count": 3 },
+    { "cause": "Missing loading bay", "count": 2 }
+  ],
+  "candidates": [
+    {
+      "cluster_id": "C_512",
+      "assigned_station": "JAYANAGARA",
+      "dominant_cause": "Insufficient signage",
+      "suggested_fix": "Install no-parking boards and bay markings",
+      "recommended_agency": "BBMP Roads",
+      "lcle_pct": 42.1,
+      "bci": 0.078,
+      "roi_score": 88.2,
+      "escalation_ready": true
+    },
+    {
+      "cluster_id": "C_446",
+      "assigned_station": "ADUGODI",
+      "dominant_cause": "Narrow carriageway",
+      "suggested_fix": "Road widening feasibility study",
+      "recommended_agency": "BBMP Engineering",
+      "lcle_pct": 55.74,
+      "bci": 0.0235,
+      "roi_score": 92.53,
+      "escalation_ready": true
+    },
+    {
+      "cluster_id": "C_318",
+      "assigned_station": "HSR_LAYOUT",
+      "dominant_cause": "Missing loading bay",
+      "suggested_fix": "Designate time-restricted loading zone",
+      "recommended_agency": "BTP + BBMP Joint",
+      "lcle_pct": 31.6,
+      "bci": 0.055,
+      "roi_score": 76.8,
+      "escalation_ready": false
+    }
+  ]
+}

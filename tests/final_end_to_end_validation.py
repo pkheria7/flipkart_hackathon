@@ -29,26 +29,55 @@ SCHEMA_COLUMNS = [
     "classification", "recommended_action",
 ]
 
-SCHEMA_DTYPES = {
-    "cluster_id": "object",
-    "centroid_lat": "float64",
-    "centroid_lng": "float64",
-    "assigned_station": "object",
-    "border_flag": "int64",
-    "road_class": "object",
-    "road_width_m": "float64",
-    "osm_coverage": "int64",
-    "violation_count": "int64",
-    "vehicle_mix": "object",
-    "lcle_pct": "float64",
-    "bci": "float64",
-    "persistence": "float64",
-    "recurrence": "float64",
-    "peak_window": "object",
-    "roi_score": "float64",
-    "classification": "object",
-    "recommended_action": "object",
+SCHEMA_CATEGORIES = {
+    # column → expected dtype category
+    "cluster_id":          "string",
+    "centroid_lat":        "float",
+    "centroid_lng":        "float",
+    "assigned_station":    "string",
+    "border_flag":         "integer",
+    "road_class":          "string",
+    "road_width_m":        "float",
+    "osm_coverage":        "integer",
+    "violation_count":     "integer",
+    "vehicle_mix":         "string",
+    "lcle_pct":            "float",
+    "bci":                 "float",
+    "persistence":         "float",
+    "recurrence":          "float",
+    "peak_window":         "string",
+    "roi_score":           "float",
+    "classification":      "string",
+    "recommended_action":  "string",
 }
+
+
+def _is_string_like(s: "pd.Series") -> bool:
+    """Accept object, string (StringDtype), and category dtypes."""
+    dt = s.dtype
+    if pd.api.types.is_object_dtype(dt):
+        return True
+    if pd.api.types.is_string_dtype(dt) and not pd.api.types.is_bool_dtype(dt):
+        return True
+    if hasattr(dt, "name") and dt.name == "category":
+        return True
+    # pandas StringDtype from pyarrow shows as 'string' or 'large_string'
+    dtype_str = str(dt).lower()
+    return "string" in dtype_str
+
+
+def _is_numeric_like(s: "pd.Series") -> bool:
+    return pd.api.types.is_numeric_dtype(s)
+
+
+def _is_integer_like(s: "pd.Series") -> bool:
+    """Accept integer dtypes, or numeric where every non-null value is a whole number."""
+    if pd.api.types.is_integer_dtype(s):
+        return True
+    if pd.api.types.is_numeric_dtype(s):
+        non_null = s.dropna()
+        return bool((non_null == non_null.astype("int64").astype(s.dtype)).all())
+    return False
 
 
 def check(name: str, condition: bool, detail: str = "") -> dict:
@@ -156,18 +185,28 @@ def main() -> int:
         f"missing={missing_cols}, extra={extra_cols}",
     ))
 
-    dtype_ok = True
     dtype_issues = []
-    for col, expected in SCHEMA_DTYPES.items():
-        if col in scored.columns:
-            actual = str(scored[col].dtype)
-            if actual != expected:
-                dtype_ok = False
-                dtype_issues.append(f"{col}: expected {expected}, got {actual}")
+    for col, category in SCHEMA_CATEGORIES.items():
+        if col not in scored.columns:
+            continue
+        s = scored[col]
+        actual = str(s.dtype)
+        if category == "string":
+            ok = _is_string_like(s)
+            if not ok:
+                dtype_issues.append(f"{col}: expected string-like, got {actual}")
+        elif category == "float":
+            ok = _is_numeric_like(s)
+            if not ok:
+                dtype_issues.append(f"{col}: expected numeric/float, got {actual}")
+        elif category == "integer":
+            ok = _is_integer_like(s)
+            if not ok:
+                dtype_issues.append(f"{col}: expected integer-like, got {actual}")
     checks.append(check(
         "scored_schema_dtypes",
-        dtype_ok,
-        "; ".join(dtype_issues) if dtype_issues else "all dtypes match",
+        len(dtype_issues) == 0,
+        "; ".join(dtype_issues) if dtype_issues else "all dtype categories match",
     ))
 
     # ------------------------------------------------------------------

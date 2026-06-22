@@ -62,16 +62,16 @@ Oversized clusters were re-clustered with tighter DBSCAN parameters to produce b
 
 ### For M3 Peak Window and M4 Recurrence
 Use **row-level** file:
-- `/Users/pkheria7/Desktop/flipkart_data/data/processed/cluster_handoff_for_prakhar.parquet`
-- `/Users/pkheria7/Desktop/flipkart_data/data/processed/cluster_handoff_for_prakhar.csv`
+- `C:\Users\Prakhar Parashar\Documents\GRID_HACKATHON\flipkart_hackathon\data\processed\cluster_handoff_for_prakhar.parquet`
+- `C:\Users\Prakhar Parashar\Documents\GRID_HACKATHON\flipkart_hackathon\data\processed\cluster_handoff_for_prakhar.csv`
 
 Key columns already provided:
 `cluster_id`, `created_datetime_ist`, `date_ist`, `hour`, `day_of_week`, `day_name`, `week_number`, `month`, `vehicle_type_final`, `junction_flag`, `police_station_clean`, `h3_res9`
 
 ### For M18 Jurisdiction Scoping and cluster-level merging
 Use **cluster-level** file:
-- `/Users/pkheria7/Desktop/flipkart_data/data/processed/cluster_summary.parquet`
-- `/Users/pkheria7/Desktop/flipkart_data/data/processed/cluster_summary.csv`
+- `C:\Users\Prakhar Parashar\Documents\GRID_HACKATHON\flipkart_hackathon\data\processed\cluster_summary.parquet`
+- `C:\Users\Prakhar Parashar\Documents\GRID_HACKATHON\flipkart_hackathon\data\processed\cluster_summary.csv`
 
 Key columns:
 `cluster_id`, `centroid_lat`, `centroid_lng`, `violation_count`, `police_station_mode`, `location_mode`, `vehicle_mix`, `junction_flag_rate`, `h3_cells_count`

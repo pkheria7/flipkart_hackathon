@@ -1,0 +1,52 @@
+{
+  "plan_id": "PLAN_20260621_DAILY",
+  "date": "2026-06-21",
+  "generated_at": "2026-06-21T04:00:00+05:30",
+  "status": "pending",
+  "station_summaries": [
+    { "station": "ADUGODI", "assignment_count": 8, "avg_roi_score": 71.8, "structural_count": 3, "responsive_count": 5 },
+    { "station": "INDIRANAGAR", "assignment_count": 6, "avg_roi_score": 68.2, "structural_count": 2, "responsive_count": 4 },
+    { "station": "KORAMANGALA", "assignment_count": 5, "avg_roi_score": 65.4, "structural_count": 1, "responsive_count": 4 }
+  ],
+  "assignments": [
+    {
+      "cluster_id": "C_446",
+      "assigned_station": "ADUGODI",
+      "time_window": "02:00-04:00",
+      "officer_id": "OFF_ADUGODI_01",
+      "officer_name": "Ramesh Kumar",
+      "tow_truck_id": "TOW_ADUGODI_01",
+      "action": "Recurring patrol + towing support + signage/infra review",
+      "reason": "ROI=92.5, LCLE=55.7%, BCI=0.023, class=STRUCTURAL",
+      "explanation_en": "High structural violation cluster near Adugodi Main Road with persistent LCLE signal.",
+      "explanation_kn": "ಅಡುಗೋಡಿ ಮುಖ್ಯ ರಸ್ತೆಯ ಬಳಿ ಉನ್ನತ ರಚನಾತ್ಮಕ ಉಲ್ಲಂಘನೆ ಕ್ಲಸ್ಟರ್.",
+      "roi_score": 92.53,
+      "lcle_pct": 55.74,
+      "bci": 0.0235
+    },
+    {
+      "cluster_id": "C_102",
+      "assigned_station": "INDIRANAGAR",
+      "time_window": "17:00-19:00",
+      "officer_id": "OFF_INDIRANAGAR_01",
+      "officer_name": "Priya Nair",
+      "action": "Peak-window patrol with tow standby",
+      "reason": "ROI=85.4, LCLE=38.2%, BCI=0.041, class=STRUCTURAL",
+      "roi_score": 85.4,
+      "lcle_pct": 38.2,
+      "bci": 0.041
+    },
+    {
+      "cluster_id": "C_751",
+      "assigned_station": "ADUGODI",
+      "time_window": "11:00-13:00",
+      "officer_id": "OFF_ADUGODI_03",
+      "officer_name": "Mahesh Reddy",
+      "action": "Targeted short-term patrol during peak window",
+      "reason": "ROI=79.1, LCLE=20.7%, BCI=0.068, class=RESPONSIVE",
+      "roi_score": 79.06,
+      "lcle_pct": 20.75,
+      "bci": 0.0683
+    }
+  ]
+}

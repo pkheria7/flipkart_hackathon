@@ -25,15 +25,21 @@ venv
 data/processed/cleaned_violations.csv
 data/processed/clustered_violations.csv
 
-# OSM / geospatial caches
-cache/
+# Cache artifacts (demo-critical graph + JSON fallbacks; other cache files stay local)
+cache/*
+!cache/
+!cache/bengaluru_drive_graph.graphml
+!cache/*.json
 
 # Raw data — never commit
 data/raw/
 
-# Secrets / environment
+# Environment / secrets
 .env
 .env.*
+!.env.example
+!frontend/.env.example
+frontend/.env.local
 *.secret
 
 # Test/type caches
@@ -57,3 +63,8 @@ data/outputs/daily_master_plan.json
 # SQLite WAL files
 data/outputs/*.sqlite-shm
 data/outputs/*.sqlite-wal
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/frontend/

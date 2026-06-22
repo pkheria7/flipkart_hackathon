@@ -1,0 +1,26 @@
+[
+  {
+    "id": "RPT_WEEK_COMPARISON",
+    "title": "Week 1 vs Week 2 Demo Report",
+    "type": "markdown",
+    "path": "reports/WEEK_1_VS_WEEK_2_DEMO_REPORT.md",
+    "generated_at": "2026-06-21T10:00:00+05:30",
+    "description": "Synthetic closed-loop comparison of baseline vs feedback-adjusted hotspot scoring"
+  },
+  {
+    "id": "RPT_AGENT_HARDENING",
+    "title": "Agent Layer Hardening Report",
+    "type": "markdown",
+    "path": "reports/AGENT_LAYER_HARDENING_REPORT.md",
+    "generated_at": "2026-06-20T18:00:00+05:30",
+    "description": "Pipeline reliability, approval workflow, and dispatch audit summary"
+  },
+  {
+    "id": "RPT_INFRA_ESCALATION",
+    "title": "Infrastructure Escalation Brief",
+    "type": "pdf",
+    "path": "data/outputs/infra_escalation_pdfs/",
+    "generated_at": "2026-06-19T14:00:00+05:30",
+    "description": "Structural hotspot escalation candidates for BBMP coordination"
+  }
+]

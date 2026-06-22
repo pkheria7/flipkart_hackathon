@@ -1,0 +1,187 @@
+/**
+ * Multi-theme CSS variables — Civic Aurora Command theme system.
+ * Applied via document.documentElement[data-theme="<id>"].
+ * :root matches Aurora Dusk (original app theme); Daylight is opt-in.
+ */
+
+/* ── Aurora Command — Dusk (original default) ─────────────────────────────── */
+:root,
+[data-theme='aurora-dusk'] {
+  --color-bg: #06111f;
+  --color-bg-muted: #08111f;
+  --color-surface: #ffffff;
+  --color-surface-glass: rgba(255, 255, 255, 0.72);
+  --color-primary: #0b3a6f;
+  --color-secondary: #146c94;
+  --color-accent: #22d3ee;
+  --color-critical: #d62828;
+  --color-text: #ffffff;
+  --color-text-muted: #eaf3f8;
+  --color-border: rgba(34, 211, 238, 0.12);
+  --color-glow: rgba(34, 211, 238, 0.35);
+
+  --civic-dusk: #06111f;
+  --civic-navy: #08111f;
+  --civic-ink: #0b1f33;
+  --civic-ivory: #f7f2e8;
+  --civic-mist: #eaf3f8;
+  --civic-graphite: #475569;
+  --civic-white: #ffffff;
+
+  --btp-blue: #0b3a6f;
+  --btp-signal: #146c94;
+  --btp-cyan: #22d3ee;
+
+  --status-structural: #d62828;
+  --status-amber: #f59e0b;
+  --status-route: #f97316;
+  --status-seasonal: #7c3aed;
+  --status-cleared: #16a34a;
+
+  --shell-fg: #ffffff;
+  --shell-fg-muted: rgba(234, 243, 248, 0.65);
+  --fg-on-panel: #ffffff;
+  --page-fg: #eaf3f8;
+  --page-fg-muted: rgba(234, 243, 248, 0.55);
+
+  --glass-white-bg: rgba(255, 255, 255, 0.72);
+  --glass-navy-bg: rgba(8, 17, 31, 0.72);
+  --glass-border: rgba(11, 31, 51, 0.1);
+  --glass-border-accent: rgba(34, 211, 238, 0.15);
+
+  --shadow-soft: 0 4px 20px rgba(11, 58, 111, 0.06);
+  --shadow-glass: 0 8px 32px rgba(11, 58, 111, 0.08);
+  --shadow-command: 0 12px 40px rgba(8, 17, 31, 0.2);
+  --shadow-glow-cyan: 0 0 24px rgba(34, 211, 238, 0.35);
+  --shadow-glow-amber: 0 0 24px rgba(245, 158, 11, 0.35);
+  --shadow-glow-red: 0 0 24px rgba(214, 40, 40, 0.32);
+
+  --ring-offset: #08111f;
+  --scrollbar-thumb: rgba(34, 211, 238, 0.22);
+
+  --gradient-app:
+    radial-gradient(ellipse 70% 55% at 12% -5%, rgba(34, 211, 238, 0.12), transparent 60%),
+    radial-gradient(ellipse 65% 55% at 88% 8%, rgba(11, 58, 111, 0.45), transparent 62%),
+    radial-gradient(ellipse 90% 60% at 50% 108%, rgba(20, 108, 148, 0.16), transparent 70%),
+    linear-gradient(180deg, #06111f 0%, #08111f 48%, #0b1f33 100%);
+  --gradient-command: linear-gradient(135deg, #08111f 0%, #0b3a6f 100%);
+  --aurora-orb-1: rgba(34, 211, 238, 0.22);
+  --aurora-orb-2: rgba(11, 58, 111, 0.5);
+  --grid-line: rgba(34, 211, 238, 0.045);
+  --hero-scrim: linear-gradient(
+    120deg,
+    rgba(6, 17, 31, 0.82) 0%,
+    rgba(8, 17, 31, 0.4) 50%,
+    rgba(11, 31, 51, 0.7) 100%
+  );
+  --overlay-scrim: rgba(6, 17, 31, 0.6);
+}
+
+/* ── Bengaluru Daylight ───────────────────────────────────────────────────── */
+[data-theme='bengaluru-daylight'] {
+  --color-bg: #fbf7f0;
+  --color-bg-muted: #f3ebdd;
+  --color-surface: #ffffff;
+  --color-surface-glass: rgba(255, 255, 255, 0.92);
+  --color-primary: #2d3a66;
+  --color-secondary: #3d4f7c;
+  --color-accent: #c2410c;
+  --color-critical: #c0392b;
+  --color-text: #172033;
+  --color-text-muted: #5b6475;
+  --color-border: rgba(45, 58, 102, 0.12);
+  --color-glow: rgba(194, 65, 12, 0.18);
+
+  --civic-dusk: #fbf7f0;
+  --civic-navy: #f3ebdd;
+  --civic-ink: #172033;
+  --civic-ivory: #172033;
+  --civic-mist: #f3ebdd;
+  --civic-graphite: #5b6475;
+  --civic-white: #ffffff;
+
+  --btp-blue: #2d3a66;
+  --btp-signal: #3d4f7c;
+  --btp-cyan: #c2410c;
+
+  --status-structural: #c0392b;
+  --status-amber: #d97706;
+  --status-route: #ea580c;
+  --status-seasonal: #7c3aed;
+  --status-cleared: #15803d;
+
+  --shell-fg: #172033;
+  --shell-fg-muted: #5b6475;
+  --fg-on-panel: #172033;
+  --page-fg: #172033;
+  --page-fg-muted: #5b6475;
+
+  --glass-white-bg: rgba(255, 255, 255, 0.95);
+  --glass-navy-bg: rgba(255, 255, 255, 0.92);
+  --glass-border: rgba(45, 58, 102, 0.1);
+  --glass-border-accent: rgba(45, 58, 102, 0.14);
+
+  --shadow-soft: 0 4px 18px rgba(45, 58, 102, 0.08);
+  --shadow-glass: 0 8px 28px rgba(45, 58, 102, 0.1);
+  --shadow-command: 0 8px 24px rgba(45, 58, 102, 0.08);
+  --shadow-glow-cyan: 0 0 16px rgba(194, 65, 12, 0.15);
+  --shadow-glow-amber: 0 0 20px rgba(217, 119, 6, 0.18);
+  --shadow-glow-red: 0 0 20px rgba(192, 57, 43, 0.16);
+
+  --ring-offset: #fbf7f0;
+  --scrollbar-thumb: rgba(45, 58, 102, 0.2);
+
+  --gradient-app:
+    radial-gradient(ellipse 80% 50% at 12% -8%, rgba(45, 58, 102, 0.05), transparent 55%),
+    radial-gradient(ellipse 70% 45% at 88% 2%, rgba(194, 65, 12, 0.04), transparent 50%),
+    linear-gradient(180deg, #fbf7f0 0%, #f3ebdd 100%);
+  --gradient-command: linear-gradient(135deg, #ffffff 0%, #f8f4ec 52%, #f0e8da 100%);
+  --aurora-orb-1: rgba(45, 58, 102, 0.07);
+  --aurora-orb-2: rgba(194, 65, 12, 0.06);
+  --grid-line: rgba(45, 58, 102, 0.05);
+  --hero-scrim: linear-gradient(
+    120deg,
+    rgba(251, 247, 240, 0.92) 0%,
+    rgba(251, 247, 240, 0.65) 50%,
+    rgba(243, 235, 221, 0.88) 100%
+  );
+  --overlay-scrim: rgba(251, 247, 240, 0.78);
+}
+
+/* ── Light-theme readability overrides ──────────────────────────────────── */
+[data-theme-mode='light'] .text-civic-white:not(.text-on-primary) {
+  color: var(--color-text);
+}
+
+[data-theme-mode='light'] .text-civic-ivory {
+  color: var(--page-fg-muted);
+}
+
+[data-theme-mode='light'] .text-on-primary {
+  color: #ffffff !important;
+}
+
+[data-theme-mode='light'] .glass-navy,
+[data-theme-mode='light'] .dark-glass {
+  color: var(--fg-on-panel);
+}
+
+[data-theme-mode='light'] .hero-video-scrim {
+  background:
+    var(--hero-scrim),
+    radial-gradient(ellipse 60% 50% at 30% 40%, var(--aurora-orb-1), transparent 70%);
+}
+
+[data-theme-mode='light'] .command-panel .aurora-bg::before,
+[data-theme-mode='light'] .command-panel .aurora-bg::after {
+  opacity: 0.35;
+}
+
+[data-theme-mode='light'] .command-panel .text-civic-ivory,
+[data-theme-mode='light'] .command-panel [class*='text-civic-ivory'] {
+  color: var(--page-fg-muted);
+}
+
+[data-theme-mode='light'] .command-panel .text-btp-cyan {
+  color: var(--color-accent);
+}
