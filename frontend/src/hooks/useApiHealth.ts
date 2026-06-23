@@ -32,11 +32,13 @@ export function useApiHealth() {
 
   const label =
     status === 'connected'
-      ? 'API Connected'
+      ? healthQuery.data?.mode === 'file-backed'
+        ? 'File-backed API'
+        : 'API Connected'
       : status === 'mock-mode'
         ? 'Mock Mode'
         : status === 'fallback'
-          ? 'Mock Fallback'
+          ? 'Offline Fallback'
           : 'API Offline'
 
   return {

@@ -54,10 +54,25 @@ app.add_middleware(
 )
 
 
+@app.on_event("startup")
+def _bootstrap_on_startup() -> None:
+    """Ensure agent workflow files exist on cold start (Render / fresh clone)."""
+    from app.api.bootstrap import ensure_agent_demo_artifacts
+
+    result = ensure_agent_demo_artifacts()
+    if result.get("created"):
+        print(f"[startup] Agent bootstrap: created {result['created']}", flush=True)
+    elif not result.get("ok"):
+        print(f"[startup] Agent bootstrap warning: {result.get('message')}", flush=True)
+
+
 # ── Health ────────────────────────────────────────────────────────────────────
 
 @app.get("/api/health")
 def health():
+    from app.api.bootstrap import ensure_agent_demo_artifacts
+
+    ensure_agent_demo_artifacts()
     key_files = {
         "scored_hotspots.parquet": HOTSPOTS_PARQUET.exists(),
         "scored_hotspots.csv":     HOTSPOTS_CSV.exists(),
@@ -182,6 +197,12 @@ def notifications(limit: int = Query(default=200, ge=1, le=1000)):
 @app.get("/api/agent/state")
 def agent_state():
     return readers.read_agent_state()
+
+
+@app.post("/api/agent/run")
+def agent_run():
+    """Simulate 4 AM agent run — generates pending master plan (no auto-approve)."""
+    return actions.run_agent_plan()
 
 
 # ── Feedback ─────────────────────────────────────────────────────────────────

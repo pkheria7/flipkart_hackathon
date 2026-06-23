@@ -19,7 +19,7 @@ const DESCRIPTION =
 const TRUST_ROW = ['BTP-oriented workflow', 'Station-wise enforcement', 'Human-in-loop review']
 
 /** Public demo walkthrough — env override optional; always works on fresh clone. */
-const DEMO_VIDEO_FALLBACK = 'https://www.youtube.com/watch?v=7PjWqOnLzUs&t=4s'
+const DEMO_VIDEO_FALLBACK = 'https://www.youtube.com/watch?v=7PjWqOnLzUs&t=31s'
 const DEMO_VIDEO_URL = import.meta.env.VITE_DEMO_VIDEO_URL || DEMO_VIDEO_FALLBACK
 
 interface EntryCard {

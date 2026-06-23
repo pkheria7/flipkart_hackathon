@@ -257,7 +257,10 @@ def read_route_for_station(station: str) -> Optional[dict]:
 # ── master plan ───────────────────────────────────────────────────────────────
 
 def read_plan_file(path: Path) -> dict:
-    """Read a plan JSON; return structured error if missing."""
+    """Read a plan JSON; bootstrap demo artifacts if missing on fresh deploy."""
+    from app.api.bootstrap import ensure_agent_demo_artifacts
+
+    ensure_agent_demo_artifacts()
     data = _read_json(path)
     if data is None:
         return {"ok": False, "message": f"{path.name} not found", "data": None}
@@ -267,6 +270,9 @@ def read_plan_file(path: Path) -> dict:
 # ── agent state ───────────────────────────────────────────────────────────────
 
 def read_agent_state() -> dict:
+    from app.api.bootstrap import ensure_agent_demo_artifacts
+
+    ensure_agent_demo_artifacts()
     data = _read_json(AGENT_STATE)
     if data is None:
         return {"ok": False, "message": "agent_state.json not found", "data": None}
@@ -276,6 +282,9 @@ def read_agent_state() -> dict:
 # ── summary (command centre dashboard) ───────────────────────────────────────
 
 def read_summary() -> dict:
+    from app.api.bootstrap import ensure_agent_demo_artifacts
+
+    ensure_agent_demo_artifacts()
     df = _read_hotspots_df()
     agent = _read_json(AGENT_STATE) or {}
     pending = _read_json(PENDING_PLAN) or {}

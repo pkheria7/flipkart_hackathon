@@ -25,8 +25,14 @@ def approve_plan() -> dict:
     Does NOT auto-dispatch. Returns structured result or error.
     """
     try:
+        from app.api.bootstrap import ensure_agent_demo_artifacts
         from agents.approval_queue import approve_plan as _approve
+        from agents.state_manager import record_plan_status
+
+        ensure_agent_demo_artifacts()
         result = _approve()
+        if result.get("status") == "approved":
+            record_plan_status("approved")
         return {"ok": True, "message": "Plan approved", "data": result}
     except FileNotFoundError as exc:
         return {"ok": False, "message": f"No pending plan to approve: {exc}", "data": None}
@@ -44,6 +50,7 @@ def dispatch_plan() -> dict:
     try:
         from agents.approval_queue import get_approved_plan
         from agents.dispatcher import dispatch_approved_plan
+        from agents.state_manager import record_plan_status
 
         approved = get_approved_plan()
         if not approved:
@@ -51,6 +58,7 @@ def dispatch_plan() -> dict:
 
         results = dispatch_approved_plan(approved, dry_run=True)
         run_id = approved.get("run_id")
+        record_plan_status("dispatched")
         return {
             "ok": True,
             "run_id": run_id,
@@ -122,3 +130,13 @@ def submit_citizen_feedback(payload: dict) -> dict:
         return {"ok": False, "message": f"Validation error: {exc}", "data": None}
     except Exception as exc:
         return {"ok": False, "message": f"Feedback submission failed: {exc}", "data": None}
+
+
+def run_agent_plan(use_llm: bool = False) -> dict:
+    """Simulate 4 AM agent run — generate plan and submit for approval."""
+    try:
+        from app.api.bootstrap import run_agent_demo_plan
+
+        return run_agent_demo_plan(use_llm=use_llm)
+    except Exception as exc:
+        return {"ok": False, "message": f"Agent run failed: {exc}", "data": None}
