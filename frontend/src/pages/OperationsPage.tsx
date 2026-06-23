@@ -17,7 +17,7 @@ import { LoadingSkeleton } from '@/components/ui/LoadingSkeleton'
 import { cn } from '@/lib/cn'
 import { formatRelativeTime } from '@/lib/formatters'
 import { staggerContainer, fadeUp } from '@/lib/motion'
-import { normalizeMasterPlan, type PlanAssignment } from '@/lib/masterPlan'
+import { normalizeMasterPlan } from '@/lib/masterPlan'
 import { OperationsWorkflowStrip } from '@/components/operations/OperationsWorkflowStrip'
 import { RoutePlannerPanel } from '@/components/operations/RoutePlannerPanel'
 import { MasterPlanInbox } from '@/components/operations/MasterPlanInbox'
@@ -46,11 +46,6 @@ export function OperationsPage() {
 
   const activePlan = approvedPlan ?? pendingPlan ?? dailyPlan
   const notifications = notifQ.data ?? []
-
-  const firstAssignment: PlanAssignment | null = useMemo(() => {
-    const list = activePlan?.assignments ?? []
-    return list.find((a) => a.officer_name) ?? list[0] ?? null
-  }, [activePlan])
 
   const lastRunRaw =
     (agentQ.data?.data?.last_run_timestamp as string | undefined) ??
@@ -159,7 +154,6 @@ export function OperationsPage() {
               <DispatchPreview
                 notifications={notifications}
                 notifLoading={notifQ.isLoading}
-                firstAssignment={firstAssignment}
                 planStatus={planStatus}
               />
             ),

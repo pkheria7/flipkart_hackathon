@@ -8,14 +8,12 @@ import { cn } from '@/lib/cn'
 import { staggerContainer } from '@/lib/motion'
 import { dispatchApprovedPlan } from '@/services/masterPlanService'
 import type { ApiNotification } from '@/types/api'
-import type { PlanAssignment } from '@/lib/masterPlan'
 import { NotificationCard, KIND_META } from './NotificationCard'
 import { MobileAssignmentPreview } from './MobileAssignmentPreview'
 
 interface DispatchPreviewProps {
   notifications: ApiNotification[]
   notifLoading?: boolean
-  firstAssignment?: PlanAssignment | null
   /** Current plan lifecycle status — used to guard dispatch before approval. */
   planStatus?: string
 }
@@ -40,7 +38,6 @@ function dispatchCount(data: unknown): number | null {
 export function DispatchPreview({
   notifications,
   notifLoading,
-  firstAssignment,
   planStatus,
 }: DispatchPreviewProps) {
   const queryClient = useQueryClient()
@@ -207,10 +204,7 @@ export function DispatchPreview({
           )}
 
           <div data-testid="officer-mobile-preview">
-            <MobileAssignmentPreview
-              assignment={firstAssignment ?? undefined}
-              notification={selected ?? undefined}
-            />
+            <MobileAssignmentPreview notification={selected ?? undefined} />
           </div>
         </div>
       </div>
