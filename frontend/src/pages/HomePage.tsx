@@ -18,7 +18,9 @@ const DESCRIPTION =
   'Convert FTVR violation records into ROI-ranked hotspots, patrol routes, and escalation briefs.'
 const TRUST_ROW = ['BTP-oriented workflow', 'Station-wise enforcement', 'Human-in-loop review']
 
-const DEMO_VIDEO_URL = import.meta.env.VITE_DEMO_VIDEO_URL ?? ''
+/** Public demo walkthrough — env override optional; always works on fresh clone. */
+const DEMO_VIDEO_FALLBACK = 'https://www.youtube.com/watch?v=QPVqnaJB3R0'
+const DEMO_VIDEO_URL = import.meta.env.VITE_DEMO_VIDEO_URL || DEMO_VIDEO_FALLBACK
 
 interface EntryCard {
   title: string
@@ -238,14 +240,8 @@ function EntryCardView({ card }: { card: EntryCard }) {
 }
 
 function DemoVideoCard() {
-  const [fallback, setFallback] = useState(false)
-
   const handleClick = () => {
-    if (DEMO_VIDEO_URL) {
-      window.open(DEMO_VIDEO_URL, '_blank', 'noopener,noreferrer')
-    } else {
-      setFallback(true)
-    }
+    window.open(DEMO_VIDEO_URL, '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -269,16 +265,10 @@ function DemoVideoCard() {
             <p className="mt-1 text-sm leading-snug text-white/70">
               View the complete GridLock Command walkthrough.
             </p>
-            {fallback ? (
-              <p className="mt-3 text-xs font-medium text-amber-300/90">
-                Demo video link will be added before submission.
-              </p>
-            ) : (
-              <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-300">
-                Watch demo
-                <ExternalLink className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </span>
-            )}
+            <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-300">
+              Watch demo
+              <ExternalLink className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </span>
           </div>
         </div>
       </button>
