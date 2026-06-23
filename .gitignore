@@ -68,3 +68,12 @@ data/outputs/*.sqlite-wal
 frontend/node_modules/
 frontend/dist/
 frontend/frontend/
+
+frontend/test-results/
+frontend/playwright-report/
+
+
+demo-assets/final-video/
+frontend/test-results/
+frontend/playwright-report/
+

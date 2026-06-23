@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, Building2, ShieldCheck } from 'lucide-react'
+import { ArrowRight, Building2, ExternalLink, Play, ShieldCheck } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { APP_NAME } from '@/lib/constants'
 import { ThemeSelector } from '@/components/layout/ThemeSelector'
@@ -17,6 +17,8 @@ const SUBTITLE = 'Parking Impact Intelligence for Bengaluru Traffic Police'
 const DESCRIPTION =
   'Convert FTVR violation records into ROI-ranked hotspots, patrol routes, and escalation briefs.'
 const TRUST_ROW = ['BTP-oriented workflow', 'Station-wise enforcement', 'Human-in-loop review']
+
+const DEMO_VIDEO_URL = import.meta.env.VITE_DEMO_VIDEO_URL ?? ''
 
 interface EntryCard {
   title: string
@@ -168,7 +170,7 @@ export function HomePage() {
             </motion.div>
           </div>
 
-          {/* Right: login entry cards */}
+          {/* Right: login entry cards + demo video */}
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -178,6 +180,7 @@ export function HomePage() {
             {ENTRY_CARDS.map((card) => (
               <EntryCardView key={card.to} card={card} />
             ))}
+            <DemoVideoCard />
           </motion.div>
         </div>
 
@@ -230,6 +233,55 @@ function EntryCardView({ card }: { card: EntryCard }) {
           </div>
         </div>
       </Link>
+    </motion.div>
+  )
+}
+
+function DemoVideoCard() {
+  const [fallback, setFallback] = useState(false)
+
+  const handleClick = () => {
+    if (DEMO_VIDEO_URL) {
+      window.open(DEMO_VIDEO_URL, '_blank', 'noopener,noreferrer')
+    } else {
+      setFallback(true)
+    }
+  }
+
+  return (
+    <motion.div
+      variants={fadeUp}
+      whileHover={{ y: -4 }}
+      className="sm:col-span-2 lg:col-span-1"
+    >
+      <button
+        type="button"
+        data-testid="home-demo-card"
+        onClick={handleClick}
+        className="group focus-ring-command w-full rounded-2xl border border-white/12 bg-[#0a1626]/80 p-5 text-left shadow-[0_12px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl transition-all duration-300 hover:border-emerald-400/50 hover:shadow-[0_0_28px_rgba(52,211,153,0.25)]"
+      >
+        <div className="flex items-start gap-4">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-400/15 text-emerald-300">
+            <Play className="h-5 w-5" />
+          </span>
+          <div className="min-w-0">
+            <h3 className="text-base font-bold text-white">Watch System Demo</h3>
+            <p className="mt-1 text-sm leading-snug text-white/70">
+              View the complete GridLock Command walkthrough.
+            </p>
+            {fallback ? (
+              <p className="mt-3 text-xs font-medium text-amber-300/90">
+                Demo video link will be added before submission.
+              </p>
+            ) : (
+              <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-300">
+                Watch demo
+                <ExternalLink className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </span>
+            )}
+          </div>
+        </div>
+      </button>
     </motion.div>
   )
 }

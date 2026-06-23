@@ -30,6 +30,9 @@ const DemoModePage = lazyNamed(() => import('@/pages/DemoModePage'), 'DemoModePa
 const HotspotDetailPage = lazyNamed(() => import('@/pages/HotspotDetailPage'), 'HotspotDetailPage')
 const NotFoundPage = lazyNamed(() => import('@/pages/NotFoundPage'), 'NotFoundPage')
 
+// Recording-only routes — demo automation only, not in any navigation
+const RecordingViolationGridPage = lazyNamed(() => import('@/pages/RecordingViolationGridPage'), 'RecordingViolationGridPage')
+
 // Phase 0 legacy routes (not in sidebar)
 const LoginPage = lazyNamed(() => import('@/pages/LoginPage'), 'LoginPage')
 const PriorityBoardPage = lazyNamed(() => import('@/pages/PriorityBoardPage'), 'PriorityBoardPage')
@@ -56,6 +59,9 @@ export function AppRouter() {
         <Route path="/login/station" element={<StationLoginPage />} />
         {/* Legacy Phase 0 placeholder login — still reachable by URL */}
         <Route path="/login" element={<LoginPage />} />
+
+        {/* ── Recording / demo automation (no auth, no shell) ─────── */}
+        <Route path="/recording/violation-grid" element={<RecordingViolationGridPage />} />
 
         {/* ── Admin authenticated ─────────────────────────────────── */}
         <Route element={<ProtectedRoute requireRole="admin" />}>

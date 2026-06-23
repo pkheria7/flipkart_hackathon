@@ -175,19 +175,14 @@ export function LandingPage() {
                     <ArrowRight className="h-5 w-5" />
                   </CommandButton>
                 </Link>
-                <Link to="/demo">
-                  <CommandButton variant="secondary" size="lg" className="w-full sm:w-auto">
-                    Start Demo Mode
-                  </CommandButton>
-                </Link>
               </motion.div>
 
               <motion.p variants={fadeUp} className="mt-5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-civic-ivory/50">
-                <span>Human-in-loop enforcement</span>
+                <span>ROI-first enforcement</span>
                 <span className="text-btp-cyan/50">·</span>
-                <span>File-backed API</span>
+                <span>Station-wise patrol routes</span>
                 <span className="text-btp-cyan/50">·</span>
-                <span>Dry-run dispatch</span>
+                <span>Structural escalation pipeline</span>
               </motion.p>
             </motion.div>
 
@@ -382,11 +377,6 @@ export function LandingPage() {
                     <CommandButton size="lg" variant="cyan">
                       Enter Command Center
                       <ArrowRight className="h-5 w-5" />
-                    </CommandButton>
-                  </Link>
-                  <Link to="/demo">
-                    <CommandButton size="lg" variant="secondary">
-                      Start Demo Mode
                     </CommandButton>
                   </Link>
                 </div>

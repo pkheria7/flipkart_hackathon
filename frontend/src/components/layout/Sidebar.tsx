@@ -5,7 +5,6 @@ import {
   LayoutDashboard,
   Map,
   MessagesSquare,
-  Play,
   Route,
   TrendingUp,
   X,
@@ -28,7 +27,6 @@ const navItems: NavItem[] = [
   { label: 'Patrol Operations', to: '/operations', icon: Route },
   { label: 'Feedback & Escalation', to: '/feedback-escalation', icon: MessagesSquare },
   { label: 'Enforcement Impact', to: '/impact', icon: TrendingUp },
-  { label: 'Demo Mode', to: '/demo', icon: Play },
 ]
 
 interface SidebarProps {
