@@ -18,5 +18,7 @@ const mockNotifications: ApiNotification[] = (notificationsMock as Array<{
 }))
 
 export async function getNotifications(limit = 200): Promise<ApiNotification[]> {
-  return apiGet(`/api/notifications?limit=${limit}`, mockNotifications)
+  const res = await apiGet<ApiNotification[]>(`/api/notifications?limit=${limit}`, mockNotifications)
+  if (import.meta.env.DEV) console.log(`[notificationService] loaded ${res.length} notifications`)
+  return res
 }

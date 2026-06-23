@@ -9,29 +9,39 @@ const mockPending: PlanFileResponse = { ok: true, data: pendingPlanMock as Recor
 const mockApproved: PlanFileResponse = { ok: true, data: approvedPlanMock as Record<string, unknown> }
 
 export async function getDailyMasterPlan(): Promise<PlanFileResponse> {
-  return apiGet('/api/master-plan/daily', mockDaily)
+  const res = await apiGet('/api/master-plan/daily', mockDaily)
+  if (import.meta.env.DEV) console.log('[masterPlanService] daily plan loaded, ok=', res.ok)
+  return res
 }
 
 export async function getPendingMasterPlan(): Promise<PlanFileResponse> {
-  return apiGet('/api/master-plan/pending', mockPending)
+  const res = await apiGet('/api/master-plan/pending', mockPending)
+  if (import.meta.env.DEV) console.log('[masterPlanService] pending plan loaded, ok=', res.ok)
+  return res
 }
 
 export async function getApprovedMasterPlan(): Promise<PlanFileResponse> {
-  return apiGet('/api/master-plan/approved', mockApproved)
+  const res = await apiGet('/api/master-plan/approved', mockApproved)
+  if (import.meta.env.DEV) console.log('[masterPlanService] approved plan loaded, ok=', res.ok)
+  return res
 }
 
 export async function approveMasterPlan(): Promise<ActionResponse> {
-  return apiPost('/api/master-plan/approve', undefined, {
+  const res = await apiPost<ActionResponse>('/api/master-plan/approve', undefined, {
     ok: true,
     message: 'Plan approved (mock)',
     data: approvedPlanMock,
   })
+  if (import.meta.env.DEV) console.log('[masterPlanService] approve result:', res)
+  return res
 }
 
 export async function dispatchApprovedPlan(): Promise<ActionResponse> {
-  return apiPost('/api/dispatch/approved-plan', undefined, {
+  const res = await apiPost<ActionResponse>('/api/dispatch/approved-plan', undefined, {
     ok: true,
     message: 'Dispatch dry-run complete (mock)',
     data: { eml_count: 3 },
   })
+  if (import.meta.env.DEV) console.log('[masterPlanService] dispatch result:', res)
+  return res
 }

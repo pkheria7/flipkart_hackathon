@@ -141,16 +141,26 @@ export function OperationsPage() {
           {
             id: 'approval',
             label: 'Approval',
-            content: <ApprovalConsole status={planStatus} pendingPlan={pendingPlan} approvedPlan={approvedPlan} />,
+            testId: 'approval-tab',
+            content: (
+              <ApprovalConsole
+                status={planStatus}
+                dailyPlan={dailyPlan}
+                pendingPlan={pendingPlan}
+                approvedPlan={approvedPlan}
+              />
+            ),
           },
           {
             id: 'dispatch',
             label: 'Dispatch Preview',
+            testId: 'dispatch-preview-tab',
             content: (
               <DispatchPreview
                 notifications={notifications}
                 notifLoading={notifQ.isLoading}
                 firstAssignment={firstAssignment}
+                planStatus={planStatus}
               />
             ),
           },

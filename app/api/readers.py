@@ -10,6 +10,7 @@ All functions:
 from __future__ import annotations
 
 import email as _email_lib
+from email.header import decode_header as _decode_header, make_header as _make_header
 import json
 import math
 import os
@@ -337,6 +338,14 @@ def read_summary() -> dict:
 
 # ── notifications (eml) ───────────────────────────────────────────────────────
 
+def _decode_mime_words(raw: str) -> str:
+    """Decode MIME encoded-word header (=?utf-8?q?...?=) to plain Unicode."""
+    try:
+        return str(_make_header(_decode_header(raw)))
+    except Exception:
+        return raw
+
+
 def _kind_from_subject(subject: str) -> str:
     s = subject.lower()
     if "head officer" in s or "chief" in s or "command" in s:
@@ -351,8 +360,8 @@ def _kind_from_subject(subject: str) -> str:
 def _parse_eml(path: Path, idx: int) -> dict:
     try:
         msg = _email_lib.message_from_bytes(path.read_bytes())
-        subject = msg.get("Subject", "")
-        recipient = msg.get("To", "")
+        subject = _decode_mime_words(msg.get("Subject", ""))
+        recipient = _decode_mime_words(msg.get("To", ""))
         body = ""
         if msg.is_multipart():
             for part in msg.walk():
