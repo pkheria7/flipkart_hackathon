@@ -106,7 +106,7 @@ Open [http://localhost:5173](http://localhost:5173).
 ```
 VITE_API_BASE_URL=http://localhost:8000
 VITE_USE_MOCK_DATA=false
-VITE_DEMO_VIDEO_URL=https://www.youtube.com/watch?v=QPVqnaJB3R0
+VITE_DEMO_VIDEO_URL=https://www.youtube.com/watch?v=7PjWqOnLzUs&t=4s
 ```
 
 ---
