@@ -91,14 +91,21 @@ def hotspots(
     station:        Optional[str] = Query(default=None),
     classification: Optional[str] = Query(default=None),
     sort_by:        str           = Query(default="roi_score"),
-    limit:          int           = Query(default=100, ge=1, le=5000),
+    limit:          int           = Query(default=1500, ge=1, le=5000),
 ):
-    return readers.read_hotspots(
+    print(
+        f"[/api/hotspots] station={station!r} classification={classification!r} "
+        f"sort_by={sort_by!r} limit={limit}",
+        flush=True,
+    )
+    result = readers.read_hotspots(
         station=station,
         classification=classification,
         sort_by=sort_by,
         limit=limit,
     )
+    print(f"[/api/hotspots] returning {len(result)} rows", flush=True)
+    return result
 
 
 @app.get("/api/hotspots/{cluster_id}")

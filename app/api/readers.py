@@ -17,7 +17,22 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+
+def _find_project_root() -> Path:
+    """Resolve repo root regardless of CWD or how uvicorn was invoked."""
+    here = Path(__file__).resolve()
+    for candidate in [here.parent, *here.parents]:
+        if (
+            (candidate / "data").exists()
+            and (candidate / "frontend").exists()
+            and (candidate / "app").exists()
+        ):
+            return candidate
+    # Hard fallback: app/api/readers.py → app/api → app → repo root
+    return here.parents[2]
+
+
+PROJECT_ROOT = _find_project_root()
 
 # ── canonical output paths ────────────────────────────────────────────────────
 HOTSPOTS_PARQUET        = PROJECT_ROOT / "data" / "outputs" / "scored_hotspots.parquet"
@@ -132,15 +147,48 @@ def read_hotspots(
 
 
 def _read_hotspots_df():
-    """Try parquet first, CSV fallback."""
-    try:
-        import pandas as pd
-        if HOTSPOTS_PARQUET.exists():
-            return pd.read_parquet(HOTSPOTS_PARQUET)
-        if HOTSPOTS_CSV.exists():
-            return pd.read_csv(HOTSPOTS_CSV)
-    except Exception:
-        pass
+    """
+    Try parquet first; fall back to CSV if parquet fails or is absent.
+    Each source has its own try/except so a parquet failure does NOT skip CSV.
+    Prints diagnostics to stdout (visible in uvicorn logs) on any failure.
+    """
+    import pandas as pd
+
+    if HOTSPOTS_PARQUET.exists():
+        try:
+            df = pd.read_parquet(HOTSPOTS_PARQUET)
+            print(f"[readers] hotspots: {len(df)} rows loaded from parquet", flush=True)
+            return df
+        except Exception as exc:
+            print(
+                f"[readers] WARNING parquet read failed — trying CSV fallback.\n"
+                f"  path:   {HOTSPOTS_PARQUET}\n"
+                f"  exists: {HOTSPOTS_PARQUET.exists()}\n"
+                f"  error:  {exc}",
+                flush=True,
+            )
+
+    if HOTSPOTS_CSV.exists():
+        try:
+            df = pd.read_csv(HOTSPOTS_CSV)
+            print(f"[readers] hotspots: {len(df)} rows loaded from CSV fallback", flush=True)
+            return df
+        except Exception as exc:
+            print(
+                f"[readers] ERROR CSV read also failed.\n"
+                f"  path:   {HOTSPOTS_CSV}\n"
+                f"  exists: {HOTSPOTS_CSV.exists()}\n"
+                f"  error:  {exc}",
+                flush=True,
+            )
+
+    print(
+        f"[readers] ERROR no hotspot data found — check data/outputs/.\n"
+        f"  PROJECT_ROOT:   {PROJECT_ROOT}\n"
+        f"  parquet exists: {HOTSPOTS_PARQUET.exists()}\n"
+        f"  csv exists:     {HOTSPOTS_CSV.exists()}",
+        flush=True,
+    )
     return None
 
 

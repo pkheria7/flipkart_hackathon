@@ -38,8 +38,32 @@ function toQuery(params?: HotspotQueryParams): string {
   return s ? `?${s}` : ''
 }
 
+function normalizeHotspotResponse(raw: unknown): ApiHotspot[] {
+  if (Array.isArray(raw)) return raw as ApiHotspot[]
+  if (raw && typeof raw === 'object') {
+    const r = raw as Record<string, unknown>
+    if (Array.isArray(r.data)) return r.data as ApiHotspot[]
+    if (Array.isArray(r.items)) return r.items as ApiHotspot[]
+    if (Array.isArray(r.records)) return r.records as ApiHotspot[]
+  }
+  return []
+}
+
 export async function getHotspots(params?: HotspotQueryParams): Promise<ApiHotspot[]> {
-  return apiGet(`/api/hotspots${toQuery(params)}`, mockHotspots as unknown as ApiHotspot[])
+  // Default limit=1500 ensures all stations and hotspots reach the frontend.
+  const resolved: HotspotQueryParams = { sort_by: 'roi_score', limit: 1500, ...params }
+  const raw = await apiGet<unknown>(
+    `/api/hotspots${toQuery(resolved)}`,
+    mockHotspots as unknown as ApiHotspot[],
+  )
+  const result = normalizeHotspotResponse(raw)
+  if (result.length === 0) {
+    console.warn(
+      '[hotspotService] getHotspots returned 0 rows — ' +
+      'check that the API is running and data/outputs/scored_hotspots.parquet (or .csv) exists.',
+    )
+  }
+  return result
 }
 
 export async function getTopHotspots(limit = 10): Promise<ApiHotspot[]> {
